@@ -1,0 +1,87 @@
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Menu</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="menu-container">
+        <div class="menu" id="menu">
+            <div class="indicator" id="indicator"></div>
+            <button class="menu-item" onclick="selectMenuItem(0, this)">خانه</button>
+            <button class="menu-item" onclick="selectMenuItem(1, this)">خدمات شرکت</button>
+            <button class="menu-item" onclick="selectMenuItem(2, this)">استانداردها</button>
+            <button class="menu-item" onclick="selectMenuItem(3, this)">درباره ما</button>
+            <button class="menu-item" onclick="selectMenuItem(4, this)">بلاگ</button>
+            <button class="menu-item" onclick="selectMenuItem(5, this)">تماس با ما</button>
+        </div>
+    </div>
+
+    <script>
+        function selectMenuItem(index, element) {
+            const indicator = document.getElementById('indicator');
+            const rect = element.getBoundingClientRect();
+            const menuRect = document.getElementById('menu').getBoundingClientRect();
+            
+            indicator.style.width = rect.width + 'px';
+            indicator.style.transform = `translateX(${rect.left - menuRect.left}px)`;
+        }
+    </script>
+
+    <style>
+        body {
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background: #121212;
+            color: white;
+        }
+
+        .menu-container {
+            position: relative;
+            display: flex;
+            justify-content: center;
+            width: 100%;
+        }
+
+        .menu {
+            position: relative;
+            display: flex;
+            gap: 20px;
+            padding: 10px 20px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 22px;
+            background: rgba(255, 255, 255, 0.04);
+        }
+
+        .menu-item {
+            background: none;
+            border: none;
+            color: white;
+            font-size: 16px;
+            cursor: pointer;
+            padding: 10px 15px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .menu-item:hover {
+            color: #ff5e78;
+        }
+
+        .indicator {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            height: 4px;
+            width: 70px;
+            background: #831e39;
+            border-radius: 12px;
+            transition: transform 0.2s ease, width 0.2s ease;
+        }
+    </style>
+</body>
+</html>
