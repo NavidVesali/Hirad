@@ -1,87 +1,77 @@
-<html lang="fa" dir="rtl">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Responsive Menu</title>
-    <link rel="stylesheet" href="styles.css">
-</head>
-<body>
-    <div class="menu-container">
-        <div class="menu" id="menu">
-            <div class="indicator" id="indicator"></div>
-            <button class="menu-item" onclick="selectMenuItem(0, this)">خانه</button>
-            <button class="menu-item" onclick="selectMenuItem(1, this)">خدمات شرکت</button>
-            <button class="menu-item" onclick="selectMenuItem(2, this)">استانداردها</button>
-            <button class="menu-item" onclick="selectMenuItem(3, this)">درباره ما</button>
-            <button class="menu-item" onclick="selectMenuItem(4, this)">بلاگ</button>
-            <button class="menu-item" onclick="selectMenuItem(5, this)">تماس با ما</button>
-        </div>
-    </div>
-
-    <script>
-        function selectMenuItem(index, element) {
-            const indicator = document.getElementById('indicator');
-            const rect = element.getBoundingClientRect();
-            const menuRect = document.getElementById('menu').getBoundingClientRect();
-            
-            indicator.style.width = rect.width + 'px';
-            indicator.style.transform = `translateX(${rect.left - menuRect.left}px)`;
-        }
-    </script>
-
+    <title>Simplified Stack-Like Container</title>
     <style>
         body {
-            margin: 0;
             display: flex;
             justify-content: center;
             align-items: center;
-            height: 100vh;
-            background: #121212;
-            color: white;
+            margin: 0;
+            background-color: #f0f0f0;
+            padding: 20px;
         }
 
-        .menu-container {
+        .stack {
             position: relative;
-            display: flex;
-            justify-content: center;
-            width: 100%;
+            width: 80%;
         }
 
-        .menu {
-            position: relative;
-            display: flex;
-            gap: 20px;
-            padding: 10px 20px;
-            border: 1px solid rgba(255, 255, 255, 0.1);
-            border-radius: 22px;
-            background: rgba(255, 255, 255, 0.04);
-        }
-
-        .menu-item {
-            background: none;
-            border: none;
-            color: white;
+        .group-box-name {
+            position: absolute;
+            top: -10px;
+            left: 50%;
+            transform: translateX(-50%);
             font-size: 16px;
-            cursor: pointer;
-            padding: 10px 15px;
-            position: relative;
+            font-weight: bold;
+            color: #282828;
+            background-color: #f0f0f0;
+            padding: 0 5px;
+            z-index: 2;
+        }
+
+        .content-div {
+            position: absolute;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 100%;
+            padding: 15px;
+            background-color: transparent;
             z-index: 1;
         }
 
-        .menu-item:hover {
-            color: #ff5e78;
+        .border-container {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100px;
+            border-top-left-radius: 30px;
+            border-top-right-radius: 30px;
+            background: transparent;
+            overflow: hidden;
+            z-index: -1;
+            /* Gradient mask */
+            -webkit-mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0) 70%);
+            mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0) 70%);
+            /* Borders */
+            border: 1px solid #282828;
         }
 
-        .indicator {
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            height: 4px;
-            width: 70px;
-            background: #831e39;
-            border-radius: 12px;
-            transition: transform 0.2s ease, width 0.2s ease;
-        }
+        
     </style>
+</head>
+<body>
+    
+    <div class="stack">
+        <div class="group-box-name">درباره شرکت تجهیز فرآیند هیراد</div>
+        <div class="content-div">
+            <h2>Test this is a test</h2>
+            <p>This is another test</p>
+        </div>
+        <div class="border-container"></div>
+    </div>
 </body>
 </html>
