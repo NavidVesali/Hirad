@@ -1,77 +1,23 @@
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
+    <meta charset="UTF-8" dir="rtl">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Simplified Stack-Like Container</title>
+    <title>Vertical Tabs with Dots and Line</title>
     <style>
         body {
             display: flex;
             justify-content: center;
             align-items: center;
+            height: 100vh;
             margin: 0;
-            background-color: #f0f0f0;
-            padding: 20px;
+            background: #f9f9f9;
         }
 
-        .stack {
-            position: relative;
-            width: 80%;
-        }
-
-        .group-box-name {
-            position: absolute;
-            top: -10px;
-            left: 50%;
-            transform: translateX(-50%);
-            font-size: 16px;
-            font-weight: bold;
-            color: #282828;
-            background-color: #f0f0f0;
-            padding: 0 5px;
-            z-index: 2;
-        }
-
-        .content-div {
-            position: absolute;
-            top: 0;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 100%;
-            padding: 15px;
-            background-color: transparent;
-            z-index: 1;
-        }
-
-        .border-container {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100px;
-            border-top-left-radius: 30px;
-            border-top-right-radius: 30px;
-            background: transparent;
-            overflow: hidden;
-            z-index: -1;
-            /* Gradient mask */
-            -webkit-mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0) 70%);
-            mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0) 70%);
-            /* Borders */
-            border: 1px solid #282828;
-        }
-
-        
+       
     </style>
 </head>
 <body>
-    
-    <div class="stack">
-        <div class="group-box-name">درباره شرکت تجهیز فرآیند هیراد</div>
-        <div class="content-div">
-            <h2>Test this is a test</h2>
-            <p>This is another test</p>
-        </div>
-        <div class="border-container"></div>
-    </div>
+
+
 </body>
 </html>
