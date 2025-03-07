@@ -29,10 +29,9 @@
   align-items: center;
   padding: 12px;
   height: 48px;
-  width: 182px;
   border: 1px solid #0000;
   border-radius: 20px;
-  background: linear-gradient(#511922, #511922) padding-box, linear-gradient(var(--angle), rgba(255, 106, 0, 0), #832339) border-box;
+  background: linear-gradient(#511922, #511922) padding-box, linear-gradient(var(--angle), rgba(255, 106, 0, 0), #c51a42) border-box;
   box-shadow: inset 0px 4px 15px 2px rgba(131, 35, 57, 0.7);
 }
 .primary-button:hover {
@@ -74,10 +73,9 @@
   align-items: center;
   padding: 12px;
   height: 48px;
-  width: 182px;
   border: 1px solid #0000;
   border-radius: 20px;
-  background: linear-gradient(#272727, #272727) padding-box, linear-gradient(var(--angle), rgba(255, 106, 0, 0), #3c3c3c) border-box;
+  background: linear-gradient(#272727, #272727) padding-box, linear-gradient(var(--angle), rgba(255, 106, 0, 0), #6c6c6c) border-box;
   box-shadow: inset 0px 4px 15px 2px rgba(255, 255, 255, 0.08);
 }
 .s-button:hover {
@@ -107,7 +105,7 @@
   inherits: false;
 }
 
-.container {
+.container-1 {
   border: 1px solid #0000;
   background: rgba(255, 255, 255, 0.03) padding-box, linear-gradient(var(--angle), rgba(255, 255, 255, 0.03), #3c3c3c) border-box;
   box-shadow: inset 0px 4px 15px 2px rgba(255, 255, 255, 0.04);
@@ -118,7 +116,7 @@
   color: #7a7a7a;
 }
 
-.stack {
+.stack-1 {
   display: block;
   position: absolute;
   left: 50%;
@@ -153,7 +151,7 @@
 }
 
 .border-container {
-  position: absolute;
+  /* position: absolute; */
   top: 0;
   left: 0;
   width: 100%;
@@ -168,47 +166,4 @@
   mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0) 70%);
   /* Borders */
   border: 1px solid #282828;
-}
-
-.tabs {
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-  position: relative;
-}
-
-.tabs::before {
-  content: '';
-  position: absolute;
-  top: 10px;
-  bottom: 10px;
-  left: 10px;
-  width: 2px;
-  background: #007bff;
-}
-
-.tab {
-  display: flex;
-  align-items: center;
-  gap: 15px;
-  cursor: pointer;
-}
-
-.dot {
-  width: 20px;
-  height: 20px;
-  background: #007bff;
-  border-radius: 50%;
-  z-index: 1;
-}
-
-.tab-content {
-  padding: 10px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  background: #fff;
-}
-
-.tab:hover .dot {
-  background: #0056b3;
 }
