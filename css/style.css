@@ -31,14 +31,15 @@
   height: 48px;
   border: 1px solid #0000;
   border-radius: 20px;
-  background: linear-gradient(#511922, #511922) padding-box, linear-gradient(var(--angle), rgba(255, 106, 0, 0), #c51a42) border-box;
+  background: linear-gradient(#511922, #511922) padding-box,
+    linear-gradient(var(--angle), rgba(255, 106, 0, 0), #c51a42) border-box;
   box-shadow: inset 0px 4px 15px 2px rgba(131, 35, 57, 0.7);
 }
 .primary-button:hover {
   animation: rotate 3s linear infinite;
 }
 
-.p-button2{
+.p-button2 {
   color: #d4d4d4;
   display: flex;
   justify-content: center;
@@ -46,7 +47,8 @@
   padding: 12px;
   border: 1px solid #0000;
   border-radius: 20px;
-  background: linear-gradient(#511922, #511922) padding-box, linear-gradient(var(--angle), rgba(255, 106, 0, 0), #832339) border-box;
+  background: linear-gradient(#511922, #511922) padding-box,
+    linear-gradient(var(--angle), rgba(255, 106, 0, 0), #832339) border-box;
   box-shadow: inset 0px 4px 15px 2px rgba(131, 35, 57, 0.7);
 }
 .p-button2:hover {
@@ -75,23 +77,24 @@
   height: 48px;
   border: 1px solid #0000;
   border-radius: 20px;
-  background: linear-gradient(#272727, #272727) padding-box, linear-gradient(var(--angle), rgba(255, 106, 0, 0), #6c6c6c) border-box;
+  background: linear-gradient(#272727, #272727) padding-box,
+    linear-gradient(var(--angle), rgba(255, 106, 0, 0), #6c6c6c) border-box;
   box-shadow: inset 0px 4px 15px 2px rgba(255, 255, 255, 0.08);
 }
 .s-button:hover {
   animation: rotate 3s linear infinite;
 }
-.s-button2{
+.s-button2 {
   color: #d4d4d4;
   padding: 12px;
   border: 1px solid #0000;
-  background: linear-gradient(#272727, #272727) padding-box, linear-gradient(var(--angle), rgba(255, 106, 0, 0), #3c3c3c) border-box;
+  background: linear-gradient(#272727, #272727) padding-box,
+    linear-gradient(var(--angle), rgba(255, 106, 0, 0), #3c3c3c) border-box;
   box-shadow: inset 0px 4px 15px 2px rgba(255, 255, 255, 0.08);
 }
 .s-button2:hover {
   animation: rotate 3s linear infinite;
 }
-
 
 @keyframes rotate {
   to {
@@ -107,7 +110,8 @@
 
 .container-1 {
   border: 1px solid #0000;
-  background: rgba(255, 255, 255, 0.03) padding-box, linear-gradient(var(--angle), rgba(255, 255, 255, 0.03), #3c3c3c) border-box;
+  background: rgba(255, 255, 255, 0.03) padding-box,
+    linear-gradient(var(--angle), rgba(255, 255, 255, 0.03), #3c3c3c) border-box;
   box-shadow: inset 0px 4px 15px 2px rgba(255, 255, 255, 0.04);
   backdrop-filter: blur(10px); /* Added blur effect */
 }
@@ -117,53 +121,116 @@
 }
 
 .stack-1 {
-  display: block;
-  position: absolute;
-  left: 50%;
-  transform: translate(-50%);
-  width: 80%;
-  margin-top: 30px;
-}
-
-.group-box-name {
-  position: absolute;
-  top: -10px;
-  left: 50%;
-  transform: translateX(-50%);
-  font-size: 16px;
-  font-weight: bold;
-  background-color: inherit;
-  padding: 0 5px;
-  z-index: 2;
-}
-
-.content-div {
-  position: absolute;
-  text-align: center;
-  top: 0;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 100%;
-  height: auto;
-  padding: 15px;
-  background-color: transparent;
-  z-index: 1;
+  position: relative; /* Parent container for absolute positioning of children */
+  width: 80%; /* Responsive width, approximately 60% of viewport */
+  max-width: 80%; /* Caps the width at 300px on larger screens */
 }
 
 .border-container {
-  /* position: absolute; */
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100px;
-  border-top-left-radius: 30px;
-  border-top-right-radius: 30px;
-  background: transparent;
+  position: absolute; /* Positions this div relative to .stack */
+  top: 0; /* Aligns to the top of the stack (can be adjusted) */
+  left: 0; /* Aligns to the left of the stack (can be adjusted) */
+  width: 100%; /* Takes full width of .stack */
+  height: 200px; /* Allows height to adjust */
+  aspect-ratio: 3 / 2; /* Maintains 3:2 aspect ratio */
+  border-top-left-radius: 30px; /* Rounded top-left corner */
+  border-top-right-radius: 30px; /* Rounded top-right corner */
+  background: transparent; /* Ensures no background fill */
   overflow: hidden;
-  z-index: -1;
-  /* Gradient mask */
-  -webkit-mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0) 70%);
-  mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0) 70%);
-  /* Borders */
-  border: 1px solid #282828;
+  /* Apply gradient mask */
+  -webkit-mask-image: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 1) 0%,
+    rgba(0, 0, 0, 0) 70%
+  );
+  mask-image: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 1) 0%,
+    rgba(0, 0, 0, 0) 70%
+  );
+  /* Place behind other elements */
+  z-index: -1; /* Puts this container behind .content-div */
 }
+.group-box-name {
+  background: #141414;
+  position: absolute; /* Positions this text relative to .stack */
+  top: -10px; /* Moves the text slightly above the container's top border */
+  left: 50%; /* Centers the text horizontally */
+  transform: translateX(
+    -50%
+  ); /* Shifts the text left by half its width to center it perfectly */
+  font-size: 16px; /* Font size for the title */
+  font-weight: bold; /* Bold text for emphasis */
+  padding: 0 5px; /* Padding to create a small box around the text */
+  z-index: 2; /* Ensures this is on top of both .border-container and .content-div */
+}
+
+/* Borders (top, left, right) in dark gray (#282828) */
+.border-container {
+  border-top: 1px solid #282828; /* Dark gray top border */
+  border-left: 1px solid #282828; /* Dark gray left border */
+  border-right: 1px solid #282828; /* Dark gray right border */
+}
+
+/* Media query for smaller screens */
+@media (max-width: 480px) {
+  .stack {
+    width: 50vw; /* Narrower on very small screens */
+  }
+  .group-box-name {
+    font-size: 14px; /* Smaller font size on mobile */
+    top: -8px; /* Adjust positioning for smaller screens */
+    padding: 0 4px; /* Slightly less padding on mobile */
+  }
+
+  .border-container {
+    border-top-left-radius: 20px; /* Smaller radius for mobile */
+    border-top-right-radius: 20px;
+  }
+}
+
+.tabs {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  position: relative;
+}
+
+.tabs::before {
+  content: "";
+  position: absolute;
+  top: 15px;
+  bottom: 15px;
+  right: 9px;
+  width: 2px;
+  background: #afc4c4;
+}
+
+.tab {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  cursor: pointer;
+}
+
+.dot {
+  width: 20px;
+  height: 20px;
+  background: #007bff;
+  border-radius: 50%;
+  z-index: 1;
+}
+
+.tab-content {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background: #fff;
+}
+
+.tab:hover .dot {
+  background: #0056b3;
+  
+}
+
+

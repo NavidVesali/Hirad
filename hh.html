@@ -1,22 +1,82 @@
-<div id="about-continer" class="stack">
-    <h2 class="group-box-name">درباره شرکت تجهیز فرآیند هیراد</h2>
-    <div class="content-div flex flex-col items-center gap-10">
-      <p class="text-justify">
-        شرکت تجـهـیـز فـرآیـنـد هـیـراد در سـال ۱۳۹۴ در تـهـران با شماره ثبتی ۵۲۵۴۷۰ بـا بـررسی نیازمندی های صـنـایـع نــفـت, گــاز پتروشیـمی
-        صنایـع وابسته و بـازار داخـل با ارائـه خـدمات فـنی و مهندسی به منظور تامین، تدارکات و تجهیزات فنی و صنعتی مورد نیاز صـنایـع، نفـت و گاز و
-        پـتـروشیمی  پـالایـشگاه، نیروگاه ها، صنایـع تـولیدی، غـذایی و دارویی و سیالات  تاسیس گردیـد. شرکت تجـهـیز فـرآیـنـد هـیـراد   همواره سعی
-        دارد با بهترین برند های جهانی از نظر کیـفـیت و اصالت کالا در ارتـبـاط و همکاری باشد تا بتواند کالایی قابل اطمینان و در عین حال با قـیـمـت
-        مناسب در اختیار مـصـرف کنندگان قـرار بـدهـد و با تکیه به مـوجـودی انـبار داخـل و ارتباطات نزدیک با تولیدکنندگان داخلی و انبارهای خارجی
-        آماده هرگونه پاسخگویی به استعمالات و نیاز های صنایع مرتبط باشد.رعایـت کلـیه استانداردهای بـیـن الـمـللی (ASMI,ASME,ANSI,API,EN,DIN,BS,ISO)
-        و تحویل کالا در حضور نماینده کارفرما و ناظرین شرکـتـهـای بـازرسی و همچنین ارائه گواهینامه های مرتبط به کالا (Certificate)  از اهـداف
-        راهـبـردی و برنامه های کاری این شرکت است.
-      </p>
-      <button class="max-w-[426px] mt-[30px] primary-button flex-nowrap cursor-pointer">دانلود کاتالوگ شرکت / Download Catalogue</button>
-      <div class="w-[70%] h-auto s-button2 flex flex-nowrap rounded-[32px]">
-        <div class="w-[20%] h-auto text-center">1</div>
-        <div class="w-[20%] h-auto text-center">2</div>
-        <div class="w-[20%] h-auto text-center">3</div>
-        <div class="w-[20%] h-auto text-center">4</div>
-        <div class="w-[20%] h-auto text-center">5</div>
-      </div>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" dir="rtl">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vertical Tabs with Dots and Line</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background: #f9f9f9;
+        }
+
+        .tabs {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            position: relative;
+        }
+
+        .tabs::before {
+            content: '';
+            position: absolute;
+            top: 10px;
+            bottom: 10px;
+            left: 10px;
+            width: 2px;
+            background: #21c54a;
+        }
+
+        .tab {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            cursor: pointer;
+        }
+
+        .dot {
+            width: 20px;
+            height: 20px;
+            background: #007bff;
+            border-radius: 50%;
+            z-index: 1;
+        }
+
+        .tab-content {
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            background: #fff;
+        }
+
+        .tab:hover .dot {
+            background: #0056b3;
+        }
+    </style>
+</head>
+<body>
+
+<div class="tabs">
+    <div class="tab">
+        <div class="dot"></div>
+        <div class="tab-content">Tab 1 Content</div>
     </div>
+    <div class="tab">
+        <div class="dot"></div>
+        <div class="tab-content">Tab 2 Content</div>
+    </div>
+    <div class="tab">
+        <div class="dot"></div>
+        <div class="tab-content">Tab 3 Content</div>
+    </div>
+    <div class="tab">
+        <div class="dot"></div>
+        <div class="tab-content">Tab 4 Content</div>
+    </div>
+</div>
+
+</body>
+</html>
