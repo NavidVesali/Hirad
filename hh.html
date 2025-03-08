@@ -1,82 +1,28 @@
+<!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8" dir="rtl">
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Vertical Tabs with Dots and Line</title>
-    <style>
-        body {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            margin: 0;
-            background: #f9f9f9;
-        }
+    <link rel="stylesheet" href="/src/output.css" />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
 
-        .tabs {
-            display: flex;
-            flex-direction: column;
-            gap: 20px;
-            position: relative;
-        }
-
-        .tabs::before {
-            content: '';
-            position: absolute;
-            top: 10px;
-            bottom: 10px;
-            left: 10px;
-            width: 2px;
-            background: #21c54a;
-        }
-
-        .tab {
-            display: flex;
-            align-items: center;
-            gap: 15px;
-            cursor: pointer;
-        }
-
-        .dot {
-            width: 20px;
-            height: 20px;
-            background: #007bff;
-            border-radius: 50%;
-            z-index: 1;
-        }
-
-        .tab-content {
-            padding: 10px;
-            border: 1px solid #ccc;
-            border-radius: 5px;
-            background: #fff;
-        }
-
-        .tab:hover .dot {
-            background: #0056b3;
-        }
-    </style>
+    <title>Document</title>
 </head>
-<body>
+<body class="flex justify-between items-center">
 
-<div class="tabs">
-    <div class="tab">
-        <div class="dot"></div>
-        <div class="tab-content">Tab 1 Content</div>
-    </div>
-    <div class="tab">
-        <div class="dot"></div>
-        <div class="tab-content">Tab 2 Content</div>
-    </div>
-    <div class="tab">
-        <div class="dot"></div>
-        <div class="tab-content">Tab 3 Content</div>
-    </div>
-    <div class="tab">
-        <div class="dot"></div>
-        <div class="tab-content">Tab 4 Content</div>
-    </div>
-</div>
-
+    <button class="custom-button "><span class="material-icons md-48 absolute top-[-10px] right-[9px] bg-green-600 rounded-2xl ">face</span>
+    </button>
+    <button class="custom-button "><span class="material-icons md-48 absolute top-[-10px] right-[9px] bg-green-600 rounded-2xl ">face</span>
+    </button>
+    <button class="custom-button "><span class="material-icons md-48 absolute top-[-10px] right-[9px] bg-green-600 rounded-2xl ">face</span>
+    </button>
+    <button class="custom-button "><span class="material-icons md-48 absolute top-[-10px] right-[9px] bg-green-600 rounded-2xl ">face</span>
+    </button>
+    <button class="custom-button "><span class="material-icons md-48 absolute top-[-10px] right-[9px] bg-green-600 rounded-2xl ">face</span>
+    </button>
+    <button class="custom-button "><span class="material-icons md-48 absolute top-[-10px] right-[9px] bg-green-600 rounded-2xl ">face</span>
+    </button>
+    
 </body>
 </html>

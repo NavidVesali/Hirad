@@ -122,7 +122,7 @@
 
 .stack-1 {
   position: relative; /* Parent container for absolute positioning of children */
-  width: 80%; /* Responsive width, approximately 60% of viewport */
+  width: 70%; /* Responsive width, approximately 60% of viewport */
   max-width: 80%; /* Caps the width at 300px on larger screens */
 }
 
@@ -130,8 +130,6 @@
   position: absolute; /* Positions this div relative to .stack */
   top: 0; /* Aligns to the top of the stack (can be adjusted) */
   left: 0; /* Aligns to the left of the stack (can be adjusted) */
-  width: 100%; /* Takes full width of .stack */
-  height: 200px; /* Allows height to adjust */
   aspect-ratio: 3 / 2; /* Maintains 3:2 aspect ratio */
   border-top-left-radius: 30px; /* Rounded top-left corner */
   border-top-right-radius: 30px; /* Rounded top-right corner */
@@ -159,9 +157,9 @@
   transform: translateX(
     -50%
   ); /* Shifts the text left by half its width to center it perfectly */
-  font-size: 16px; /* Font size for the title */
+  /* font-size: 16px; Font size for the title */
   font-weight: bold; /* Bold text for emphasis */
-  padding: 0 5px; /* Padding to create a small box around the text */
+  padding: 0 10px; /* Padding to create a small box around the text */
   z-index: 2; /* Ensures this is on top of both .border-container and .content-div */
 }
 
@@ -199,11 +197,12 @@
 .tabs::before {
   content: "";
   position: absolute;
-  top: 15px;
-  bottom: 15px;
-  right: 9px;
-  width: 2px;
-  background: #afc4c4;
+  top: 38px;
+  bottom: 38px;
+  right: 20px;
+  width: 1px;
+  background: #FFFFFF4D;
+  /* transition: top 0.3s; */
 }
 
 .tab {
@@ -211,26 +210,57 @@
   align-items: center;
   gap: 15px;
   cursor: pointer;
+  position: relative;
 }
 
 .dot {
-  width: 20px;
-  height: 20px;
-  background: #007bff;
+  width: 9px;
+  height: 9px;
+  background: #ffffffd0;
   border-radius: 50%;
   z-index: 1;
-}
-
-.tab-content {
-  padding: 10px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  background: #fff;
-}
-
-.tab:hover .dot {
-  background: #0056b3;
+  transition:transform 0.3s, background 0.3s;
   
 }
 
+.tab-content {
+  font-size: 20px;
+  font-weight: 400;
+  padding: 10px;
+  border-radius: 5px;
+  color: #7A7A7A;
+  transition: opacity 0.3s, color 0.3s;
+}
+
+input[type="radio"] {
+  display: none;
+}
+
+input[type="radio"]:checked + .tab .dot {
+  background: #C2163E;
+  transform: scale(1.50);
+}
+
+input[type="radio"]:checked + .tab .tab-content {
+  color: #C2163E;
+}
+
+
+/* input[type="radio"]:checked + label .tab-content {
+  opacity: 1;
+} */
+
+/* .tab .tab-content {
+  opacity: 0.5;
+} */
+
+/* input[type="radio"]:checked + label::before {
+  content: "";
+  position: absolute;
+  top: 45%;
+  right: 11px;
+  width: 1px;
+  height: 40%;
+  transform: translateY(-50%);
+} */
 
