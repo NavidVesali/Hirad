@@ -197,7 +197,7 @@
 .tabs::before {
   content: "";
   position: absolute;
-  top: 38px;
+  top: 53px;
   bottom: 38px;
   right: 20px;
   width: 1px;
@@ -224,7 +224,7 @@
 }
 
 .tab-content {
-  font-size: 20px;
+  font-size: 16px;
   font-weight: 400;
   padding: 10px;
   border-radius: 5px;
