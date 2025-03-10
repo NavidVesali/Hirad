@@ -15,6 +15,17 @@
   src: url("/Font/Shabnam-Light.ttf") format("truetype");
   font-weight: 300;
 }
+@font-face {
+  font-family: "iconsax";
+  src: url("fonts/iconsax.eot?yjegnn");
+  src: url("fonts/iconsax.eot?yjegnn#iefix") format("embedded-opentype"),
+    url("fonts/iconsax.ttf?yjegnn") format("truetype"),
+    url("fonts/iconsax.woff?yjegnn") format("woff"),
+    url("fonts/iconsax.svg?yjegnn#iconsax") format("svg");
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
 
 * {
   font-family: Shabnam;
@@ -122,7 +133,7 @@
 
 .stack-1 {
   position: relative; /* Parent container for absolute positioning of children */
-  width: 70%; /* Responsive width, approximately 60% of viewport */
+  width: 80%; /* Responsive width, approximately 60% of viewport */
   max-width: 80%; /* Caps the width at 300px on larger screens */
 }
 
@@ -150,9 +161,10 @@
   z-index: -1; /* Puts this container behind .content-div */
 }
 .group-box-name {
+  font-size: 20px;
   background: #141414;
   position: absolute; /* Positions this text relative to .stack */
-  top: -10px; /* Moves the text slightly above the container's top border */
+  top: -16px; /* Moves the text slightly above the container's top border */
   left: 50%; /* Centers the text horizontally */
   transform: translateX(
     -50%
@@ -201,7 +213,7 @@
   bottom: 38px;
   right: 20px;
   width: 1px;
-  background: #FFFFFF4D;
+  background: #ffffff4d;
   /* transition: top 0.3s; */
 }
 
@@ -219,8 +231,7 @@
   background: #ffffffd0;
   border-radius: 50%;
   z-index: 1;
-  transition:transform 0.3s, background 0.3s;
-  
+  transition: transform 0.3s, background 0.3s;
 }
 
 .tab-content {
@@ -228,7 +239,7 @@
   font-weight: 400;
   padding: 10px;
   border-radius: 5px;
-  color: #7A7A7A;
+  color: #7a7a7a;
   transition: opacity 0.3s, color 0.3s;
 }
 
@@ -237,14 +248,13 @@ input[type="radio"] {
 }
 
 input[type="radio"]:checked + .tab .dot {
-  background: #C2163E;
-  transform: scale(1.50);
+  background: #c2163e;
+  transform: scale(1.5);
 }
 
 input[type="radio"]:checked + .tab .tab-content {
-  color: #C2163E;
+  color: #c2163e;
 }
-
 
 /* input[type="radio"]:checked + label .tab-content {
   opacity: 1;
@@ -263,4 +273,17 @@ input[type="radio"]:checked + .tab .tab-content {
   height: 40%;
   transform: translateY(-50%);
 } */
-
+.about-2-txt {
+  text-align: center;
+  line-height: 58px;
+}
+.about-2-icon {
+  background-color: #272727;
+  border-radius: 50%;
+  position: absolute;
+  top: -20px;
+  right: -10px;
+  width: 56px;
+  height: 56px;
+  padding: 18px;
+}
