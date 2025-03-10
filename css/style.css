@@ -32,6 +32,13 @@
   color: #d4d4d4;
 }
 
+.header-search {
+  background-color: #272727;
+  border-radius: 40%;
+  width: 56px;
+  height: 56px;
+  padding: 18px;
+}
 .primary-button {
   cursor: pointer;
   color: #d4d4d4;
@@ -287,3 +294,8 @@ input[type="radio"]:checked + .tab .tab-content {
   height: 56px;
   padding: 18px;
 }
+
+
+
+/*------------------ start services custom style ---------------------*/
+

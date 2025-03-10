@@ -1,50 +1,57 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    rel="stylesheet">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Expandable Divs</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .wrapper {
+            width: 1520px;
+            height: 552px;
+            display: flex;
+            border: 2px solid #333;
+            overflow: hidden;
+        }
+        .box {
+            width: calc(1520px / 5);
+            height: 100%;
+            background: lightgray;
+            border-right: 2px solid white;
+            transition: width 0.5s ease-in-out;
+            cursor: pointer;
+        }
+        .box:last-child {
+            border-right: none;
+        }
+        .wrapper .box.active {
+            width: 1070px;
+        }
+        .wrapper .box:not(.active) {
+            width: calc((1520px - 1070px) / 4);
+        }
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+        <div class="box" onclick="expandDiv(this)"></div>
+        <div class="box" onclick="expandDiv(this)"></div>
+        <div class="box" onclick="expandDiv(this)"></div>
+        <div class="box" onclick="expandDiv(this)"></div>
+        <div class="box" onclick="expandDiv(this)"></div>
+    </div>
 
-    <link rel="stylesheet" href="/Font/iconsax-css/font.css">
-
-    <title>Document</title>
-  </head>
-  <body class="flex justify-between items-center">
-    <button class="custom-button">
-      <span
-        class="material-icons md-48 absolute top-[-10px] right-[9px] bg-green-600 rounded-2xl"
-        >face</span
-      >
-    </button>
-    <button class="custom-button">
-      <span
-        class="material-icons md-48 absolute top-[-10px] right-[9px] bg-green-600 rounded-2xl"
-        >face</span
-      >
-    </button>
-    <button class="custom-button">
-      <span
-        class="material-icons md-48 absolute top-[-10px] right-[9px] bg-green-600 rounded-2xl"
-        >\e90a</span
-      >
-    </button>
-    <button class="custom-button">
-      <span
-        class="material-icons md-48 absolute top-[-10px] right-[9px] bg-green-600 rounded-2xl"
-        >face</span
-      >
-    </button>
-    <button class="custom-button">
-      <span
-        class="material-icons md-48 absolute top-[-10px] right-[9px] bg-green-600 rounded-2xl"
-        >face</span
-      >
-    </button>
-    <button class="custom-button">
-      <span
-        class="material-icons md-48 absolute top-[-10px] right-[9px] bg-green-600 rounded-2xl"
-        >face</span
-      >
-    </button>
-  </body>
+    <script>
+        function expandDiv(clickedDiv) {
+            document.querySelectorAll('.box').forEach(div => {
+                div.classList.remove('active');
+            });
+            clickedDiv.classList.add('active');
+        }
+    </script>
+</body>
 </html>
