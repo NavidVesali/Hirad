@@ -318,3 +318,25 @@ input[type="radio"]:checked + .tab .tab-content {
   opacity: 1;
   transform: translateY(0);
 }
+
+
+
+/*                  contant style             */
+
+.contact-bg {
+  background-image: url('../image/contant/background.png'); /* Ensure the path is correct */
+  background-size: cover; /* Adjust as needed */
+  background-position: center; /* Adjust as needed */
+  background-repeat: no-repeat; /* Adjust as needed */
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 15px;
+}
+.form-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 15px;
+}

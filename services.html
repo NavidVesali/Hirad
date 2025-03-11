@@ -10,39 +10,17 @@
   <body class="bg-[#141414] flex flex-col items-center justify-center">
     <!-------------------- Header Section ---------------------->
 
-    <header
-      class="flex justify-between w-[100%] pt-[30px] px-[100px] items-center rounded-[40%] top-0 sticky z-50"
-    >
-      <span
-        class="container-1 rounded-[24px] w-[80px] h-[80px] flex items-center justify-center"
-        ><img src="./image/Header/Logo1.svg" alt=""
-      /></span>
+    <header class="flex justify-between w-[100%] pt-[30px] px-[100px] items-center rounded-[40%] top-0 sticky z-50">
+      <span class="container-1 rounded-[24px] w-[80px] h-[80px] flex items-center justify-center"><img src="./image/Header/Logo1.svg" alt="" /></span>
       <div class="w-[60%] h-[59px] bg-transparent z-[-1] relative">
-        <section
-          id="nav-bar"
-          class="w-[100%] h-[59px] flex justify-around items-center text-base text-center font-[300] container-1 rounded-[24px]"
-        >
-          <span class="max-w-[93px] h-[58px] leading-[58px]"
-            ><a href="" class="font-[700] text-base">خانه</a></span
-          >
-          <span class="max-w-[93px] h-[58px] leading-[58px]"
-            ><a href="" class="font-[700] text-base">خدمات شرکت</a></span
-          >
-          <span class="max-w-[93px] h-[58px] leading-[58px]"
-            ><a href="" class="font-[700] text-base">بلاگ</a></span
-          >
-          <span class="max-w-[93px] h-[58px] leading-[58px]"
-            ><a href="" class="font-[700] text-base">درباره ما</a></span
-          >
-          <span class="max-w-[93px] h-[58px] leading-[58px]"
-            ><a href="" class="font-[700] text-base">استانداردها</a></span
-          >
-          <span class="max-w-[93px] h-[58px] leading-[58px]"
-            ><a href="" class="font-[700] text-base">محصولات</a></span
-          >
-          <span class="max-w-[93px] h-[58px] leading-[58px]"
-            ><a href="" class="font-[700] text-base">تماس با ما</a></span
-          >
+        <section id="nav-bar" class="w-[100%] h-[59px] flex justify-around items-center text-base text-center font-[300] container-1 rounded-[24px]">
+          <span class="max-w-[93px] h-[58px] leading-[58px]"><a href="" class="font-[700] text-base">خانه</a></span>
+          <span class="max-w-[93px] h-[58px] leading-[58px]"><a href="" class="font-[700] text-base">خدمات شرکت</a></span>
+          <span class="max-w-[93px] h-[58px] leading-[58px]"><a href="" class="font-[700] text-base">بلاگ</a></span>
+          <span class="max-w-[93px] h-[58px] leading-[58px]"><a href="" class="font-[700] text-base">درباره ما</a></span>
+          <span class="max-w-[93px] h-[58px] leading-[58px]"><a href="" class="font-[700] text-base">استانداردها</a></span>
+          <span class="max-w-[93px] h-[58px] leading-[58px]"><a href="" class="font-[700] text-base">محصولات</a></span>
+          <span class="max-w-[93px] h-[58px] leading-[58px]"><a href="" class="font-[700] text-base">تماس با ما</a></span>
         </section>
         <div
           id="nav-index"
@@ -51,224 +29,217 @@
       </div>
 
       <div class="flex justify-start items-center gap-1">
-        <img
-          src="./image/Header/search-normal.svg"
-          class="header-search"
-          alt="search"
-        />
-        <button class="primary-button cursor-pointer">
-          <img class="ml-1" src="./image/Header/login.svg" alt="" />ثبت نام /
-          ورود
-        </button>
+        <img src="./image/Header/search-normal.svg" class="header-search" alt="search" />
+        <button class="primary-button cursor-pointer"><img class="ml-1" src="./image/Header/login.svg" alt="" />ثبت نام / ورود</button>
       </div>
     </header>
     <!-------------------- Header Section ---------------------->
 
-    <div class="w-[80%] h-auto flex flex-col mt-52 gap-3.5">
+    <!-------------------- start box section----------------- -->
+
+    <div class="w-[80%] h-auto flex flex-col my-16 gap-3.5">
       <div class="flex justify-start items-center gap-2 p-3.5">
         <img src="./image/services/menu.svg" alt="" />
         <p>صفحه اصلی / خدمات هیراد</p>
       </div>
       <div class="w-[100%] h-auto flex justify-between p-3.5">
-        <h1 class="text-[48px] font-bold">
-          خدمات کلیدی شرکت تجهیز فرآیند هیراد
-        </h1>
+        <h1 class="text-[48px] font-bold">خدمات کلیدی شرکت تجهیز فرآیند هیراد</h1>
         <div class="flex justify-start items-center gap-2">
           <span>مشاهده خدمات هیراد</span>
           <img src="./image/services/arrow-down.svg" alt="" />
         </div>
       </div>
-      <p class="text-[20px]">
-        همراه شما در طراحی، اجرا و بهره‌برداری کامل پروژه‌ها
-      </p>
+      <p class="text-[20px]">همراه شما در طراحی، اجرا و بهره‌برداری کامل پروژه‌ها</p>
     </div>
 
     <div class="wrapper">
-      <div
-      class="box s-button2 flex justify-evenly gap-4"
-      onclick="expandDiv(this)"
-    >
-      <div class="servic-box w-[100%] h-[100%] justify-between items-center">
-        <div class="w-[40%] h-[100%] my-4">
-          <img
-            class="w-full h-full object-cover rounded-[24px]"
-            src="./image/services/image 2.svg"
-            alt=""
-          />
-        </div>
-        <div
-          class="flex flex-col justify-between w-[60%] h-[90%] my-12 px-5 border-l-2 gap-6 border-[#7a7a7a]"
-        >
-          <div class=" ">
-            <h2 class="text-[32px]">بازرگانی و تامین تجهیزات</h2>
-            <p class="sec-color text-justify">
-              برخی برندها با وجود آنکه در بازارصنایع نفت، گاز و پتروشیمی مورد
-              مصرف هستند و در وندورلیست ها نیز عضویت دارند فاقد نماینده رسمی
-              در ایران هستند، تجهیز فرآیند هیراد به واسطه شرکای بین المللی
-              تجاری خود و همچنین انبارداران (استوکیست ها) در سراسر ایران
-              توانمندی تامین سفارشی کالای صنعتی را در سریع ترین زمان ممکن با
-              قیمتی مناسب و با امکان ارائه گواهینامه های معتبر بازرسی دارد.
-            </p>
+      <div class="box s-button2 flex justify-evenly gap-4" onclick="expandDiv(this)">
+        <div class="servic-box w-[100%] h-[100%] justify-between items-center">
+          <div class="w-[40%] h-[100%] my-4">
+            <img class="w-full h-full object-cover rounded-[24px]" src="./image/services/image 2.svg" alt="" />
           </div>
-          <button class="p-button2 cursor-pointer  w-[225px] h-[48px]">
-            <img
-              class="ml-1"
-              src="./image/services/call-outgoing.svg"
-              alt=""
-            />ارتباط با بخش مشاوره
-          </button>
+          <div class="flex flex-col justify-between w-[60%] h-[90%] my-12 px-5 border-l-2 gap-6 border-[#7a7a7a]">
+            <div class=" ">
+              <h2 class="text-[32px]">بازرگانی و تامین تجهیزات</h2>
+              <p class="sec-color text-justify">
+                برخی برندها با وجود آنکه در بازارصنایع نفت، گاز و پتروشیمی مورد مصرف هستند و در وندورلیست ها نیز عضویت دارند فاقد نماینده رسمی در
+                ایران هستند، تجهیز فرآیند هیراد به واسطه شرکای بین المللی تجاری خود و همچنین انبارداران (استوکیست ها) در سراسر ایران توانمندی تامین
+                سفارشی کالای صنعتی را در سریع ترین زمان ممکن با قیمتی مناسب و با امکان ارائه گواهینامه های معتبر بازرسی دارد.
+              </p>
+            </div>
+            <button class="p-button2 cursor-pointer w-[225px] h-[48px]">
+              <img class="ml-1" src="./image/services/call-outgoing.svg" alt="" />ارتباط با بخش مشاوره
+            </button>
+          </div>
+        </div>
+        <div class="h-[90%] flex flex-col justify-between self-center items-center pb-1.5 min-w-[96px]">
+          <span class="sec-color text-[32px]">۰۱</span>
+          <span class="text-[20px]" style="writing-mode: vertical-rl; rotate: 180deg">بازرگانی و تامین تجهیزات</span>
         </div>
       </div>
-      <div
-        class=" h-[90%] flex flex-col justify-between self-center items-center pb-1.5 min-w-[96px]"
-      >
-        <span class="sec-color text-[32px]">۰۱</span>
-        <span
-          class="text-[20px]"
-          style="writing-mode: vertical-rl; rotate: 180deg"
-          >بازرگانی و تامین تجهیزات</span
-        >
-      </div>
-    </div> <div
-    class="box s-button2 flex justify-evenly gap-4"
-    onclick="expandDiv(this)"
-  >
-    <div class="servic-box w-[100%] h-[100%] justify-between items-center">
-      <div class="w-[40%] h-[100%] my-4">
-        <img
-          class="w-full h-full object-cover rounded-[24px]"
-          src="./image/services/image 2.svg"
-          alt=""
-        />
-      </div>
-      <div
-        class="flex flex-col justify-between w-[60%] h-[90%] my-12 px-5 border-l-2 gap-6 border-[#7a7a7a]"
-      >
-        <div class=" ">
-          <h2 class="text-[32px]">بازرگانی و تامین تجهیزات</h2>
-          <p class="sec-color text-justify">
-            برخی برندها با وجود آنکه در بازارصنایع نفت، گاز و پتروشیمی مورد
-            مصرف هستند و در وندورلیست ها نیز عضویت دارند فاقد نماینده رسمی
-            در ایران هستند، تجهیز فرآیند هیراد به واسطه شرکای بین المللی
-            تجاری خود و همچنین انبارداران (استوکیست ها) در سراسر ایران
-            توانمندی تامین سفارشی کالای صنعتی را در سریع ترین زمان ممکن با
-            قیمتی مناسب و با امکان ارائه گواهینامه های معتبر بازرسی دارد.
-          </p>
+      <div class="box s-button2 flex justify-evenly gap-4" onclick="expandDiv(this)">
+        <div class="servic-box w-[100%] h-[100%] justify-between items-center">
+          <div class="w-[40%] h-[100%] my-4">
+            <img class="w-full h-full object-cover rounded-[24px]" src="./image/services/image 2.svg" alt="" />
+          </div>
+          <div class="flex flex-col justify-between w-[60%] h-[90%] my-12 px-5 border-l-2 gap-6 border-[#7a7a7a]">
+            <div class=" ">
+              <h2 class="text-[32px]">بازرگانی و تامین تجهیزات</h2>
+              <p class="sec-color text-justify">
+                برخی برندها با وجود آنکه در بازارصنایع نفت، گاز و پتروشیمی مورد مصرف هستند و در وندورلیست ها نیز عضویت دارند فاقد نماینده رسمی در
+                ایران هستند، تجهیز فرآیند هیراد به واسطه شرکای بین المللی تجاری خود و همچنین انبارداران (استوکیست ها) در سراسر ایران توانمندی تامین
+                سفارشی کالای صنعتی را در سریع ترین زمان ممکن با قیمتی مناسب و با امکان ارائه گواهینامه های معتبر بازرسی دارد.
+              </p>
+            </div>
+            <button class="p-button2 cursor-pointer w-[225px] h-[48px]">
+              <img class="ml-1" src="./image/services/call-outgoing.svg" alt="" />ارتباط با بخش مشاوره
+            </button>
+          </div>
         </div>
-        <button class="p-button2 cursor-pointer  w-[225px] h-[48px]">
-          <img
-            class="ml-1"
-            src="./image/services/call-outgoing.svg"
-            alt=""
-          />ارتباط با بخش مشاوره
-        </button>
+        <div class="h-[90%] flex flex-col justify-between self-center items-center pb-1.5 min-w-[96px]">
+          <span class="sec-color text-[32px]">۰۱</span>
+          <span class="text-[20px]" style="writing-mode: vertical-rl; rotate: 180deg">بازرگانی و تامین تجهیزات</span>
+        </div>
+      </div>
+      <div class="box s-button2 flex justify-evenly gap-4" onclick="expandDiv(this)">
+        <div class="servic-box w-[100%] h-[100%] justify-between items-center">
+          <div class="w-[40%] h-[100%] my-4">
+            <img class="w-full h-full object-cover rounded-[24px]" src="./image/services/image 2.svg" alt="" />
+          </div>
+          <div class="flex flex-col justify-between w-[60%] h-[90%] my-12 px-5 border-l-2 gap-6 border-[#7a7a7a]">
+            <div class=" ">
+              <h2 class="text-[32px]">بازرگانی و تامین تجهیزات</h2>
+              <p class="sec-color text-justify">
+                برخی برندها با وجود آنکه در بازارصنایع نفت، گاز و پتروشیمی مورد مصرف هستند و در وندورلیست ها نیز عضویت دارند فاقد نماینده رسمی در
+                ایران هستند، تجهیز فرآیند هیراد به واسطه شرکای بین المللی تجاری خود و همچنین انبارداران (استوکیست ها) در سراسر ایران توانمندی تامین
+                سفارشی کالای صنعتی را در سریع ترین زمان ممکن با قیمتی مناسب و با امکان ارائه گواهینامه های معتبر بازرسی دارد.
+              </p>
+            </div>
+            <button class="p-button2 cursor-pointer w-[225px] h-[48px]">
+              <img class="ml-1" src="./image/services/call-outgoing.svg" alt="" />ارتباط با بخش مشاوره
+            </button>
+          </div>
+        </div>
+        <div class="h-[90%] flex flex-col justify-between self-center items-center pb-1.5 min-w-[96px]">
+          <span class="sec-color text-[32px]">۰۱</span>
+          <span class="text-[20px]" style="writing-mode: vertical-rl; rotate: 180deg">بازرگانی و تامین تجهیزات</span>
+        </div>
+      </div>
+      <div class="box s-button2 flex justify-evenly gap-4" onclick="expandDiv(this)">
+        <div class="servic-box w-[100%] h-[100%] justify-between items-center">
+          <div class="w-[40%] h-[100%] my-4">
+            <img class="w-full h-full object-cover rounded-[24px]" src="./image/services/image 2.svg" alt="" />
+          </div>
+          <div class="flex flex-col justify-between w-[60%] h-[90%] my-12 px-5 border-l-2 gap-6 border-[#7a7a7a]">
+            <div class=" ">
+              <h2 class="text-[32px]">بازرگانی و تامین تجهیزات</h2>
+              <p class="sec-color text-justify">
+                برخی برندها با وجود آنکه در بازارصنایع نفت، گاز و پتروشیمی مورد مصرف هستند و در وندورلیست ها نیز عضویت دارند فاقد نماینده رسمی در
+                ایران هستند، تجهیز فرآیند هیراد به واسطه شرکای بین المللی تجاری خود و همچنین انبارداران (استوکیست ها) در سراسر ایران توانمندی تامین
+                سفارشی کالای صنعتی را در سریع ترین زمان ممکن با قیمتی مناسب و با امکان ارائه گواهینامه های معتبر بازرسی دارد.
+              </p>
+            </div>
+            <button class="p-button2 cursor-pointer w-[225px] h-[48px]">
+              <img class="ml-1" src="./image/services/call-outgoing.svg" alt="" />ارتباط با بخش مشاوره
+            </button>
+          </div>
+        </div>
+        <div class="h-[90%] flex flex-col justify-between self-center items-center pb-1.5 min-w-[96px]">
+          <span class="sec-color text-[32px]">۰۱</span>
+          <span class="text-[20px]" style="writing-mode: vertical-rl; rotate: 180deg">بازرگانی و تامین تجهیزات</span>
+        </div>
       </div>
     </div>
-    <div
-      class=" h-[90%] flex flex-col justify-between self-center items-center pb-1.5 min-w-[96px]"
-    >
-      <span class="sec-color text-[32px]">۰۱</span>
-      <span
-        class="text-[20px]"
-        style="writing-mode: vertical-rl; rotate: 180deg"
-        >بازرگانی و تامین تجهیزات</span
-      >
-    </div>
-  </div> <div
-  class="box s-button2 flex justify-evenly gap-4"
-  onclick="expandDiv(this)"
->
-  <div class="servic-box w-[100%] h-[100%] justify-between items-center">
-    <div class="w-[40%] h-[100%] my-4">
-      <img
-        class="w-full h-full object-cover rounded-[24px]"
-        src="./image/services/image 2.svg"
-        alt=""
-      />
-    </div>
-    <div
-      class="flex flex-col justify-between w-[60%] h-[90%] my-12 px-5 border-l-2 gap-6 border-[#7a7a7a]"
-    >
-      <div class=" ">
-        <h2 class="text-[32px]">بازرگانی و تامین تجهیزات</h2>
-        <p class="sec-color text-justify">
-          برخی برندها با وجود آنکه در بازارصنایع نفت، گاز و پتروشیمی مورد
-          مصرف هستند و در وندورلیست ها نیز عضویت دارند فاقد نماینده رسمی
-          در ایران هستند، تجهیز فرآیند هیراد به واسطه شرکای بین المللی
-          تجاری خود و همچنین انبارداران (استوکیست ها) در سراسر ایران
-          توانمندی تامین سفارشی کالای صنعتی را در سریع ترین زمان ممکن با
-          قیمتی مناسب و با امکان ارائه گواهینامه های معتبر بازرسی دارد.
-        </p>
-      </div>
-      <button class="p-button2 cursor-pointer  w-[225px] h-[48px]">
-        <img
-          class="ml-1"
-          src="./image/services/call-outgoing.svg"
-          alt=""
-        />ارتباط با بخش مشاوره
-      </button>
-    </div>
-  </div>
-  <div
-    class=" h-[90%] flex flex-col justify-between self-center items-center pb-1.5 min-w-[96px]"
-  >
-    <span class="sec-color text-[32px]">۰۱</span>
-    <span
-      class="text-[20px]"
-      style="writing-mode: vertical-rl; rotate: 180deg"
-      >بازرگانی و تامین تجهیزات</span
-    >
-  </div>
-</div> <div
-class="box s-button2 flex justify-evenly gap-4"
-onclick="expandDiv(this)"
->
-<div class="servic-box w-[100%] h-[100%] justify-between items-center">
-  <div class="w-[40%] h-[100%] my-4">
-    <img
-      class="w-full h-full object-cover rounded-[24px]"
-      src="./image/services/image 2.svg"
-      alt=""
-    />
-  </div>
-  <div
-    class="flex flex-col justify-between w-[60%] h-[90%] my-12 px-5 border-l-2 gap-6 border-[#7a7a7a]"
-  >
-    <div class=" ">
-      <h2 class="text-[32px]">بازرگانی و تامین تجهیزات</h2>
-      <p class="sec-color text-justify">
-        برخی برندها با وجود آنکه در بازارصنایع نفت، گاز و پتروشیمی مورد
-        مصرف هستند و در وندورلیست ها نیز عضویت دارند فاقد نماینده رسمی
-        در ایران هستند، تجهیز فرآیند هیراد به واسطه شرکای بین المللی
-        تجاری خود و همچنین انبارداران (استوکیست ها) در سراسر ایران
-        توانمندی تامین سفارشی کالای صنعتی را در سریع ترین زمان ممکن با
-        قیمتی مناسب و با امکان ارائه گواهینامه های معتبر بازرسی دارد.
+    <!-------------------- end box section----------------- -->
+    <!-------------------- start s-gallery section----------------- -->
+
+    <div id="s-gallery" class="w-[80%] my-16">
+      <h2 class="text-[36px] font-[700]">تامین تجهیزات صنعتی پروژه های خطوط لوله نفت و گاز</h2>
+      <p class="text-[20px] font-[400] text-justify">
+        مجموعه تجهیز فرآیند هیراد با سابقه طولانی حضور در صنعت یکی از بزرگترین و کامل ترین تامین کنندگان کالاهای مورد نیاز در صنایع حفاری، نفت و گاز،
+        پتروشیمی و همچنین صنایع فولاد و معدن و پروژه های نیروگاهی است. ساختن بنای محکمی از اعتماد بین شرکت های طرف قرارداد ما نه تنها دسترسی چشمگیری
+        به منابع مهم و اصلی تجهیزات و کالاهای تخصصی ما فراهم کرده است بلکه افق دیدی باز در برابر ما گشوده بطوریکه هر لحظه در تقویم تجاری جمهوری اسلامی
+        ایران به محکم تر کردن روابط خود با منابع سابق و ایجاد روابط با منابع نو و قابل اعتماد دیگری پرداخته و به فهرست همکاران خود افزوده است. ایجاد
+        شبکه ای چنین قوی و همچنان گسترده شونده بین کارفرمایان و مشتریان و سازندگان و تامین کنندگان این توانایی منحصر به فرد را برای ما به ارمغان آورده
+        که پاسخگوی نیاز بخش تدارک پروژه های شما (Procurement) در سریع ترین زمان ممکن و با بهترین قیمت باشیم.
       </p>
     </div>
-    <button class="p-button2 cursor-pointer  w-[225px] h-[48px]">
-      <img
-        class="ml-1"
-        src="./image/services/call-outgoing.svg"
-        alt=""
-      />ارتباط با بخش مشاوره
-    </button>
-  </div>
-</div>
-<div
-  class=" h-[90%] flex flex-col justify-between self-center items-center pb-1.5 min-w-[96px]"
->
-  <span class="sec-color text-[32px]">۰۱</span>
-  <span
-    class="text-[20px]"
-    style="writing-mode: vertical-rl; rotate: 180deg"
-    >بازرگانی و تامین تجهیزات</span
-  >
-</div>
-</div>
-    </div>
 
-    <br />
-    <br /><br /><br />
+    <div>
+      <video id="s-gallery-video" src="" class="w-80% h-auto" poster="./image/services/Video.svg"></video>
+    </div>
+    <!-------------------- end s-gallery section----------------- -->
+
+    <div class="w-[80%] h-auto my-16">
+      <h2 class="font-[700] text-[36px]">تامین تجهیزات صنعتی پروژه های خطوط لوله نفت و گاز</h2>
+      <p class="font-[400] text-[20px] text-justify">
+        برای معرفی تجهیزات نفت، گاز و پتروشیمی ابتدا نیاز است اطلاعات مختصری راجع به تاریخچه این صنعت داشته باشیم. کلمه‌ پتروشیمی در اصل ترکیبی از دو
+        واژه “پترول” و “شیمی” است که معنای لغوی این عبارت تبدیل فرآورده‌های نفت خام یا گاز طبیعی به محصولات مصرفی می‌باشد. فرآورده‌‌های نفتی امروزه
+        علاوه بر استفاده‌های قبلی خود در زمینه‌هایی مانند سوخت وسائل نقلیه، روغن موتور و سایر موارد در تولید بسیاری دیگر از قطعات مورد نیاز ساخت
+        خودروها، نقش مهمی دارند. همچنین از فراورده‌های نفتی برای تامین سوخت موشک‌های هدایت شونده، سفینه‌های ماهواره‌بر و گاها در ساخت قطعات داخلی
+        آن‌ها به‌کار می‌رود. برای استفاده از فراورده‌ها نیاز است که تجهیزات نفت و گاز مخصوص این حوزه به‌کار‌گیری شود.
+      </p>
+    </div>
+    <!-- start footer section -------------------------------------------------->
+    <section id="footer" class="s-button2 w-full flex justify-between items-center my-5">
+      <div class="mr-12">
+        <img src="./image/footer/hirad-Logo 1.png" alt="" />
+      </div>
+
+      <div class="grid grid-cols-3 grid-rows-3 gap-8">
+        <div class="flex justify-start items-center gap-1">
+          <img src="./image/footer/arrow-left.svg" alt="" />
+          <p>خانه</p>
+        </div>
+        <div class="flex justify-start items-center gap-1">
+          <img src="./image/footer/arrow-left.svg" alt="" />
+          <p>استانداردها</p>
+        </div>
+        <div class="flex justify-start items-center gap-1">
+          <img src="./image/footer/arrow-left.svg" alt="" />
+          <p>تماس با ما</p>
+        </div>
+        <div class="flex justify-start items-center gap-1">
+          <img src="./image/footer/arrow-left.svg" alt="" />
+          <p>خدمات شرکت</p>
+        </div>
+        <div class="flex justify-start items-center gap-1">
+          <img src="./image/footer/arrow-left.svg" alt="" />
+          <p>درباره ما</p>
+        </div>
+        <div class="flex justify-start items-cente gap-1r">
+          <img src="./image/footer/arrow-left.svg" alt="" />
+          <p>محصولات</p>
+        </div>
+        <div class="flex justify-start items-center gap-1">
+          <img src="./image/footer/arrow-left.svg" alt="" />
+          <p>بلاگ</p>
+        </div>
+      </div>
+
+      <div class="flex flex-col flex-nowrap w-[546px] h-[200px] gap-8 my-2.5">
+        <div class="flex justify-start items-center gap-1.5">
+          <img src="./image/footer/location.svg" alt="" />
+          <p>تــهـران، خـیــابــان ستـارخــان خـیابان نیایش کوچـه موثق نـــژاد پـلـاک 1 واحــد یک</p>
+        </div>
+        <div class="flex justify-start items-center gap-1.5">
+          <img src="./image/footer/call-calling.svg" alt="" />
+          <p>66420839 (21) 98+ - 66429816(21) 98+</p>
+        </div>
+        <div class="flex justify-start items-center gap-1.5">
+          <img src="./image/footer/whatsapp.svg" alt="" />
+          <p>09352557163 / 0912-9333608</p>
+        </div>
+        <div class="flex justify-start items-center gap-1.5">
+          <img src="./image/footer/sms.svg" alt="" />
+          <p>info@Hiradepc.ir / Hiradepc@gmail.com</p>
+        </div>
+      </div>
+    </section>
+    <!-- end footer section -------------------------------------------------->
+
+    <p>تمامی حقوق این وب سایت متعلق به شرکت تجهیز فرآیند هیراد می‌باشد.   ۱۴۰۳ – ۱۳۹۴</p>
+
     <script src="./js/js-start.js"></script>
   </body>
 </html>

@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./src/output.css" />
+    <link rel="stylesheet" href="./css/style.css" />
+    <title>تماس با ما</title>
+  </head>
+  <body class="bg-[#141414] flex flex-col items-center justify-center">
+    <!-------------------- start Header Section -------------------->
+
+    <header class="flex justify-between w-[100%] pt-[30px] px-[100px] items-center rounded-[40%] top-0 sticky z-50">
+      <span class="container-1 rounded-[24px] w-[80px] h-[80px] flex items-center justify-center"><img src="./image/Header/Logo1.svg" alt="" /></span>
+      <div class="w-[60%] h-[59px] bg-transparent z-[-1] relative">
+        <section id="nav-bar" class="w-[100%] h-[59px] flex justify-around items-center text-base text-center font-[300] container-1 rounded-[24px]">
+          <span class="max-w-[93px] h-[58px] leading-[58px]"><a href="" class="font-[700] text-base">خانه</a></span>
+          <span class="max-w-[93px] h-[58px] leading-[58px]"><a href="" class="font-[700] text-base">خدمات شرکت</a></span>
+          <span class="max-w-[93px] h-[58px] leading-[58px]"><a href="" class="font-[700] text-base">بلاگ</a></span>
+          <span class="max-w-[93px] h-[58px] leading-[58px]"><a href="" class="font-[700] text-base">درباره ما</a></span>
+          <span class="max-w-[93px] h-[58px] leading-[58px]"><a href="" class="font-[700] text-base">استانداردها</a></span>
+          <span class="max-w-[93px] h-[58px] leading-[58px]"><a href="" class="font-[700] text-base">محصولات</a></span>
+          <span class="max-w-[93px] h-[58px] leading-[58px]"><a href="" class="font-[700] text-base">تماس با ما</a></span>
+        </section>
+        <div
+          id="nav-index"
+          class="max-w-[70px] h-[14px] rounded-b-[12px] px-[30px] bg-[#832339] absolute z-[-1] right-[2%] bottom-[-7px] nav-index transition-all duration-300 ease-in-out"
+        ></div>
+      </div>
+
+      <div class="flex justify-start items-center gap-1">
+        <img src="./image/Header/search-normal.svg" class="header-search" alt="search" />
+        <button class="primary-button cursor-pointer"><img class="ml-1" src="./image/Header/login.svg" alt="" />ثبت نام / ورود</button>
+      </div>
+    </header>
+    <!-------------------- end Header Section ---------------------->
+    <!-------------------- start contant form Section ---------------------->
+
+    <section id="contact" class="contact-bg w-full h-auto flex flex-col items-center my-12">
+      <div class="w-[60%] h-auto flex flex-col items-center justify-center">
+        <h1 class="font-[700] text-[48px]">تماس با هیراد</h1>
+        <p class="text-[16px] sec-color text-center">
+          اینجا هستیم که کمک کنیم!<br />سوالی درباره محصولات، خدمات، یا سفارش‌ها دارید؟ یا دنبال مشاوره تخصصی هستید؟<br />با بخش مشاوره، فروش، یا حتی
+          مدیریت می‌تونید راحت در تماس باشید. منتظر شنیدن از شما هستیم!
+        </p>
+        <div class="form-container w-[100%]">
+          <form>
+            <div class="form-grid">
+              <div class="form-group w-[50%]">
+                <label for="name">نام و نام خانوادگی</label>
+                <input
+                  type="text"
+                  id="name"
+                  name="name"
+                  placeholder="نام و نام خانوادگی"
+                  class="s-button2 rounded-[18px] text-[#ffffff] text-right"
+                />
+              </div>
+              <div class="form-group w-[50%]">
+                <label for="lastname">انتخاب بخش‌*</label>
+                <input
+                  type="text"
+                  id="lastname"
+                  name="lastname"
+                  placeholder="انتخاب بخش‌"
+                  class="s-button2 rounded-[18px] text-[#ffffff] text-right"
+                />
+              </div>
+              <div class="form-group w-[50%]">
+                <label for="email">ایمیل</label>
+                <input
+                  type="email"
+                  id="email"
+                  name="email"
+                  placeholder="Example@exampl.com"
+                  class="s-button2 rounded-[18px] text-[#ffffff] text-right"
+                />
+              </div>
+              <div class="form-group w-[50%]">
+                <label for="phone">شماره تماس</label>
+                <input type="tel" id="phone" name="phone" placeholder="+98 912 000 0000" class="s-button2 rounded-[18px] text-[#ffffff] text-right" />
+              </div>
+            </div>
+            <div class="form-group w-[100%]">
+              <label for="message">پیام*</label>
+              <textarea
+                id="message"
+                name="message"
+                placeholder="پیام خود را بنویسید ..."
+                class="w-[100%] h-[142px] s-button2 rounded-[18px] text-[#ffffff] text-right"
+              ></textarea>
+            </div>
+            <button type="submit" class="primary-button w-[100%] h-[48px]">ارسال پیام</button>
+          </form>
+        </div>
+      </div>
+    </section>
+    <!-------------------- start contant form Section ---------------------->
+  </body>
+</html>
