@@ -73,18 +73,6 @@
   animation: rotate 3s linear infinite;
 }
 
-@keyframes rotate {
-  to {
-    --angle: 360deg;
-  }
-}
-
-@property --angle {
-  syntax: "<angle>";
-  initial-value: 0deg;
-  inherits: false;
-}
-
 .s-button {
   cursor: pointer;
   color: #d4d4d4;
@@ -295,7 +283,38 @@ input[type="radio"]:checked + .tab .tab-content {
   padding: 18px;
 }
 
-
-
 /*------------------ start services custom style ---------------------*/
 
+.wrapper {
+  width: 80%;
+  height: 552px;
+  display: flex;
+  border-radius: 24px;
+  overflow: hidden;
+  gap: 4px;
+}
+.box {
+  margin-left: 4px;
+  height: 100%;
+  transition: all 0.5s ease-in-out;
+  cursor: pointer;
+  border-radius: 24px;
+  min-width: 120px;
+  width: fit-content;
+}
+.box:last-child {
+  border-left: none;
+}
+
+.servic-box {
+  display: none;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 0.5s ease;
+}
+
+.servic-box.show {
+  display: block;
+  opacity: 1;
+  transform: translateY(0);
+}
