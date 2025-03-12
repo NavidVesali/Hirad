@@ -107,3 +107,7 @@ document.addEventListener("DOMContentLoaded", () => {
     expandDiv(allServiceBoxes[0].parentElement);
   }
 });
+
+function onClick() {
+  window.location.href = "/index.html";
+}

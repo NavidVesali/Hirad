@@ -1,0 +1,57 @@
+input {
+    width: 100%;
+    padding: 18px;
+    height: 48px;
+    margin: 10px 0;
+    background-color: rgba(255, 255, 255, 0.04);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 18px;
+    font-size: 16px;
+}
+
+input:focus {
+    border-color: #832339;
+    outline: none;
+}
+
+input::placeholder {
+    color: #AAAAAA;
+    font-size: 14px;
+}
+
+.password-container {
+    position: relative;
+    width: 100%;
+}
+
+.password-container input {
+    padding-right: 40px;
+    width: 100%;
+}
+
+.password-container .toggle-password {
+    position: absolute;
+    top: 50%;
+    right: 15px;
+    transform: translateY(-50%);
+    cursor: pointer;
+}
+textarea {
+    width: 100%;
+    padding: 18px;
+    margin: 10px 0;
+    background-color: rgba(255, 255, 255, 0.04);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 18px;
+    font-size: 16px;
+}
+
+textarea:focus {
+    border-color: #832339;
+    outline: none;
+}
+
+textarea::placeholder {
+    color: #AAAAAA;
+    font-size: 14px;
+}

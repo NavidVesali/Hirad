@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./src/output.css" />
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
+  <body class="bg-[#141414] flex flex-col items-center justify-center">
+    <!-------------------- start Header Section -------------------->
+
+    <header
+      class="flex justify-between w-[100%] pt-[30px] px-[100px] items-center top-0 sticky z-50"
+      style="
+        background-image: linear-gradient(to bottom, #141414 40%, transparent);
+      "
+    >
+      <span
+        class="container-1 rounded-[24px] w-[80px] h-[80px] flex items-center justify-center"
+        ><img src="./image/Header/Logo1.svg" alt=""
+      /></span>
+      <div class="w-[60%] h-[59px] bg-transparent z-[-1] relative">
+        <section
+          id="nav-bar"
+          class="w-[100%] h-[59px] flex justify-around items-center text-base text-center font-[300] container-1 rounded-[24px]"
+        >
+          <span class="max-w-[93px] h-[58px] leading-[58px]"
+            ><a href="" class="font-[700] text-base">خانه</a></span
+          >
+          <span class="max-w-[93px] h-[58px] leading-[58px]"
+            ><a href="" class="font-[700] text-base">خدمات شرکت</a></span
+          >
+          <span class="max-w-[93px] h-[58px] leading-[58px]"
+            ><a href="./about.html" class="font-[700] text-base"
+              >درباره ما</a
+            ></span
+          >
+
+          <span class="max-w-[93px] h-[58px] leading-[58px]"
+            ><a href="" class="font-[700] text-base">محصولات</a></span
+          >
+          <span class="max-w-[93px] h-[58px] leading-[58px]"
+            ><a href="" class="font-[700] text-base">تماس با ما</a></span
+          >
+        </section>
+        <div
+          id="nav-index"
+          class="max-w-[70px] h-[14px] rounded-b-[12px] px-[30px] bg-[#832339] absolute z-[-1] right-[2%] bottom-[-7px] nav-index transition-all duration-300 ease-in-out"
+        ></div>
+      </div>
+
+      <div class="flex justify-start items-center gap-1">
+        <img
+          src="./image/Header/search-normal.svg"
+          class="header-search"
+          alt="search"
+        />
+        <button class="primary-button cursor-pointer">
+          <img class="ml-1" src="./image/Header/login.svg" alt="" />ثبت نام /
+          ورود
+        </button>
+      </div>
+    </header>
+    <!-------------------- end Header Section ---------------------->
+    <script src="./js/js-start.js"></script>
+  </body>
+</html>

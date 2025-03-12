@@ -272,6 +272,9 @@ input[type="radio"]:checked + .tab .tab-content {
   text-align: center;
   line-height: 58px;
 }
+.hero-item {
+  text-align: center;
+}
 .about-2-icon {
   background-color: #272727;
   border-radius: 50%;
@@ -319,12 +322,10 @@ input[type="radio"]:checked + .tab .tab-content {
   transform: translateY(0);
 }
 
-
-
 /*                  contant style             */
 
 .contact-bg {
-  background-image: url('../image/contant/background.png'); /* Ensure the path is correct */
+  background-image: url("../image/contant/background.png"); /* Ensure the path is correct */
   background-size: cover; /* Adjust as needed */
   background-position: center; /* Adjust as needed */
   background-repeat: no-repeat; /* Adjust as needed */
