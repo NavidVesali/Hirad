@@ -92,8 +92,8 @@
 }
 .s-button2 {
   color: #d4d4d4;
-  padding: 12px;
-  border: 1px solid #0000;
+  /* padding: 12px; */
+  /* border: 1px solid #0000; */
   background: linear-gradient(#272727, #272727) padding-box,
     linear-gradient(var(--angle), rgba(255, 106, 0, 0), #3c3c3c) border-box;
   box-shadow: inset 0px 4px 15px 2px rgba(255, 255, 255, 0.08);
@@ -204,7 +204,7 @@
 .tabs::before {
   content: "";
   position: absolute;
-  top: 53px;
+  top: 44px;
   bottom: 38px;
   right: 20px;
   width: 1px;

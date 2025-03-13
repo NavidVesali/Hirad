@@ -5,24 +5,47 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./src/output.css" />
     <link rel="stylesheet" href="./css/style.css" />
-    <title>تماس با ما</title>
+    <title>محصولات</title>
   </head>
   <body class="bg-[#141414] flex flex-col items-center justify-center">
     <!-------------------- start Header Section -------------------->
 
-    <header class="flex justify-between w-[100%] pt-[30px] px-[100px] items-center top-0 sticky z-50"
-    style="background-image: linear-gradient(to bottom ,#141414 40% ,transparent );"
+    <header
+      class="flex justify-between w-[100%] pt-[30px] px-[100px] items-center top-0 sticky z-50"
+      style="
+        background-image: linear-gradient(to bottom, #141414 40%, transparent);
+      "
     >
-      <span class="container-1 rounded-[24px] w-[80px] h-[80px] flex items-center justify-center"><img src="./image/Header/Logo1.svg" alt="" /></span>
+      <span
+        class="container-1 rounded-[24px] w-[80px] h-[80px] flex items-center justify-center"
+        ><img src="./image/Header/Logo1.svg" alt=""
+      /></span>
       <div class="w-[60%] h-[59px] bg-transparent z-[-1] relative">
-        <section id="nav-bar" class="w-[100%] h-[59px] flex justify-around items-center text-base text-center font-[300] container-1 rounded-[24px]">
-          <span class="max-w-[93px] h-[58px] leading-[58px]"><a href="" class="font-[700] text-base">خانه</a></span>
-          <span class="max-w-[93px] h-[58px] leading-[58px]"><a href="" class="font-[700] text-base">خدمات شرکت</a></span>
-          <span class="max-w-[93px] h-[58px] leading-[58px]"><a href="" class="font-[700] text-base">بلاگ</a></span>
-          <span class="max-w-[93px] h-[58px] leading-[58px]"><a href="" class="font-[700] text-base">درباره ما</a></span>
-          <span class="max-w-[93px] h-[58px] leading-[58px]"><a href="" class="font-[700] text-base">استانداردها</a></span>
-          <span class="max-w-[93px] h-[58px] leading-[58px]"><a href="" class="font-[700] text-base">محصولات</a></span>
-          <span class="max-w-[93px] h-[58px] leading-[58px]"><a href="" class="font-[700] text-base">تماس با ما</a></span>
+        <section
+          id="nav-bar"
+          class="w-[100%] h-[59px] flex justify-around items-center text-base text-center font-[300] container-1 rounded-[24px]"
+        >
+          <span class="max-w-[93px] h-[58px] leading-[58px]"
+            ><a href="" class="font-[700] text-base">خانه</a></span
+          >
+          <span class="max-w-[93px] h-[58px] leading-[58px]"
+            ><a href="" class="font-[700] text-base">خدمات شرکت</a></span
+          >
+          <span class="max-w-[93px] h-[58px] leading-[58px]"
+            ><a href="" class="font-[700] text-base">بلاگ</a></span
+          >
+          <span class="max-w-[93px] h-[58px] leading-[58px]"
+            ><a href="" class="font-[700] text-base">درباره ما</a></span
+          >
+          <span class="max-w-[93px] h-[58px] leading-[58px]"
+            ><a href="" class="font-[700] text-base">استانداردها</a></span
+          >
+          <span class="max-w-[93px] h-[58px] leading-[58px]"
+            ><a href="" class="font-[700] text-base">محصولات</a></span
+          >
+          <span class="max-w-[93px] h-[58px] leading-[58px]"
+            ><a href="" class="font-[700] text-base">تماس با ما</a></span
+          >
         </section>
         <div
           id="nav-index"
@@ -31,8 +54,15 @@
       </div>
 
       <div class="flex justify-start items-center gap-1">
-        <img src="./image/Header/search-normal.svg" class="header-search" alt="search" />
-        <button class="primary-button cursor-pointer"><img class="ml-1" src="./image/Header/login.svg" alt="" />ثبت نام / ورود</button>
+        <img
+          src="./image/Header/search-normal.svg"
+          class="header-search"
+          alt="search"
+        />
+        <button class="primary-button cursor-pointer">
+          <img class="ml-1" src="./image/Header/login.svg" alt="" />ثبت نام /
+          ورود
+        </button>
       </div>
     </header>
     <!-------------------- end Header Section ---------------------->
@@ -40,8 +70,170 @@
     <div id="contact" class="w-[80%] h-auto flex flex-col my-16 gap-3.5">
       <div class="flex justify-start items-center gap-2 p-3.5">
         <img src="./image/services/menu.svg" alt="" />
-        <p>صفحه اصلی / درباره ما</p>
+        <p>صفحه اصلی / محصولات</p>
       </div>
-</div>
+    </div>
+
+    <div class="w-[80%] h-auto flex justify-center items-center my-10 gap-[30px]">
+      <div class="tabs p-4 w-[15%] h-auto">
+        <div>
+          <input type="radio" id="tab1" name="tabs" checked />
+          <label class="tab" for="tab1">
+            <div class="dot"></div>
+            <div class="tab-content">شیرآلات صنعتی</div>
+          </label>
+        </div>
+        <div>
+          <input type="radio" id="tab2" name="tabs" />
+          <label class="tab" for="tab2">
+            <div class="dot"></div>
+            <div class="tab-content">اتصلات</div>
+          </label>
+        </div>
+        <div>
+          <input type="radio" id="tab3" name="tabs" />
+          <label class="tab" for="tab3">
+            <div class="dot"></div>
+            <div class="tab-content">لوله تیوب</div>
+          </label>
+        </div>
+        <div>
+          <input type="radio" id="tab4" name="tabs" />
+          <label class="tab" for="tab4">
+            <div class="dot"></div>
+            <div class="tab-content">فلنج</div>
+          </label>
+        </div>
+        <div>
+          <input type="radio" id="tab5" name="tabs" />
+          <label class="tab" for="tab5">
+            <div class="dot"></div>
+            <div class="tab-content">ابزار دقیق</div>
+          </label>
+        </div>
+      </div>
+  
+      <div class="w-[35%] h-auto"> 
+      <img src="./image/Main-1.png" alt="" class="">
+      </div>
+  
+      <div class="flex flex-col gap-7 w-[45%]">
+        <h2 class="text-[36px] font-[700]">شـیرآلـات صـنعتی</h2>
+        <p class="w-[100%] h-auto font-[400] text-[18px] text text-justify">
+          واردات و تامین انواع مختلف شیرالات صنعتی در متریال های کربـن استیل ،
+          استنلس استیل ، فولاد های آلیاژی ( Alloy Steel ) ، چـدنی، بر اساس
+          استاندارد متریال : ASME/API/NACE/DIN، شیر فلکه تـوپی ،شیر کشویـی ،
+          شیر سـوزنی ، شیر یکطرفه (خـودکار) ، شیر نیدل شیر پـروانه ای ، شیر
+          پـلاگ، ، شیر اسـتوانه ای، شیر فـشار شکن ، شیر اطمـینان ، شیر
+          دیـافـراگمی بر اسـاس انـواع اتـصـال دو سـر : فـلـنـجـی RF/RTJ ،
+          جـوشی ، سـاکت، دنده
+        </p>
+        <button class="primary-button w-[250px]">مشاهده بیشتر</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="w-[80%] h-auto grid grid-cols-3 gap-2.5 mb-16 " >
+    <div class="w-[100%] s-button2 h-auto rounded-[32px]">
+      <img src="./image/product-list/image.svg" alt="" class="pb-[5px]" >
+      <div class="p-[20px]">
+        <h3 class="tex-[20px] text-right py-[5px]">گیت ولو استنلس استیل NICO</h3>
+      <p class="text-[16px] text-right py-[5px]">اندازه:</p>
+      <p class="text-left py-[5px]">1/2" ~ 36"</p>
+      <hr style="color: rgba(255, 255, 255, 0.1);">
+      <p class="py-[5px]">رتبه بندی‌های اسمی:</p>
+      <div>
+        <ul class="list-disc list-inside p-[5px] " style="direction: ltr;">
+          <li>ASME: 150# ~ 1500#</li>
+          <li>DIN: PN10 ~ PN160</li>
+          <li>JIS: 10K ~ 63K</li>
+        </ul>
+      </div>
+      <div class="w-[100%] h-auto  flex justify-between items-center gap-3 ">
+        <button class="p-button2 cursor-pointer w-[50%] h-[48px]">مشاوره&nbsp;&nbsp; 
+          <img class="ml-1" src="./image/services/call-outgoing.svg" alt="" /></button>
+        <button class="s-button rounded-[20px] cursor-pointer w-[50%] h-[48px]">اطلاعات بیشتر
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M14.9998 19.92L8.47984 13.4C7.70984 12.63 7.70984 11.37 8.47984 10.6L14.9998 4.07996" stroke="#D4D4D4" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+            
+            </button>
+      </div>
+      </div>
+    </div>
+ 
+  
+  </div>
+
+    <!-- -------------start footer section ------------------------->
+    <section
+    id="footer"
+    class="s-button2 w-full flex justify-between items-center my-5"
+  >
+    <div class="mr-12">
+      <img src="./image/footer/hirad-Logo 1.png" alt="" />
+    </div>
+  
+    <div class="grid grid-cols-3 grid-rows-3 gap-8">
+      <div class="flex justify-start items-center gap-1">
+        <img src="./image/footer/arrow-left.svg" alt="" />
+        <p>خانه</p>
+      </div>
+      <div class="flex justify-start items-center gap-1">
+        <img src="./image/footer/arrow-left.svg" alt="" />
+        <p>استانداردها</p>
+      </div>
+      <div class="flex justify-start items-center gap-1">
+        <img src="./image/footer/arrow-left.svg" alt="" />
+        <p>تماس با ما</p>
+      </div>
+      <div class="flex justify-start items-center gap-1">
+        <img src="./image/footer/arrow-left.svg" alt="" />
+        <p>خدمات شرکت</p>
+      </div>
+      <div class="flex justify-start items-center gap-1">
+        <img src="./image/footer/arrow-left.svg" alt="" />
+        <p>درباره ما</p>
+      </div>
+      <div class="flex justify-start items-cente gap-1r">
+        <img src="./image/footer/arrow-left.svg" alt="" />
+        <p>محصولات</p>
+      </div>
+      <div class="flex justify-start items-center gap-1">
+        <img src="./image/footer/arrow-left.svg" alt="" />
+        <p>بلاگ</p>
+      </div>
+    </div>
+  
+    <div class="flex flex-col flex-nowrap w-[546px] h-[200px] gap-8 my-2.5">
+      <div class="flex justify-start items-center gap-1.5">
+        <img src="./image/footer/location.svg" alt="" />
+        <p>
+          تــهـران، خـیــابــان ستـارخــان خـیابان نیایش کوچـه موثق نـــژاد
+          پـلـاک 1 واحــد یک
+        </p>
+      </div>
+      <div class="flex justify-start items-center gap-1.5">
+        <img src="./image/footer/call-calling.svg" alt="" />
+        <p>66420839 (21) 98+ - 66429816(21) 98+</p>
+      </div>
+      <div class="flex justify-start items-center gap-1.5">
+        <img src="./image/footer/whatsapp.svg" alt="" />
+        <p>09352557163 / 0912-9333608</p>
+      </div>
+      <div class="flex justify-start items-center gap-1.5">
+        <img src="./image/footer/sms.svg" alt="" />
+        <p>info@Hiradepc.ir / Hiradepc@gmail.com</p>
+      </div>
+    </div>
+  </section>
+  <!-- end footer section -------------------------------------------------->
+  
+  <p>
+    تمامی حقوق این وب سایت متعلق به شرکت تجهیز فرآیند هیراد می‌باشد.   ۱۴۰۳ –
+    ۱۳۹۴
+  </p>
+
+    <script src="./js/js-start.js"></script>
   </body>
 </html>
