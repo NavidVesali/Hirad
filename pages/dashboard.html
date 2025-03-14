@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>پنل کاربری هیراد</title>
+    <link rel="stylesheet" href="../css/buttons.css">
+    <link rel="stylesheet" href="../css/inputs.css">
+    <link rel="stylesheet" href="../css/containers.css">
+    <link rel="stylesheet" href="../css/text-styles.css">
+    <link rel="stylesheet" href="../css/snackbar.css">
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="../css/sidebar.css">
+    <link rel="stylesheet" href="../css/dashboard-header.css">
+    <link rel="stylesheet" href="../css/dashboard-content.css">
+</head>
+
+<body style="align-items:stretch;">
+    <!-- Sidebar from js class -->
+    <div class="sidebar">
+        <hirad-sidebar></hirad-sidebar>
+    </div>
+    <div class="content-container">
+        <!-- Dashboard Header -->
+        <div class="header">
+            <div class="user-profile">
+                <!-- <img src="/api/placeholder/35/35" alt="User"> -->
+                <span>ادمین</span>
+            </div>
+            <div style="display: flex;
+            flex-direction: row;">
+                <div class="notification-icon">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path opacity="0.4" d="M19.3399 14.4899L18.3399 12.8299C18.1299 12.4599 17.9399 11.7599 17.9399 11.3499V8.8199C17.9399 5.5599 15.2899 2.8999 12.0199 2.8999C8.74994 2.8999 6.09994 5.5599 6.09994 8.8199V11.3499C6.09994 11.7599 5.90994 12.4599 5.69994 12.8199L4.68994 14.4899C4.28994 15.1599 4.19994 15.8999 4.44994 16.5799C4.68994 17.2499 5.25994 17.7699 5.99994 18.0199C7.93994 18.6799 9.97994 18.9999 12.0199 18.9999C14.0599 18.9999 16.0999 18.6799 18.0399 18.0299C18.7399 17.7999 19.2799 17.2699 19.5399 16.5799C19.7999 15.8899 19.7299 15.1299 19.3399 14.4899Z" fill="#292D32"/>
+                    <path d="M14.2508 3.32C13.5608 3.05 12.8108 2.9 12.0208 2.9C11.2408 2.9 10.4908 3.04 9.80078 3.32C10.2308 2.51 11.0808 2 12.0208 2C12.9708 2 13.8108 2.51 14.2508 3.32Z" fill="#292D32"/>
+                    <path d="M14.8297 20.01C14.4097 21.17 13.2997 22 11.9997 22C11.2097 22 10.4297 21.68 9.87969 21.11C9.55969 20.81 9.31969 20.41 9.17969 20C9.30969 20.02 9.43969 20.03 9.57969 20.05C9.80969 20.08 10.0497 20.11 10.2897 20.13C10.8597 20.18 11.4397 20.21 12.0197 20.21C12.5897 20.21 13.1597 20.18 13.7197 20.13C13.9297 20.11 14.1397 20.1 14.3397 20.07C14.4997 20.05 14.6597 20.03 14.8297 20.01Z" fill="#292D32"/>
+                    </svg>
+                    <span class="notification-badge">3</span>
+                </div>
+                <span class="notification-icon" id="log-out" style="cursor: pointer;">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path opacity="0.4" d="M9 7.2V16.79C9 20 11 22 14.2 22H16.79C19.99 22 21.99 20 21.99 16.8V7.2C22 4 20 2 16.8 2H14.2C11 2 9 4 9 7.2Z" fill="#292D32"/>
+                        <path d="M5.56945 8.12002L2.21945 11.47C1.92945 11.76 1.92945 12.24 2.21945 12.53L5.56945 15.88C5.85945 16.17 6.33945 16.17 6.62945 15.88C6.91945 15.59 6.91945 15.11 6.62945 14.82L4.55945 12.75H15.2495C15.6595 12.75 15.9995 12.41 15.9995 12C15.9995 11.59 15.6595 11.25 15.2495 11.25H4.55945L6.62945 9.18002C6.77945 9.03002 6.84945 8.84002 6.84945 8.65002C6.84945 8.46002 6.77945 8.26002 6.62945 8.12002C6.33945 7.82002 5.86945 7.82002 5.56945 8.12002Z" fill="#292D32"/>
+                        </svg>
+                </span>
+            </div>
+        </div>
+        <!-- Dashboard Contents -->s
+        <div class="content">
+            <!-- Contetnt for dashboard tab -->
+            <div id="dashboard" class="tab-content active">
+                <h2>داشبورد</h2>
+                <hr style="border: 1px solid rgba(255, 255, 255, 0.04); margin: 15px 0;">
+                <p>
+                    در این نسخه فقط تغییر صفحات، مدیریت محصولات و مدیریت کاربران سایت فعال می‌باشد. در آپدیت‌های بعدی سایر خدمات اضافه خواهد شد.
+                </p>
+            </div>
+            <!-- Contetnt for products tab -->
+            <div id="products" class="tab-content">
+                <div>
+                    <div class="sub-tabs">
+                        <div class="sub-tab active" onclick="showSubTab(0)">دسته‌بندی</div>
+                        <div class="sub-tab" onclick="showSubTab(1)">محصولات</div>
+                    </div>
+                    <!-- Sub-tab for product categories -->
+                    <div class="sub-tab-content active">
+                        <h3>افزودن دسته‌بند جدید</h3>
+                        <br></br>
+                        <form class="dashboard-form" id="cat-form">
+                            <div>
+                                <label for="cat-name">نام دسته‌بندی</label>
+                                <input type="text " id="cat-name" name="cat-name"><br><br>
+                            </div>
+                            <div class="file-drop-area" id="drop-area">
+                                <svg width="48" height="48" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path opacity="0.4" d="M20.5 10.19H17.61C15.24 10.19 13.31 8.26 13.31 5.89V3C13.31 2.45 12.86 2 12.31 2H8.07C4.99 2 2.5 4 2.5 7.57V16.43C2.5 20 4.99 22 8.07 22H15.93C19.01 22 21.5 20 21.5 16.43V11.19C21.5 10.64 21.05 10.19 20.5 10.19Z" fill="#292D32"/>
+                                    <path d="M15.7997 2.20999C15.3897 1.79999 14.6797 2.07999 14.6797 2.64999V6.13999C14.6797 7.59999 15.9197 8.80999 17.4297 8.80999C18.3797 8.81999 19.6997 8.81999 20.8297 8.81999C21.3997 8.81999 21.6997 8.14999 21.2997 7.74999C19.8597 6.29999 17.2797 3.68999 15.7997 2.20999Z" fill="#292D32"/>
+                                    <path d="M11.5295 12.47L9.52945 10.47C9.51945 10.46 9.50945 10.46 9.50945 10.45C9.44945 10.39 9.36945 10.34 9.28945 10.3C9.27945 10.3 9.27945 10.3 9.26945 10.3C9.18945 10.27 9.10945 10.26 9.02945 10.25C8.99945 10.25 8.97945 10.25 8.94945 10.25C8.88945 10.25 8.81945 10.27 8.75945 10.29C8.72945 10.3 8.70945 10.31 8.68945 10.32C8.60945 10.36 8.52945 10.4 8.46945 10.47L6.46945 12.47C6.17945 12.76 6.17945 13.24 6.46945 13.53C6.75945 13.82 7.23945 13.82 7.52945 13.53L8.24945 12.81V17C8.24945 17.41 8.58945 17.75 8.99945 17.75C9.40945 17.75 9.74945 17.41 9.74945 17V12.81L10.4695 13.53C10.6195 13.68 10.8095 13.75 10.9995 13.75C11.1895 13.75 11.3795 13.68 11.5295 13.53C11.8195 13.24 11.8195 12.76 11.5295 12.47Z" fill="#292D32"/>
+                                    </svg>
+                                <p id="file-upload-label">عکس دسته‌بندی را آپلود کنید</p>
+                                <input type="file" id="cat-image" class="file-input" />
+                                <div class="file-info" id="file-info">
+                                </div>
+                            </div>
+
+                            <div style="grid-column: 1/-1 ;">
+                                <label for="cat-dec">توضیحات دسته‌بندی</label>
+                                <textarea style="min-height: 140px;" type="text" id="cat-dec" name="cat-dec"> </textarea>
+                            </div>
+                            <button class="primary-button" type="submit" id="cat-submit" style="max-width: 300px;">ثبت دسته‌بندی</button>
+                        </form>
+                        <br></br>
+                        <table>
+                            <tr>
+                                <th>ID</th>
+                                <th>Name</th>
+                                <th>Action</th>
+                            </tr>
+                            <tr>
+                                <td>1</td>
+                                <td>Item A</td>
+                                <td><button>Edit</button></td>
+                            </tr>
+                        </table>
+                    </div>
+                    <!-- Sub-tab for products -->
+                    <div class="sub-tab-content ">
+                        <h2>Form in Tab 2</h2>
+                        <form>
+                            <label for="email ">Email:</label>
+                            <input type="email " id="email " name="email "><br><br>
+                            <input type="submit " value="Submit ">
+                        </form>
+                        <table>
+                            <tr>
+                                <th>ID</th>
+                                <th>Email</th>
+                                <th>Action</th>
+                            </tr>
+                            <tr>
+                                <td>1</td>
+                                <td>example@mail.com</td>
+                                <td><button>Delete</button></td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+
+            </div>
+            <!-- Contetnt for orders tab -->
+            <div id="orders " class="tab-content ">
+                <h2>Orders</h2>
+                <p>Track your orders here.</p>
+            </div>
+            <!-- Contetnt for customers tab -->
+            <div id="customers " class="tab-content ">
+                <h2>Customers</h2>
+                <p>View and manage customers.</p>
+            </div>
+            <!-- Contetnt for pages tab -->
+            <div id="pages " class="tab-content ">
+                <h2>pages</h2>
+                <p>Set up pages.</p>
+            </div>
+            <!-- Contetnt for analytics tab -->
+            <div id="analytics " class="tab-content ">
+                <h2>Analytics</h2>
+                <p>Analyze your business data.</p>
+            </div>
+            <!-- Contetnt for setting tab -->
+            <div id="settings " class="tab-content ">
+                <h2>Settings</h2>
+                <p>Configure system settings.</p>
+            </div>
+        </div>
+    </div>
+    <div id="snackbar"></div>
+    <script src="../js/dashboard.js "></script>
+    <script src="../js/api-handler.js"></script>
+    <script src="../js/upload-input.js"></script>
+</body>
+
+</html>

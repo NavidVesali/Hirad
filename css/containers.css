@@ -1,0 +1,25 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 400px;
+    border: 1px solid transparent;
+    border-radius: 32px;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.03) padding-box, linear-gradient(var(--angle), rgba(255, 255, 255, 0.03), #3c3c3c) border-box;
+    box-shadow: inset 0px 4px 15px 2px rgba(255, 255, 255, 0.04);
+    backdrop-filter: blur(10px);
+}
+
+.form-container {
+    opacity: 0;
+    display: none;
+}
+
+.form-container.show {
+    flex-direction: column;
+    width: 100%;
+    margin-bottom: 20px;
+    display: block;
+    opacity: 1;
+}

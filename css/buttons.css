@@ -1,0 +1,48 @@
+.primary-button {
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 12px;
+    width: 100%;
+    height: 48px;
+    border: 1px solid transparent;
+    border-radius: 20px;
+    background: linear-gradient(#511922, #511922) padding-box, linear-gradient(var(--angle), rgba(255, 106, 0, 0), #c51a42) border-box;
+    box-shadow: inset 0px 4px 15px 2px rgba(131, 35, 57, 0.7);
+}
+
+.primary-button:hover {
+    animation: rotate 3s linear infinite;
+}
+
+.s-button {
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 12px;
+    height: 48px;
+    width: 100%;
+    max-width: 182px;
+    border: 1px solid transparent;
+    border-radius: 20px;
+    background: linear-gradient(#272727, #272727) padding-box, linear-gradient(var(--angle), rgba(255, 106, 0, 0), #6c6c6c) border-box;
+    box-shadow: inset 0px 4px 15px 2px rgba(255, 255, 255, 0.08);
+}
+
+.s-button:hover {
+    animation: rotate 3s linear infinite;
+}
+
+@property --angle {
+    syntax: "<angle>";
+    initial-value: 0deg;
+    inherits: false;
+}
+
+@keyframes rotate {
+    to {
+        --angle: 360deg;
+    }
+}

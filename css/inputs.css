@@ -9,12 +9,25 @@ input {
     font-size: 16px;
 }
 
-input:focus {
+textarea {
+    width: 100%;
+    padding: 18px;
+    margin: 10px 0;
+    color: var(--text-color);
+    background-color: rgba(255, 255, 255, 0.04);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 18px;
+    font-size: 16px;
+}
+
+input:focus,
+textarea:focus {
     border-color: #832339;
     outline: none;
 }
 
-input::placeholder {
+input::placeholder,
+textarea::placeholder {
     color: #AAAAAA;
     font-size: 14px;
 }
@@ -36,22 +49,74 @@ input::placeholder {
     transform: translateY(-50%);
     cursor: pointer;
 }
-textarea {
+
+
+/* Style the drop area */
+
+.file-drop-area {
+    justify-content: center;
+    align-content: center;
     width: 100%;
-    padding: 18px;
-    margin: 10px 0;
+    padding: 20px;
+    border: 2px dashed rgba(255, 255, 255, 0.08);
+    text-align: center;
+    cursor: pointer;
+    border-radius: 24px;
+    background-color: rgba(255, 255, 255, 0.03);
+    transition: background-color 0.3s ease;
+}
+
+.file-drop-area:hover {
     background-color: rgba(255, 255, 255, 0.04);
-    border: 1px solid rgba(255, 255, 255, 0.08);
-    border-radius: 18px;
+    border: 2px dashed var(--primary-color);
+}
+
+
+/* Hide the file input */
+
+.file-input {
+    display: none;
+}
+
+
+/* Style the drop area text */
+
+.file-drop-area p {
+    margin: 0;
+    direction: ltr;
+    white-space: normal;
+    word-wrap: break-word;
+    max-width: 40vw;
     font-size: 16px;
-}
-
-textarea:focus {
-    border-color: #832339;
-    outline: none;
-}
-
-textarea::placeholder {
     color: #AAAAAA;
+}
+
+.file-drop-area path {
+    fill: var(--text-color);
+}
+
+
+/* Style the file information display */
+
+.file-info {
+    margin-top: 15px;
+    display: none;
     font-size: 14px;
+    color: #333;
+    text-align: left;
+}
+
+.file-info .file-name {
+    display: inline-block;
+    margin-left: 10px;
+    font-weight: bold;
+}
+
+.file-info .file-icon {
+    width: 20px;
+    height: 20px;
+    display: inline-block;
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin-right: 10px;
 }

@@ -716,9 +716,6 @@
   .mx-4 {
     margin-inline: calc(var(--spacing) * 4);
   }
-  .my-2 {
-    margin-block: calc(var(--spacing) * 2);
-  }
   .my-2\.5 {
     margin-block: calc(var(--spacing) * 2.5);
   }
@@ -908,17 +905,17 @@
   .min-h-screen {
     min-height: 100vh;
   }
-  .w-1 {
-    width: calc(var(--spacing) * 1);
-  }
   .w-1\/2 {
     width: calc(1/2 * 100%);
   }
-  .w-80 {
-    width: calc(var(--spacing) * 80);
+  .w-\[100\%\] {
+    width: 100%;
   }
-  .w-\[8\] {
-    width: 8;
+  .w-\[15\%\] {
+    width: 15%;
+  }
+  .w-\[20\%\] {
+    width: 20%;
   }
   .w-\[35\%\] {
     width: 35%;
@@ -946,15 +943,6 @@
   }
   .w-\[90\%\] {
     width: 90%;
-  }
-  .w-\[100\%\] {
-    width: 100%;
-  }
-  .w-\[15\%\] {
-    width: 15%;
-  }
-  .w-\[20\%\] {
-    width: 20%;
   }
   .w-\[172px\] {
     width: 172px;
@@ -1893,9 +1881,6 @@
   .object-top {
     object-position: top;
   }
-  .p-3 {
-    padding: calc(var(--spacing) * 3);
-  }
   .p-3\.5 {
     padding: calc(var(--spacing) * 3.5);
   }
@@ -1940,9 +1925,6 @@
   }
   .pt-\[30px\] {
     padding-top: 30px;
-  }
-  .pb-1 {
-    padding-bottom: calc(var(--spacing) * 1);
   }
   .pb-1\.5 {
     padding-bottom: calc(var(--spacing) * 1.5);

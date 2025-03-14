@@ -1,0 +1,63 @@
+ /* Header Styles */
+ 
+ .header {
+     position: fixed;
+     top: 0;
+     right: var(--sidebar-width);
+     left: 0;
+     height: var(--header-height);
+     display: flex;
+     justify-content: space-between;
+     align-items: center;
+     padding: 0 20px;
+     background: rgba(255, 255, 255, 0.03) padding-box, linear-gradient(var(--angle), rgba(255, 255, 255, 0.03), #3c3c3c) border-box;
+     box-shadow: inset 0px 4px 15px 2px rgba(255, 255, 255, 0.04);
+     backdrop-filter: blur(10px);
+     transition: right 0.3s ease;
+     z-index: 99;
+ }
+ 
+ .sidebar.collapsed~.content-container .header {
+     right: var(--sidebar-collapsed-width);
+ }
+ 
+ .user-profile {
+     color: var(--text-color);
+     display: flex;
+     margin-right: 30px;
+     align-items: center;
+     cursor: pointer;
+ }
+ 
+ .user-profile img {
+     width: 35px;
+     height: 35px;
+     border-radius: 50%;
+     margin-left: 10px;
+ }
+ 
+ .notification-icon {
+     color: var(--text-color);
+     margin-left: 20px;
+     cursor: pointer;
+     position: relative;
+ }
+ 
+ .notification-icon path {
+     fill: var(--text-color);
+ }
+ 
+ .notification-badge {
+     position: absolute;
+     top: -5px;
+     right: -5px;
+     background-color: var(--primary-color);
+     color: white;
+     border-radius: 50%;
+     width: 18px;
+     height: 18px;
+     font-size: 0.7rem;
+     display: flex;
+     align-items: center;
+     justify-content: center;
+ }

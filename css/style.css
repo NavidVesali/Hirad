@@ -325,7 +325,7 @@ input[type="radio"]:checked + .tab .tab-content {
 /*                  contant style             */
 
 .contact-bg {
-  background-image: url("../image/contant/background.png"); /* Ensure the path is correct */
+  background-image: url("../assets/images/contant/background.png"); /* Ensure the path is correct */
   background-size: cover; /* Adjust as needed */
   background-position: center; /* Adjust as needed */
   background-repeat: no-repeat; /* Adjust as needed */

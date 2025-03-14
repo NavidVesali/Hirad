@@ -1,0 +1,128 @@
+.sidebar {
+    width: var(--sidebar-width);
+    height: 100vh;
+    position: fixed;
+    right: 0;
+    top: 0;
+    box-shadow: var(--shadow);
+    transition: all 0.3s ease;
+    z-index: 100;
+    overflow-x: hidden;
+    background: rgba(255, 255, 255, 0.03) padding-box, linear-gradient(var(--angle), rgba(255, 255, 255, 0.03), #3c3c3c) border-box;
+    box-shadow: inset 0px 4px 15px 2px rgba(255, 255, 255, 0.04);
+    backdrop-filter: blur(10px);
+}
+
+.sidebar.collapsed {
+    width: var(--sidebar-collapsed-width);
+}
+
+.sidebar-header {
+    height: var(--header-height);
+    display: flex;
+    align-items: center;
+    padding: 0 20px;
+    border-bottom: 1px solid #444444;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    font-weight: 700;
+    font-size: 1.2rem;
+    color: var(--text-color);
+}
+
+.logo-icon {
+    margin-left: 10px;
+    font-size: 1.5rem;
+}
+
+.logo-text {
+    transition: opacity 0.3s;
+}
+
+.sidebar.collapsed .logo-text {
+    opacity: 0;
+    width: 0;
+}
+
+.toggle-btn {
+    margin-right: auto;
+    background: none;
+    border: none;
+    color: var(--text-color);
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.menu {
+    list-style: none;
+    padding: 20px 0;
+}
+
+.menu-item {
+    padding: 12px 20px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    transition: all 0.5s ease;
+    color: var(--text-color);
+}
+
+.menu-item:hover {
+    background-color: rgba(131, 35, 57, 0.1);
+}
+
+.menu-item.active {
+    background-color: rgba(131, 35, 57, 0.1);
+    border-left: 5px solid var(--accent-color);
+    color: var(--accent-color);
+}
+
+.menu-item.active .menu-icon {
+    color: var(--accent-color);
+}
+
+.menu-item path {
+    fill: var(--text-color);
+}
+
+.menu-item.active path {
+    fill: var(--accent-color);
+}
+
+.menu-item svg {
+    margin-left: 10px;
+    min-width: 20px;
+    text-align: center;
+}
+
+.menu-text {
+    transition: opacity 0.3s;
+    white-space: nowrap;
+}
+
+.sidebar.collapsed .menu-text {
+    opacity: 0;
+    width: 0;
+}
+
+@media (max-width: 768px) {
+    .sidebar {
+        width: var(--sidebar-collapsed-width);
+        transform: translateX(-100%);
+    }
+    .sidebar.collapsed {
+        transform: translateX(0);
+    }
+    .content-container {
+        margin-left: 0;
+    }
+    .header {
+        left: 0;
+    }
+    .dashboard-cards {
+        grid-template-columns: 1fr;
+    }
+}

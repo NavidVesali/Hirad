@@ -1,0 +1,36 @@
+/* Global Styles */
+
+* {
+    font-family: Shabnam;
+    /* color: #d4d4d4; */
+    margin: 0;
+    direction: rtl;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --primary-color: #832339;
+    --secondary-color: #511922;
+    --accent-color: #d5123c;
+    --text-color: #d4d4d4;
+    --bg-color: #141414;
+    --sidebar-width: 250px;
+    --sidebar-collapsed-width: 70px;
+    --header-height: 60px;
+    --shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Shabnam;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #141414;
+    position: relative;
+}
