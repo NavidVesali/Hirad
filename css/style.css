@@ -331,3 +331,30 @@ input[type="radio"]:checked + .tab .tab-content {
   grid-template-columns: repeat(2, 1fr);
   gap: 15px;
 }
+
+
+
+
+
+
+.header-item{
+  max-width: 93px;
+  height: 58px;
+  line-height: 58px;
+  font-weight: 700;
+  text-align: base;
+}
+
+
+.nav-index{
+  max-width: 70px;
+  height: 14px;
+  border-radius: 12px;
+  padding: 0 30px;
+  background: #832339;
+  position: absolute;
+  z-index: -1;
+  /* right: calc(2%); */
+  bottom: -7px;
+  transition: all 0.3s ease-in-out;
+}
