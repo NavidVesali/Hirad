@@ -5,7 +5,7 @@ class Footer extends HTMLElement {
 
   connectedCallback() {
     this.innerHTML = `
-     <section id="footer" class="s-button2 w-full flex justify-between items-center mb-5">
+     <section id="footer" class="s-button2 w-full flex justify-between items-center pt-[10px] mb-5">
     <div class="mr-12">
         <img src="/assets/images/footer/hirad-Logo 1.png" alt="" />
     </div>
