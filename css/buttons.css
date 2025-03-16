@@ -24,7 +24,6 @@
     padding: 12px;
     height: 48px;
     width: 100%;
-    max-width: 182px;
     border: 1px solid transparent;
     border-radius: 20px;
     background: linear-gradient(#272727, #272727) padding-box, linear-gradient(var(--angle), rgba(255, 106, 0, 0), #6c6c6c) border-box;

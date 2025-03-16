@@ -896,6 +896,12 @@
   .h-\[59px\] {
     height: 59px;
   }
+  .h-\[64px\] {
+    height: 64px;
+  }
+  .h-\[70px\] {
+    height: 70px;
+  }
   .h-\[80px\] {
     height: 80px;
   }
@@ -982,6 +988,9 @@
   }
   .w-\[375px\] {
     width: 375px;
+  }
+  .w-\[500px\] {
+    width: 500px;
   }
   .w-\[546px\] {
     width: 546px;
@@ -1941,6 +1950,12 @@
   .pb-1\.5 {
     padding-bottom: calc(var(--spacing) * 1.5);
   }
+  .pb-3 {
+    padding-bottom: calc(var(--spacing) * 3);
+  }
+  .pb-3\.5 {
+    padding-bottom: calc(var(--spacing) * 3.5);
+  }
   .pb-\[5px\] {
     padding-bottom: 5px;
   }
@@ -2116,6 +2131,9 @@
   }
   .\[color\:red\]\/50\! {
     color: color-mix(in oklab, red 50%, transparent) !important;
+  }
+  .text-\[px\] {
+    color: px;
   }
   .capitalize {
     text-transform: capitalize;
