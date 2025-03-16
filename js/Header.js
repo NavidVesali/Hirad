@@ -1,10 +1,10 @@
 class Header extends HTMLElement {
-  constructor() {
-    super();
-  }
+    constructor() {
+        super();
+    }
 
-  connectedCallback() {
-    this.innerHTML = `
+    connectedCallback() {
+        this.innerHTML = `
      <header
       style="
         background-image: linear-gradient(to bottom, #141414 40%, transparent);
@@ -77,102 +77,78 @@ class Header extends HTMLElement {
       </div>
     </header>
     `;
-    this.initializeEvents();
-    this.checkCurrentRoute(); 
-  }
+        this.initializeEvents();
+        this.checkCurrentRoute();
+    }
+    initializeEvents() {
+        const headerItems = this.querySelectorAll('.header-item');
+        const navIndex = this.querySelector("#nav-index");
 
-  initializeEvents() {
-    const headeritems = this.querySelectorAll('.header-item');
-    headeritems.forEach((item) => {
-      item.addEventListener('click', function () {
-        headeritems.forEach((headeritem) =>
-          headeritem.classList.remove('active')
-        );
-        this.classList.add('active');
+        headerItems.forEach((item) => {
+            item.addEventListener('click', function() {
+                headerItems.forEach((headerItem) =>
+                    headerItem.classList.remove('active')
+                );
+                this.classList.add('active');
+                moveNavIndex(this);
+            });
 
-        const navIndex = document.getElementById("nav-index");
-        const itemRect = this.getBoundingClientRect();
-        const navBarRect = document.getElementById("nav-bar").getBoundingClientRect();
-        navIndex.style.right = `${navBarRect.right - itemRect.right}px`;
+            item.addEventListener('mouseenter', function() {
+                moveNavIndex(this);
+            });
+
+            item.addEventListener('mouseleave', () => {
+                const activeItem = this.querySelector('.header-item.active');
+                if (activeItem) {
+                    moveNavIndex(activeItem);
+                }
+            });
+        });
+
+        function moveNavIndex(target) {
+            const itemRect = target.getBoundingClientRect();
+            const navBarRect = document.getElementById("nav-bar").getBoundingClientRect();
+            navIndex.style.right = `${navBarRect.right - itemRect.right+12}px`;
+            navIndex.style.width = `${itemRect.width}px`;
+        }
+    }
+
+    checkCurrentRoute() {
+        const currentPath = window.location.pathname;
+        const headerItems = this.querySelectorAll('.header-item');
+        let activeItem = null;
+
+        headerItems.forEach((item) => {
+            const itemRoute = item.getAttribute('data-route');
+            if (itemRoute && currentPath.includes(itemRoute.substring(1))) {
+                activeItem = item;
+            }
+            if (itemRoute === '/' && (currentPath === '/' || currentPath.endsWith('/index.html'))) {
+                activeItem = item;
+            }
+        });
+
+        if (activeItem) {
+            headerItems.forEach((headerItem) => headerItem.classList.remove('active'));
+            activeItem.classList.add('active');
+            this.moveNavIndex(activeItem);
+        }
+    }
+
+    moveNavIndex(target) {
+        const navIndex = this.querySelector("#nav-index");
+        const itemRect = target.getBoundingClientRect();
+        const navBarRect = this.querySelector("#nav-bar").getBoundingClientRect();
+        navIndex.style.right = `${navBarRect.right - itemRect.right+12}px`;
         navIndex.style.width = `${itemRect.width}px`;
-      });
-    });
-  }
-
-  checkCurrentRoute() {
-    // Get the current path and filename
-    const currentPath = window.location.pathname;
-    const currentFile = currentPath.split('/').pop();
-    
-    const headerItems = this.querySelectorAll('.header-item');
-    let activeItem = null;
-    
-    // First try to match by exact path
-    headerItems.forEach((item) => {
-      const itemHref = item.getAttribute('href');
-      if (itemHref && (itemHref === currentPath || itemHref.endsWith(currentPath))) {
-        activeItem = item;
-      }
-    });
-    
-    // If no match by href, try to match by filename (for relative paths)
-    if (!activeItem && currentFile) {
-      headerItems.forEach((item) => {
-        const itemHref = item.getAttribute('href');
-        if (itemHref && itemHref.includes(currentFile)) {
-          activeItem = item;
-        }
-      });
     }
-    
-    // If still no match, try to match by data-route
-    if (!activeItem) {
-      headerItems.forEach((item) => {
-        const itemRoute = item.getAttribute('data-route');
-        
-        // Check if the current path includes the route path
-        if (itemRoute && currentPath.includes(itemRoute.substring(1))) {
-          activeItem = item;
-        }
-        
-        // Special case for home page
-        if (itemRoute === '/' && (currentPath === '/' || currentPath.endsWith('/index.html'))) {
-          activeItem = item;
-        }
-      });
-    }
-    
-    // If we found an active item, update it
-    if (activeItem) {
-      headerItems.forEach((headerItem) => headerItem.classList.remove('active'));
-      activeItem.classList.add('active');
-      
-      // Position the nav-index
-      const navIndex = document.getElementById("nav-index");
-      const itemRect = activeItem.getBoundingClientRect();
-      const navBarRect = document.getElementById("nav-bar").getBoundingClientRect();
-      navIndex.style.right = `${navBarRect.right - itemRect.right}px`;
-      navIndex.style.width = `${itemRect.width}px`;
-    } else if (headerItems.length > 0) {
-      // Default to first item if no match found
-      headerItems[0].classList.add('active');
-      
-      const navIndex = document.getElementById("nav-index");
-      const itemRect = headerItems[0].getBoundingClientRect();
-      const navBarRect = document.getElementById("nav-bar").getBoundingClientRect();
-      navIndex.style.right = `${navBarRect.right - itemRect.right}px`;
-      navIndex.style.width = `${itemRect.width}px`;
-    }
-  }
 }
 
-// Add event listener for page load
 window.addEventListener('load', () => {
-  // Make sure to re-check the route when everything is loaded
-  const header = document.querySelector('hirad-header');
-  if (header) {
-    header.checkCurrentRoute();
-  }
+    const header = document.querySelector('hirad-header');
+    if (header) {
+        header.checkCurrentRoute();
+    }
 });
 
 customElements.define('hirad-header', Header);
