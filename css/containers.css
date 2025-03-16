@@ -23,3 +23,38 @@
     display: block;
     opacity: 1;
 }
+
+
+/* w-[172px] h-[80px] s-button2 hero-item rounded-[32px] relative */
+
+.hero-items {
+    width: 172px;
+    z-index: 1;
+    height: 80px;
+    border-radius: 32px;
+    display: flex;
+    position: absolute;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    color: #d4d4d4;
+    border: 1px solid #0000;
+    background: linear-gradient(#191919, #191919) padding-box, linear-gradient(var(--angle), rgba(255, 106, 0, 0), #343434) border-box;
+    box-shadow: inset 0px 4px 25px 2px rgba(255, 255, 255, 0.04);
+}
+
+.hero-items:hover {
+    animation: rotate 3s linear infinite;
+}
+
+@keyframes rotate {
+    to {
+        --angle: 360deg;
+    }
+}
+
+@property --angle {
+    syntax: "<angle>";
+    initial-value: 0deg;
+    inherits: false;
+}
