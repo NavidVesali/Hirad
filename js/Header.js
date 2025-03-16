@@ -27,7 +27,7 @@ class Header extends HTMLElement {
           justify-content: center;
           align-items: center;
         "
-        ><img src="../assets/images/Header/Logo1.svg" alt=""
+        ><img src="/assets/images/Header/Logo1.svg" alt=""
       /></span>
       <div
         style="
@@ -71,7 +71,7 @@ class Header extends HTMLElement {
           gap: 1rem;
         ">
         <img
-          src="../assets/images/Header/search-normal.svg"
+          src="/assets/images/Header/search-normal.svg"
           class="header-search"
           alt="search" />
       </div>
