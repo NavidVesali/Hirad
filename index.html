@@ -1,144 +1,72 @@
 <!DOCTYPE html>
 <html lang="fa" dir="rtl">
-
-<head>
+  <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./src/output.css" />
     <link rel="stylesheet" href="./css/style.css" />
-    <link rel="stylesheet" href="./css/containers.css">
+    <link rel="stylesheet" href="./css/containers.css" />
     <title>هیراد</title>
-</head>
+  </head>
 
-<body class="bg-[#141414] flex flex-col items-center justify-center">
+  <body class="bg-[#141414] flex flex-col items-center justify-center">
     <!-------------------- landing page nav bar section ---------------------->
-    <header class="flex justify-between w-[100%] pt-[30px] px-[100px] items-center top-0 sticky z-50" style="
-        background-image: linear-gradient(to bottom, #141414 40%, transparent);
-      ">
-        <span class="container-1 rounded-[24px] w-[80px] h-[80px] flex items-center justify-center"><img src="./assets/images/Header/Logo1.svg" alt=""
-      /></span>
-        <div class="w-[60%] h-[59px] bg-transparent z-[-1] relative">
-            <section id="nav-bar" class="w-[100%] h-[59px] flex justify-around items-center text-base text-center font-[300] container-1 rounded-[24px]">
-                <a href="./index.html" target="_self" class="font-[700] text-base max-w-[93px] h-[58px] leading-[58px]">خانه</a>
+    <hirad-header></hirad-header>
 
-                <a href="./pages/services.html" target="_self" class="font-[700] text-base max-w-[93px] h-[58px] leading-[58px]">خدمات شرکت</a
-            >
-
-          <span class="max-w-[93px] h-[58px] leading-[58px]"
-            ><a href="" class="font-[700] text-base">بلاگ</a></span>
-                <span class="max-w-[93px] h-[58px] leading-[58px]"><a
-              href="./pages/about.html"
-              target="_self"
-              class="font-[700] text-base"
-              >درباره ما</a
-            ></span
-          >
-          <span class="max-w-[93px] h-[58px] leading-[58px]"
-            ><a href="" class="font-[700] text-base">استانداردها</a></span
-          >
-          <span class="max-w-[93px] h-[58px] leading-[58px]"
-            ><a href="" class="font-[700] text-base">محصولات</a></span
-          >
-          <span class="max-w-[93px] h-[58px] leading-[58px]"
-            ><a
-              href="./pages/contact.html"
-              target="_self"
-              class="font-[700] text-base"
-              >تماس با ما</a
-            ></span
-          >
-        </section>
-        <div
-          id="nav-index"
-          class="max-w-[70px] h-[14px] rounded-b-[12px] px-[30px] bg-[#832339] absolute z-[-1] right-[2%] bottom-[-7px] nav-index transition-all duration-300 ease-in-out"
-        ></div>
-      </div>
-
-      <div class="flex justify-start items-center gap-1">
-        <img
-          src="./assets/images/Header/search-normal.svg"
-          class="header-search"
-          alt="search"
-        />
-        <button class="primary-button cursor-pointer">
-          <img class="ml-1" src="./assets/images/Header/login.svg" alt="" />ثبت
-          نام / ورود
-        </button>
-      </div>
-    </header>
     <!-------------------- landing page nav bar section end---------------------->
 
     <!-- landing page floating icons section --------------------------------------------------------->
 
-    <div id="hero-image" class="w-full " style="height: 70vh;">
-      <div class="hero-items-container" style="height: 100%; width: 100%; position: relative;">
-        <div
-          class="hero-items"
-          style="top: 35vh; right: 10vw"
-        >
+    <div id="hero-image" class="w-full" style="height: 70vh">
+      <div
+        class="hero-items-container"
+        style="height: 100%; width: 100%; position: relative">
+        <div class="hero-items" style="top: 35vh; right: 10vw">
           شیرآلات صنعتی <br />
           Instrumentations
           <img
             class="about-2-icon"
             src="./assets/images/about-2/truck-tick.svg"
-            alt=""
-          />
+            alt="" />
         </div>
-        <div
-          class="hero-items"
-          style="top: 12vh; right: 24vw"
-        >
+        <div class="hero-items" style="top: 12vh; right: 24vw">
           ابزار دقیق <br />
           Instrumentations
           <img
             class="about-2-icon"
             src="./assets/images/about-2/truck-tick.svg"
-            alt=""
-          />
+            alt="" />
         </div>
-        <div
-          class="hero-items"
-          style="top: 20vh; right: 50vw"
-        >
+        <div class="hero-items" style="top: 20vh; right: 50vw">
           اتصالات <br />
           Instrumentations
           <img
             class="about-2-icon"
             src="./assets/images/about-2/truck-tick.svg"
-            alt=""
-          />
+            alt="" />
         </div>
-        <div
-          class="hero-items"
-          style="top: 35vh; right: 85vw"
-        >
+        <div class="hero-items" style="top: 35vh; right: 85vw">
           لوله و تیوب <br />
           Instrumentations
           <img
             class="about-2-icon"
             src="./assets/images/about-2/truck-tick.svg"
-            alt=""
-          />
+            alt="" />
         </div>
-        <div
-          class="hero-items"
-          style="top: 12vh; right: 75vw"
-        >
-         فلنج <br />
+        <div class="hero-items" style="top: 12vh; right: 75vw">
+          فلنج <br />
           Instrumentations
           <img
             class="about-2-icon"
             src="./assets/images/about-2/truck-tick.svg"
-            alt=""
-          />
+            alt="" />
         </div>
       </div>
 
       <div
         id="landing-hero"
         class="w-[100%] flex flex-col items-center"
-        style="position: absolute; top: calc(60%)"
-      >
+        style="position: absolute; top: calc(60%)">
         <p class="max-w-[250px] font-[700] text-[24px]">
           شرکت تجهیز فرآیند هیراد
         </p>
@@ -148,6 +76,7 @@
         <p class="sec-color w-[710px] font-[400] text-[20px]">
           "مهندسی دقیق، تأمین هوشمند، و تعهد به کیفیت—همراه شما در هر گام."
         </p>
+        <br />
         <div class="max-w-[530px] h-[48px] flex justify-around gap-5">
           <button class="primary-button w-[243px] h-[48px]">درباره شرکت</button>
           <button class="s-button w-[223px] h-[48px]">مشاهده محصولات</button>
@@ -164,8 +93,7 @@
     <!-- start about section --------------------------------------------------->
     <section
       id="about"
-      class="w-[100%] h-auto flex flex-col items-center clear-both"
-    >
+      class="w-[100%] h-auto flex flex-col items-center clear-both">
       <div id="about-continer" class="stack-1">
         <h2 class="group-box-name">درباره شرکت تجهیز فرآیند هیراد</h2>
         <div class="content-div flex flex-col items-center gap-10">
@@ -188,14 +116,12 @@
             این شرکت است.
           </p>
           <button
-            class="max-w-[426px] mt-[30px] primary-button flex-nowrap cursor-pointer"
-          >
+            class="max-w-[426px] mt-[30px] primary-button flex-nowrap cursor-pointer">
             دانلود کاتالوگ شرکت / Download Catalogue
           </button>
           <div
             id="about-counter"
-            class="w-[70%] h-auto s-button2 flex flex-nowrap rounded-[32px]"
-          >
+            class="w-[70%] h-auto s-button2 flex flex-nowrap rounded-[32px]">
             <div class="w-[20%] h-auto text-center">1</div>
             <div class="w-[20%] h-auto text-center">2</div>
             <div class="w-[20%] h-auto text-center">3</div>
@@ -211,8 +137,7 @@
 
     <div
       id=""
-      class="w-[90%] flex justify-center items-center my-10 gap-[30px]"
-    >
+      class="w-[90%] flex justify-center items-center my-10 gap-[30px]">
       <div class="tabs p-4 w-[15%]">
         <div>
           <input type="radio" id="tab1" name="tabs" checked />
@@ -274,8 +199,7 @@
 
     <section
       id="standards"
-      class="w-[100%] h-auto flex flex-col items-center clear-both my-10"
-    >
+      class="w-[100%] h-auto flex flex-col items-center clear-both my-10">
       <div id="about-continer" class="stack-1">
         <h2 class="group-box-name px-3">استانداردها</h2>
         <div class="content-div flex flex-col items-center gap-10">
@@ -293,32 +217,27 @@
             src="./assets/images/nace.png"
             alt=""
             title="img"
-            class="w-[20%]"
-          />
+            class="w-[20%]" />
           <img
             src="./assets/images/mss.png"
             alt=""
             title="img"
-            class="w-[20%]"
-          />
+            class="w-[20%]" />
           <img
             src="./assets/images/astm.png"
             alt=""
             title="img"
-            class="w-[20%]"
-          />
+            class="w-[20%]" />
           <img
             src="./assets/images/astm.png"
             alt=""
             title="img"
-            class="w-[20%]"
-          />
+            class="w-[20%]" />
           <img
             src="./assets/images/api.png"
             alt=""
             title="img"
-            class="w-[20%]"
-          />
+            class="w-[20%]" />
         </div>
         <div class="border-container w-[100%] h-[100px]"></div>
       </div>
@@ -328,8 +247,7 @@
 
     <section
       id="about-2"
-      class="w-[100%] h-auto flex flex-col items-center clear-both my-10"
-    >
+      class="w-[100%] h-auto flex flex-col items-center clear-both my-10">
       <div id="about-continer" class="stack-1">
         <h2 class="group-box-name px-3">چرا هیراد؟</h2>
         <div class="flex flex-col items-center gap-10 my-10">
@@ -349,131 +267,107 @@
               src="./assets/images/about-2/layer.svg"
               alt=""
           /></span>
-                <span class="w-[172px] h-[80px] s-button2 about-2-txt rounded-[32px] relative">انبار<img
+          <span
+            class="w-[172px] h-[80px] s-button2 about-2-txt rounded-[32px] relative"
+            >انبار<img
               class="about-2-icon"
               src="./assets/images/about-2/house-2.svg"
               alt=""
           /></span>
-                <span class="w-[172px] h-[80px] s-button2 about-2-txt rounded-[32px] relative">بسته‌بندی<img
+          <span
+            class="w-[172px] h-[80px] s-button2 about-2-txt rounded-[32px] relative"
+            >بسته‌بندی<img
               class="about-2-icon"
               src="./assets/images/about-2/box.svg"
               alt=""
           /></span>
-                <span class="w-[172px] h-[80px] s-button2 about-2-txt rounded-[32px] relative">واحد پروژه‌ها<img
+          <span
+            class="w-[172px] h-[80px] s-button2 about-2-txt rounded-[32px] relative"
+            >واحد پروژه‌ها<img
               class="about-2-icon"
               src="./assets/images/about-2/share.svg"
               alt=""
           /></span>
-                <span class="w-[172px] h-[80px] s-button2 about-2-txt rounded-[32px] relative">بازرسی<img
+          <span
+            class="w-[172px] h-[80px] s-button2 about-2-txt rounded-[32px] relative"
+            >بازرسی<img
               class="about-2-icon"
               src="./assets/images/about-2/3d-cube-scan.svg"
               alt=""
           /></span>
-                <span class="w-[172px] h-[80px] s-button2 about-2-txt rounded-[32px] relative">ارائه اسناد حمل<img
+          <span
+            class="w-[172px] h-[80px] s-button2 about-2-txt rounded-[32px] relative"
+            >ارائه اسناد حمل<img
               class="about-2-icon"
               src="./assets/images/about-2/truck-tick.svg"
               alt=""
           /></span>
         </div>
 
-        <div class="w-[100%] h-auto s-button2 rounded-[32px] text-center leading-[58px]">
-            چشم انداز این شرکت تبدیل شدن به همکاری مورد اعتماد برای تولید کنندگان و تامین کننده ای مطمئن برای مشتریان می باشد.
+        <div
+          class="w-[100%] h-auto s-button2 rounded-[32px] text-center leading-[58px]">
+          چشم انداز این شرکت تبدیل شدن به همکاری مورد اعتماد برای تولید کنندگان
+          و تامین کننده ای مطمئن برای مشتریان می باشد.
         </div>
 
         <div class="border-container w-[100%] h-[100px]"></div>
+      </div>
+    </section>
+    <!-- start about-2 section -------------------------------------------------->
+    <!-- start about-2 section -------------------------------------------------->
+
+    <section
+      id="partners"
+      class="w-[100%] h-auto flex flex-col items-center clear-both my-10">
+      <div id="partners-continer" class="stack-1">
+        <h2 class="group-box-name text-[36px] px-3">برخی از مشتریان هـیراد</h2>
+        <div class="content-div flex flex-col items-center gap-10">
+          <p class="text-justify p-5">
+            شرکت تجهیز فرآیند هیراد به لطف خداوند و بهره مندی از همکاری متخصصان
+            جوان توانسته است محصولات و خدمات خود را به شرکت های پتروشیمی ،
+            پالایشگاه ، کارخانجات و شرکت های متعددی ارائه دهد که به تعدادی از
+            آنها اشاره می شود. در طول حیات این شرکت ، افتخار همکاری و ارائه
+            خدمات به بیش از 148 شرکت و سازمان و اشخاص حقوقی و حقیقی را داشته ایم
+            .
+          </p>
+          <div class="w-full flex justify-between">
+            <img
+              src="./assets/images/nace.png"
+              alt=""
+              title="img"
+              class="w-[20%]" />
+            <img
+              src="./assets/images/mss.png"
+              alt=""
+              title="img"
+              class="w-[20%]" />
+            <img
+              src="./assets/images/astm.png"
+              alt=""
+              title="img"
+              class="w-[20%]" />
+            <img
+              src="./assets/images/astm.png"
+              alt=""
+              title="img"
+              class="w-[20%]" />
+            <img
+              src="./assets/images/api.png"
+              alt=""
+              title="img"
+              class="w-[20%]" />
+          </div>
         </div>
-        </section>
-        <!-- start about-2 section -------------------------------------------------->
-        <!-- start about-2 section -------------------------------------------------->
 
-        <section id="partners" class="w-[100%] h-auto flex flex-col items-center clear-both my-10">
-            <div id="partners-continer" class="stack-1">
-                <h2 class="group-box-name text-[36px] px-3">برخی از مشتریان هـیراد</h2>
-                <div class="content-div flex flex-col items-center gap-10">
-                    <p class="text-justify p-5">
-                        شرکت تجهیز فرآیند هیراد به لطف خداوند و بهره مندی از همکاری متخصصان جوان توانسته است محصولات و خدمات خود را به شرکت های پتروشیمی ، پالایشگاه ، کارخانجات و شرکت های متعددی ارائه دهد که به تعدادی از آنها اشاره می شود. در طول حیات این شرکت ، افتخار همکاری
-                        و ارائه خدمات به بیش از 148 شرکت و سازمان و اشخاص حقوقی و حقیقی را داشته ایم .
-                    </p>
-                    <div class="w-full flex justify-between">
-                        <img src="./assets/images/nace.png" alt="" title="img" class="w-[20%]" />
-                        <img src="./assets/images/mss.png" alt="" title="img" class="w-[20%]" />
-                        <img src="./assets/images/astm.png" alt="" title="img" class="w-[20%]" />
-                        <img src="./assets/images/astm.png" alt="" title="img" class="w-[20%]" />
-                        <img src="./assets/images/api.png" alt="" title="img" class="w-[20%]" />
-                    </div>
-                </div>
-
-                <div class="border-container w-[100%] h-[100px]"></div>
-            </div>
-        </section>
-        <!-- end partners section -------------------------------------------------->
-        <!-- start footer section -------------------------------------------------->
-        <section id="footer" class="s-button2 w-full flex justify-between items-center my-5">
-            <div class="mr-12">
-                <img src="./assets/images/footer/hirad-Logo 1.png" alt="" />
-            </div>
-
-            <div class="grid grid-cols-3 grid-rows-3 gap-8">
-                <div class="flex justify-start items-center gap-1">
-                    <img src="./assets/images/footer/arrow-left.svg" alt="" />
-                    <p>خانه</p>
-                </div>
-                <div class="flex justify-start items-center gap-1">
-                    <img src="./assets/images/footer/arrow-left.svg" alt="" />
-                    <p>استانداردها</p>
-                </div>
-                <div class="flex justify-start items-center gap-1">
-                    <img src="./assets/images/footer/arrow-left.svg" alt="" />
-                    <p>تماس با ما</p>
-                </div>
-                <div class="flex justify-start items-center gap-1">
-                    <img src="./assets/images/footer/arrow-left.svg" alt="" />
-                    <p>خدمات شرکت</p>
-                </div>
-                <div class="flex justify-start items-center gap-1">
-                    <img src="./assets/images/footer/arrow-left.svg" alt="" />
-                    <p>درباره ما</p>
-                </div>
-                <div class="flex justify-start items-cente gap-1r">
-                    <img src="./assets/images/footer/arrow-left.svg" alt="" />
-                    <p>محصولات</p>
-                </div>
-                <div class="flex justify-start items-center gap-1">
-                    <img src="./assets/images/footer/arrow-left.svg" alt="" />
-                    <p>بلاگ</p>
-                </div>
-            </div>
-
-            <div class="flex flex-col flex-nowrap w-[546px] h-[200px] gap-8 my-2.5">
-                <div class="flex justify-start items-center gap-1.5">
-                    <img src="./assets/images/footer/location.svg" alt="" />
-                    <p>
-                        تــهـران، خـیــابــان ستـارخــان خـیابان نیایش کوچـه موثق نـــژاد پـلـاک 1 واحــد یک
-                    </p>
-                </div>
-                <div class="flex justify-start items-center gap-1.5">
-                    <img src="./assets/images/footer/call-calling.svg" alt="" />
-                    <p>66420839 (21) 98+ - 66429816(21) 98+</p>
-                </div>
-                <div class="flex justify-start items-center gap-1.5">
-                    <img src="./assets/images/footer/whatsapp.svg" alt="" />
-                    <p>09352557163 / 0912-9333608</p>
-                </div>
-                <div class="flex justify-start items-center gap-1.5">
-                    <img src="./assets/images/footer/sms.svg" alt="" />
-                    <p>info@Hiradepc.ir / Hiradepc@gmail.com</p>
-                </div>
-            </div>
-        </section>
-        <!-- end footer section -------------------------------------------------->
-
-        <p>
-            تمامی حقوق این وب سایت متعلق به شرکت تجهیز فرآیند هیراد می‌باشد.   ۱۴۰۳ – ۱۳۹۴
-        </p>
-
-        <script src="./js/js-start.js"></script>
-        <script src="./js/animated-line.js"></script>
-        <script src="./js/service-items.js"></script>
-</body>
-
+        <div class="border-container w-[100%] h-[100px]"></div>
+      </div>
+    </section>
+    <!-- end partners section -------------------------------------------------->
+    <div class="w-full h-auto "><hirad-footer></hirad-footer></div>
+    <script src="./js/js-start.js"></script>
+    <script src="./js/animated-line.js"></script>
+    <script src="./js/service-items.js"></script>
+    <script src="./js/Header.js"></script>
+    <script src="./js/footer.js"></script>
+  </body>
 </html>
