@@ -110,7 +110,7 @@ class Header extends HTMLElement {
         function moveNavIndex(target) {
             const itemRect = target.getBoundingClientRect();
             const navBarRect = document.getElementById("nav-bar").getBoundingClientRect();
-            navIndex.style.right = `${navBarRect.right - itemRect.right+12}px`;
+            navIndex.style.right = `${navBarRect.right - itemRect.right + ((itemRect.width - 70)/2)}px`;
             navIndex.style.width = `${itemRect.width}px`;
         }
     }
@@ -141,7 +141,7 @@ class Header extends HTMLElement {
         const navIndex = this.querySelector("#nav-index");
         const itemRect = target.getBoundingClientRect();
         const navBarRect = this.querySelector("#nav-bar").getBoundingClientRect();
-        navIndex.style.right = `${navBarRect.right - itemRect.right+12}px`;
+        navIndex.style.right = `${navBarRect.right - itemRect.right + ((itemRect.width - 70)/2)}px`;
         navIndex.style.width = `${itemRect.width}px`;
     }
 }

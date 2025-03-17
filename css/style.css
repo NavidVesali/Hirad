@@ -368,7 +368,7 @@ input[type="radio"]:checked+.tab .tab-content {
 }
 
 .header-item {
-    width: 94px;
+    width: calc(100%/5);
     height: 58px;
     line-height: 58px;
     font-weight: 700;

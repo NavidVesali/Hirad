@@ -13,7 +13,7 @@
 
 <body class="bg-[#141414] flex flex-col items-center justify-center">
     <!-------------------- landing page nav bar section ---------------------->
-    <hirad-header></hirad-header>
+    <hirad-header style="position: sticky; top: 0; z-index: 999"></hirad-header>
 
     <!-------------------- landing page nav bar section end---------------------->
 
@@ -46,16 +46,16 @@
             <p class="max-w-[250px] font-[700] text-[20px]">
                 شرکت تجهیز فرآیند هیراد
             </p>
-            <h1 class="max-w-[1086px] font-[700] text-[48px]">
+            <h1 class="max-w-[1086px] font-[700] text-[48px]" id="hero-title">
                 کیفیتی سزاوار شما و اعتمادی خدشه ناپذیر
             </h1>
-            <p class="sec-color w-[710px] font-[400] text-[16px]">
+            <p class="sec-color w-[710px] font-[400] text-[16px]" id="hero-caption">
                 "مهندسی دقیق، تأمین هوشمند، و تعهد به کیفیت—همراه شما در هر گام."
             </p>
             <br />
             <div class="max-w-[530px] h-[48px] flex justify-around gap-5">
-                <button class="primary-button " style="width: 243px;">درباره شرکت</button>
-                <button class="s-button " style="width: 243px;">مشاهده محصولات</button>
+                <button class="primary-button " style="width: 243px;" onclick="scrollToSection('about')">درباره شرکت </button>
+                <button class="s-button " style="width: 243px;" onclick="scrollToSection('landing-product-cat')">مشاهده محصولات</button>
             </div>
         </div>
     </div>
@@ -69,38 +69,38 @@
     <!-- start about section --------------------------------------------------->
     <section id="about" class="w-[100%] h-auto flex flex-col items-center clear-both">
         <div id="about-continer" class="stack-1">
-            <h2 class="group-box-name">درباره شرکت تجهیز فرآیند هیراد</h2>
+            <h2 id="about-title" class="group-box-name">درباره شرکت تجهیز فرآیند هیراد</h2>
             <div class="content-div flex flex-col items-center gap-10">
-                <p class="text-justify p-5">
+                <p id="about-description" class="text-justify p-5">
                     شرکت تجـهـیـز فـرآیـنـد هـیـراد در سـال ۱۳۹۴ در تـهـران با شماره ثبتی ۵۲۵۴۷۰ بـا بـررسی نیازمندی های صـنـایـع نــفـت, گــاز پتروشیـمی صنایـع وابسته و بـازار داخـل با ارائـه خـدمات فـنی و مهندسی به منظور تامین، تدارکات و تجهیزات فنی و صنعتی مورد نیاز صـنایـع،
                     نفـت و گاز و پـتـروشیمی  پـالایـشگاه، نیروگاه ها، صنایـع تـولیدی، غـذایی و دارویی و سیالات  تاسیس گردیـد. شرکت تجـهـیز فـرآیـنـد هـیـراد   همواره سعی دارد با بهترین برند های جهانی از نظر کیـفـیت و اصالت کالا در ارتـبـاط و همکاری باشد
                     تا بتواند کالایی قابل اطمینان و در عین حال با قـیـمـت مناسب در اختیار مـصـرف کنندگان قـرار بـدهـد و با تکیه به مـوجـودی انـبار داخـل و ارتباطات نزدیک با تولیدکنندگان داخلی و انبارهای خارجی آماده هرگونه پاسخگویی به استعمالات و نیاز
                     های صنایع مرتبط باشد.رعایـت کلـیه استانداردهای بـیـن الـمـللی (ASMI,ASME,ANSI,API,EN,DIN,BS,ISO) و تحویل کالا در حضور نماینده کارفرما و ناظرین شرکـتـهـای بـازرسی و همچنین ارائه گواهینامه های مرتبط به کالا (Certificate)  از اهـداف راهـبـردی
                     و برنامه های کاری این شرکت است.
                 </p>
-                <button class="max-w-[426px] mt-[30px] primary-button flex-nowrap cursor-pointer">
+                <button id="download-button" class="max-w-[426px] mt-[30px] primary-button flex-nowrap cursor-pointer">
             دانلود کاتالوگ شرکت / Download Catalogue
           </button>
                 <div id="about-counter" class="w-[70%] h-auto s-button2 flex flex-nowrap rounded-[32px] pb-3.5">
-                    <div class="w-[20%] h-auto text-center">
-                        <h2 class="text-[64px] font-[700] h-[70px]">1</h2>
-                        <p class="ftext-[20px] font-[400] sec-color">نیروی انسانی</p>
+                    <div class="counter-item w-[20%] h-auto text-center">
+                        <h2 class="counter-value text-[64px] font-[700] h-[70px]">1</h2>
+                        <p class="counter-title font-[400] sec-color">نیروی انسانی</p>
                     </div>
-                    <div class="w-[20%] h-auto text-center">
-                        <h2 class="text-[64px] font-[700] h-[70px]">2</h2>
-                        <p class="ftext-[20px] font-[400] sec-color">سال تجربه کاری</p>
+                    <div class="counter-item w-[20%] h-auto text-center">
+                        <h2 class="counter-value text-[64px] font-[700] h-[70px]">2</h2>
+                        <p class="counter-title font-[400] sec-color">سال تجربه کاری</p>
                     </div>
-                    <div class="w-[20%] h-auto text-center">
-                        <h2 class="text-[64px] font-[700] h-[70px]">3</h2>
-                        <p class="ftext-[20px] font-[400] sec-color">تعداد مشتری‌ها</p>
+                    <div class="counter-item w-[20%] h-auto text-center">
+                        <h2 class="counter-value text-[64px] font-[700] h-[70px]">3</h2>
+                        <p class="counter-title font-[400] sec-color">تعداد مشتری‌ها</p>
                     </div>
-                    <div class="w-[20%] h-auto text-center">
-                        <h2 class="text-[64px] font-[700] h-[70px]">4</h2>
-                        <p class="ftext-[20px] font-[400] sec-color">پروژه در دست اجرا</p>
+                    <div class="counter-item w-[20%] h-auto text-center">
+                        <h2 class="counter-value text-[64px] font-[700] h-[70px]">4</h2>
+                        <p class="counter-title font-[400] sec-color">پروژه در دست اجرا</p>
                     </div>
-                    <div class="w-[20%] h-auto text-center">
-                        <h2 class="text-[64px] font-[700] h-[70px]">5</h2>
-                        <p class="text-[20px] font-[400] sec-color">پروژه انجام شده</p>
+                    <div class="counter-item w-[20%] h-auto text-center">
+                        <h2 class="counter-value text-[64px] font-[700] h-[70px]">5</h2>
+                        <p class="counter-title font-[400] sec-color">پروژه انجام شده</p>
                     </div>
                 </div>
             </div>
@@ -110,7 +110,7 @@
     <!-- end here ------------------------------------------------------------->
     <!-- start catalog section -------------------------------------------------->
 
-    <div id="" class="w-[90%] flex justify-center items-center my-10 gap-[30px]">
+    <div id="landing-product-cat" class="w-[90%] flex justify-center items-center my-10 gap-[30px]">
         <div class="tabs p-4 w-[15%]">
             <div>
                 <input type="radio" id="tab1" name="tabs" checked />
@@ -265,6 +265,7 @@
         <hirad-footer></hirad-footer>
     </div>
     <script src="./js/js-start.js"></script>
+    <script src="./js/landing.js"></script>
     <script src="./js/animated-line.js"></script>
     <script src="./js/service-items.js"></script>
     <script src="./js/Header.js"></script>
