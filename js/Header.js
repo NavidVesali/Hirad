@@ -51,14 +51,14 @@ class Header extends HTMLElement {
             font-weight: 300;
             border-radius: 24px;
           ">
-         <a href="" class="header-item" data-route="/">خانه</a>
+         <a href="/" class="header-item" data-route="/">خانه</a>
           
-          <a href="../pages/services.html" class="header-item" data-route="/services">خدمات شرکت</a>
+          <a href="/services" class="header-item" data-route="/services">خدمات شرکت</a>
 
-          <a href="" class="header-item" data-route="/products">محصولات</a>
-          <a href="../pages/about.html" class="header-item" data-route="/about">درباره ما</a>
+          <a href="/products" class="header-item" data-route="/products">محصولات</a>
+          <a href="/about" class="header-item" data-route="/about">درباره ما</a>
 
-          <a href="" class="header-item" data-route="/contact">تماس با ما</a>
+          <a href="/contact" class="header-item" data-route="/contact">تماس با ما</a>
         </section>
         <div id="nav-index" class="nav-index"></div>
       </div>
