@@ -7,7 +7,7 @@ class Footer extends HTMLElement {
         this.innerHTML = `
      <section id="footer" class="s-button2 w-full flex justify-between items-center pt-[10px] mb-5">
     <div class="mr-12">
-    <span onclick="window.location.href='/'">
+    <span onclick="window.location.href='/'" style="cursor: pointer;">
         <img src="/assets/images/footer/hirad-Logo 1.png" alt=logo" />
     </span>
     </div>

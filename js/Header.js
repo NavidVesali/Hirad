@@ -18,8 +18,10 @@ class Header extends HTMLElement {
         padding: 30px 100px 0 100px;
       ">
       <span
+        onclick="window.location.href='/'"
         class="container-1"
         style="
+          cursor: pointer;
           border-radius: 24px;
           width: 80px;
           height: 80px;
