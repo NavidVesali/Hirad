@@ -20,27 +20,23 @@ h1 {
     color: var(--text-color);
     font-weight: bold;
     font-size: 32px;
-    margin-bottom: 20px;
 }
 
 h2 {
     color: var(--text-color);
     font-weight: bold;
     font-size: 28px;
-    margin-bottom: 15px;
 }
 
 h3 {
     color: var(--text-color);
     font-weight: bold;
     font-size: 22px;
-    margin-bottom: 15px;
 }
 
 h4 {
     color: var(--text-color);
     font-size: 20px;
-    margin-bottom: 15px;
 }
 
 a {
@@ -58,7 +54,6 @@ p {
     color: var(--text-color);
     font-size: 14px;
     font-weight: 100;
-    margin: 10px 0;
 }
 
 label {

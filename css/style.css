@@ -153,6 +153,8 @@
     background: transparent;
     /* Ensures no background fill */
     overflow: hidden;
+    width: 100%;
+    height: 200px;
     /* Apply gradient mask */
     -webkit-mask-image: linear-gradient( to bottom, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0) 70%);
     mask-image: linear-gradient( to bottom, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0) 70%);
