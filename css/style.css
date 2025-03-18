@@ -16,6 +16,18 @@
     font-weight: 300;
 }
 
+:root {
+    --primary-color: #832339;
+    --secondary-color: #511922;
+    --accent-color: #d5123c;
+    --text-color: #d4d4d4;
+    --bg-color: #141414;
+    --sidebar-width: 250px;
+    --sidebar-collapsed-width: 70px;
+    --header-height: 60px;
+    --shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
 * {
     font-family: Shabnam;
     color: #d4d4d4;
@@ -287,10 +299,6 @@ input[type="radio"]:checked+.tab .tab-content {
     line-height: 58px;
 }
 
-.hero-item {
-    text-align: center;
-}
-
 .about-2-icon {
     background-color: #272727;
     border-radius: 50%;
@@ -386,4 +394,16 @@ input[type="radio"]:checked+.tab .tab-content {
     /* right: calc(2%); */
     bottom: -7px;
     transition: all 0.3s ease-in-out;
+}
+
+.fade-out {
+    opacity: 0;
+    transform: translateY(10px);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.fade-in {
+    opacity: 1;
+    transform: translateY(0);
+    transition: opacity 0.3s ease, transform 0.3s ease;
 }

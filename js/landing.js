@@ -1,8 +1,13 @@
 function scrollToSection(id) {
-    document.getElementById(id).scrollIntoView({
-        behavior: 'smooth'
-    });
+    const element = document.getElementById(id);
+    const yOffset = -140;
+    const y = element.getBoundingClientRect().top + window.scrollY + yOffset;
+
+    window.scrollTo({ top: y, behavior: 'smooth' });
 }
+
+
+let tabData = [];
 
 async function fetchLandingPageData() {
     try {
@@ -43,7 +48,7 @@ function updateContent(data) {
         const counterItems = document.querySelectorAll(".counter-item");
         const downloadButton = document.getElementById("download-button");
         //Create a link and make file downloadable
-        if (data.about.link) {
+        if (data['about']['link']) {
             downloadButton.addEventListener("click", function() {
                 const link = document.createElement("a");
                 link.href = data['about']['link'];
@@ -64,6 +69,9 @@ function updateContent(data) {
                 titleElement.textContent = statistics[index]['title'];
             }
         });
+        // Product Category Section
+        tabData = data['cat'];
+        changeTab(0);
     }
 }
 
@@ -82,3 +90,47 @@ document.addEventListener("DOMContentLoaded", function() {
     // Fetch new data
     fetchLandingPageData();
 });
+
+function changeTab(index) {
+
+    const title = document.getElementById("tab-title");
+    const image = document.getElementById("tab-image");
+    const description = document.getElementById("tab-description");
+    const catButton = document.getElementById("cat-button");
+    // Remove existing animations
+    title.classList.remove("fade-in");
+    image.classList.remove("fade-in");
+    description.classList.remove("fade-in");
+    catButton.classList.remove("fade-in");
+
+    // Add fade-out animation
+    title.classList.add("fade-out");
+    image.classList.add("fade-out");
+    description.classList.add("fade-out");
+    catButton.classList.add("fade-out");
+
+    setTimeout(() => {
+        // Update content
+        title.innerText = tabData[index]['name'];
+        image.src = tabData[index]['image'];
+        description.innerText = tabData[index]['description'];
+        catButton.addEventListener("click", function() {
+            const link = document.createElement("a");
+            link.href = `/products/${tabData[index]['slug']}`;
+            document.body.appendChild(link);
+            link.click();
+            document.body.removeChild(link);
+        });
+
+        // Remove fade-out and add fade-in animation
+        title.classList.remove("fade-out");
+        image.classList.remove("fade-out");
+        description.classList.remove("fade-out");
+        catButton.classList.remove("fade-out");
+
+        title.classList.add("fade-in");
+        image.classList.add("fade-in");
+        description.classList.add("fade-in");
+        catButton.classList.add("fade-in");
+    }, 300);
+}
