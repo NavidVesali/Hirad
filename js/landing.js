@@ -39,39 +39,84 @@ function getFromStorage(key) {
 function updateContent(data) {
     if (data && typeof data === "object") {
         // Hero Image Section
-        const heroTitle = document.getElementById("hero-title");
-        const heroCaption = document.getElementById("hero-caption");
-        heroTitle.textContent = data["hero_image"]["title"];
-        heroCaption.textContent = data["hero_image"]["caption"];
-
+        if (data['hero_image']) {
+            const heroTitle = document.getElementById("hero-title");
+            const heroCaption = document.getElementById("hero-caption");
+            heroTitle.textContent = data["hero_image"]["title"];
+            heroCaption.textContent = data["hero_image"]["caption"];
+        }
         // About Section
-        const counterItems = document.querySelectorAll(".counter-item");
-        const downloadButton = document.getElementById("download-button");
-        //Create a link and make file downloadable
-        if (data['about']['link']) {
-            downloadButton.addEventListener("click", function() {
-                const link = document.createElement("a");
-                link.href = data['about']['link'];
-                link.download = "Hirad-Catalouge.pdf";
-                document.body.appendChild(link);
-                link.click();
-                document.body.removeChild(link);
+        if (data['about']) {
+            const counterItems = document.querySelectorAll(".counter-item");
+            const downloadButton = document.getElementById("download-button");
+            //Create a link and make file downloadable
+            if (data['about']['link']) {
+                downloadButton.addEventListener("click", function() {
+                    const link = document.createElement("a");
+                    link.href = data['about']['link'];
+                    link.download = "Hirad-Catalouge.pdf";
+                    document.body.appendChild(link);
+                    link.click();
+                    document.body.removeChild(link);
+                });
+            }
+            // Loop through all counter items and update their content
+            counterItems.forEach((item, index) => {
+                const valueElement = item.querySelector(".counter-value");
+                const titleElement = item.querySelector(".counter-title");
+                const statistics = data['statistics'];
+                // Update the value and title based on the statistics array
+                if (statistics[index]) {
+                    valueElement.textContent = statistics[index]['value'];
+                    titleElement.textContent = statistics[index]['title'];
+                }
             });
         }
-        // Loop through all counter items and update their content
-        counterItems.forEach((item, index) => {
-            const valueElement = item.querySelector(".counter-value");
-            const titleElement = item.querySelector(".counter-title");
-            const statistics = data['statistics'];
-            // Update the value and title based on the statistics array
-            if (statistics[index]) {
-                valueElement.textContent = statistics[index]['value'];
-                titleElement.textContent = statistics[index]['title'];
-            }
-        });
         // Product Category Section
         tabData = data['cat'];
         changeTab(0);
+
+        // Standards Section
+        const logoCarousel = document.getElementById("standard-logo");
+        if (data['standards']['content']) {
+            logoCarousel.innerHTML = "";
+            data['standards']['content'].forEach(item => {
+                const img = document.createElement("img");
+                img.src = item;
+                img.style.width = "20%";
+                img.style.height = '80px';
+                logoCarousel.appendChild(img);
+            });
+        }
+        // Why Choose Us Section
+        if (data['whychooseus']) {
+            const whyTitle = document.getElementById("why-title");
+            const whyDescription = document.getElementById("why-description");
+            const whyContent = document.getElementById("why-content");
+
+            whyTitle.textContent = data['whychooseus']['title'];
+            whyDescription.textContent = data['whychooseus']['description'];
+            whyContent.textContent = data['whychooseus']['content'];
+        }
+
+        // Partners Section
+        if (data['testimonials']) {
+            const partnersTitle = document.getElementById('partners-title');
+            const partnersDescription = document.getElementById('partners-description');
+            const partnersCarousel = document.getElementById('partners-logo');
+            partnersTitle.textContent = data['testimonials']['title'];
+            partnersDescription.textContent = data['testimonials']['description'];
+
+            partnersCarousel.innerHTML = "";
+
+            data['testimonials']['content'].forEach(item => {
+                const img = document.createElement("img");
+                img.src = item;
+                img.style.width = "20%";
+                img.style.height = '80px';
+                partnersCarousel.appendChild(img);
+            });
+        }
     }
 }
 

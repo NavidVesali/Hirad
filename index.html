@@ -13,10 +13,9 @@
 </head>
 
 <body class="bg-[#141414] flex flex-col items-center justify-center">
+
     <!-------------------- landing page nav bar section ---------------------->
     <hirad-header style="position: sticky; top: 0; z-index: 999"></hirad-header>
-
-    <!-------------------- landing page nav bar section end---------------------->
 
     <!-- landing page floating icons section --------------------------------------------------------->
     <div id="hero-image" class="w-full" style="height: 70vh">
@@ -61,11 +60,8 @@
         </div>
     </div>
 
-    <!-- end here ------------------------------------------------------------------------------>
-
     <!-- services section start -------------------------------------------------->
     <service-items></service-items>
-    <!-- end here -->
 
     <!-- start about section --------------------------------------------------->
     <section id="about" class="w-[100%] h-auto flex flex-col items-center clear-both">
@@ -108,9 +104,8 @@
             <div class="border-container"></div>
         </div>
     </section>
-    <!-- end here ------------------------------------------------------------->
-    <!-- start cat section -------------------------------------------------->
 
+    <!-- start cat section -------------------------------------------------->
     <div id="landing-product-cat" style="width: 90%; gap: 20px; min-height: 27vw; margin: 50px 0 30px 0; align-items: center; justify-items: start; display: flex; flex-direction: row;">
         <div class="tabs p-4" style="width: 200px;">
             <div>
@@ -162,20 +157,27 @@
         </div>
     </div>
 
-    <!-- end cat section -------------------------------------------------->
-
     <!-- start standard section -------------------------------------------------->
-
     <section id="standards" class="w-[100%] h-auto flex flex-col items-center clear-both my-10">
-        <div id="about-continer " class="stack-1">
+        <div id="about-continer" class="stack-1">
             <h2 class="group-box-name px-3">استانداردها</h2>
             <div class="content-div flex flex-col items-center gap-10">
-                <p class="text-justify p-5">
+                <p id="standard-description" class="text-justify p-5">
                     وجود و تعریف استانداردهای متعدد جهانی باعث گردیده هم مشتریان و هم تامین کنندگان از زبانی مشترک بهره مند گردند و مشخصات فنی کالای درخواستی بر مبنای همین استانداردها تعیین شده؛ لذا تسلط و درک کامل شرکت اطلس پادیر از تمامی استانداردها به ویژه استانداردهای
                     حوزه پایپینگ متریال، باعث می گردد کالای درخواستی طبق نیاز مشتری عرضه گردد تا از بعد فنی آرامش ایشان فراهم گردد.
                 </p>
             </div>
-            <div class="w-full flex justify-between">
+            <div id="standard-logo" style="
+                width: 100%; 
+                display: flex; 
+                flex-direction: row; 
+                gap: 10px; 
+                padding: 10px 20px; 
+                overflow-x: auto;
+                white-space: nowrap;
+                scrollbar-width: thin; 
+                scrollbar-color: #ccc transparent;
+                ">
                 <img src="./assets/images/nace.png " alt=" " title="img " class="w-[20%] " />
                 <img src="./assets/images/mss.png " alt=" " title="img " class="w-[20%] " />
                 <img src="./assets/images/astm.png " alt=" " title="img " class="w-[20%] " />
@@ -185,14 +187,13 @@
             <div class="border-container"></div>
         </div>
     </section>
-    <!-- end standard section -------------------------------------------------->
-    <!-- start about-2 section -------------------------------------------------->
 
+    <!-- start why choos us section -------------------------------------------------->
     <section id="about-2" class="w-[100%] h-auto flex flex-col items-center clear-both my-10">
         <div id="about-continer " class="stack-1">
-            <h2 class="group-box-name px-3">چرا هیراد؟</h2>
+            <h2 id="why-title" class="group-box-name px-3">چرا هیراد؟</h2>
             <div class="flex flex-col items-center gap-10 my-10">
-                <p class="text-justify px-5">
+                <p id="why-description" class="text-justify px-5">
                     همراه شما در طراحی، اجرا و بهره‌برداری کامل پروژه‌ها<br /> شرکت تجهیز فرآیند هیراد با تمرکز بر حفظ روابط بلندمدت با مشتریان، فراتر از تأمین کالا، راهکارهای جامع و خدمات ویژه‌ای را برای تسهیل امور شما ارائه می‌دهد. ما متعهدیم که تمامی
                     نیازهای شما را از صفر تا صد پروژه‌ها با بالاترین کیفیت پوشش دهیم.
                 </p>
@@ -230,25 +231,34 @@
           /></span>
             </div>
 
-            <div class="w-[100%] h-auto s-button2 rounded-[32px] text-center leading-[58px]">
+            <div id="why-content" class="w-[100%] h-auto s-button2 rounded-[32px] text-center leading-[58px]">
                 چشم انداز این شرکت تبدیل شدن به همکاری مورد اعتماد برای تولید کنندگان و تامین کننده ای مطمئن برای مشتریان می باشد.
             </div>
 
             <div class="border-container"></div>
         </div>
     </section>
-    <!-- start about-2 section -------------------------------------------------->
-    <!-- start about-2 section -------------------------------------------------->
 
+    <!-- start partners section -------------------------------------------------->
     <section id="partners" class="w-[100%] h-auto flex flex-col items-center clear-both my-10">
         <div id="partners-continer" class="stack-1">
-            <h2 class="group-box-name text-[36px] px-3">برخی از مشتریان هـیراد</h2>
+            <h2 id="partners-title" class="group-box-name text-[36px] px-3">برخی از مشتریان هـیراد</h2>
             <div class="content-div flex flex-col items-center gap-10">
-                <p class="text-justify p-5">
+                <p id="partners-description" class="text-justify p-5">
                     شرکت تجهیز فرآیند هیراد به لطف خداوند و بهره مندی از همکاری متخصصان جوان توانسته است محصولات و خدمات خود را به شرکت های پتروشیمی ، پالایشگاه ، کارخانجات و شرکت های متعددی ارائه دهد که به تعدادی از آنها اشاره می شود. در طول حیات این شرکت ، افتخار همکاری
                     و ارائه خدمات به بیش از 148 شرکت و سازمان و اشخاص حقوقی و حقیقی را داشته ایم .
                 </p>
-                <div class="w-full flex justify-between">
+                <div id="partners-logo" style="
+                width: 100%; 
+                display: flex; 
+                flex-direction: row; 
+                gap: 10px; 
+                padding: 10px 20px; 
+                overflow-x: auto;
+                white-space: nowrap;
+                scrollbar-width: thin; 
+                scrollbar-color: #ccc transparent;
+                ">
                     <img src="./assets/images/nace.png " alt=" " title="img " class="w-[20%] " />
                     <img src="./assets/images/mss.png " alt=" " title="img " class="w-[20%] " />
                     <img src="./assets/images/astm.png " alt=" " title="img " class="w-[20%] " />
