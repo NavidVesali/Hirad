@@ -1,0 +1,102 @@
+/* Animation for LetterZoomInTop */
+
+.leZoomInTop span {
+    display: inline-block;
+    animation: LetterZoomInTop 1.5s ease-in-out forwards;
+    opacity: 0;
+}
+
+
+/* Delay for each word/letter in h3 */
+
+.leZoomInTop span:nth-child(1) {
+    animation-delay: 0.1s;
+}
+
+.leZoomInTop span:nth-child(2) {
+    animation-delay: 0.2s;
+}
+
+.leZoomInTop span:nth-child(3) {
+    animation-delay: 0.3s;
+}
+
+.leZoomInTop span:nth-child(4) {
+    animation-delay: 0.4s;
+}
+
+
+/* Keyframes for the zoom-in animation */
+
+@keyframes LetterZoomInTop {
+    from {
+        transform: scale(10) translateY(-50%);
+        opacity: 0;
+    }
+    to {
+        transform: scale(1) translateY(0);
+        opacity: 1;
+    }
+}
+
+
+/* Animation for leFlyInBottom */
+
+.leFlyInBottom span {
+    display: inline-block;
+    animation: leFlyInBottom 1.5s ease-out forwards;
+    opacity: 0;
+}
+
+
+/* Delay for each word in h1, starts after h3 animation finishes */
+
+.leFlyInBottom span:nth-child(1) {
+    animation-delay: 1.6s;
+}
+
+.leFlyInBottom span:nth-child(2) {
+    animation-delay: 1.7s;
+}
+
+.leFlyInBottom span:nth-child(3) {
+    animation-delay: 1.8s;
+}
+
+.leFlyInBottom span:nth-child(4) {
+    animation-delay: 1.9s;
+}
+
+.leFlyInBottom span:nth-child(5) {
+    animation-delay: 2s;
+}
+
+.leFlyInBottom span:nth-child(6) {
+    animation-delay: 2.1s;
+}
+
+.leFlyInBottom span:nth-child(7) {
+    animation-delay: 2.2s;
+}
+
+.leFlyInBottom span:nth-child(8) {
+    animation-delay: 2.3s;
+}
+
+
+/* Keyframes for the fly-in bottom animation */
+
+@keyframes leFlyInBottom {
+    0% {
+        transform: translate(0px, 80px);
+        opacity: 0;
+    }
+    50% {
+        transform: translate(10px, -50px);
+        animation-timing-function: ease-in-out;
+    }
+    100% {
+        transform: translate(0, 0);
+        opacity: 1;
+    }
+}
