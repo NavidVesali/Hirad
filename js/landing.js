@@ -49,6 +49,8 @@ function updateContent(data) {
         if (data['about']) {
             const counterItems = document.querySelectorAll(".counter-item");
             const downloadButton = document.getElementById("download-button");
+            const aboutDescription = document.getElementById("about-description");
+            aboutDescription.textContent = data['about']['content'];
             //Create a link and make file downloadable
             if (data['about']['link']) {
                 downloadButton.addEventListener("click", function() {
