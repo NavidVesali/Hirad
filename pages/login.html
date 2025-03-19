@@ -1,71 +1,73 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>هیراد</title>
-    <link rel="stylesheet" href="../css/buttons.css">
-    <link rel="stylesheet" href="../css/inputs.css">
-    <link rel="stylesheet" href="../css/containers.css">
-    <link rel="stylesheet" href="../css/text-styles.css">
-    <link rel="stylesheet" href="../css/snackbar.css">
-    <link rel="stylesheet" href="../css/styles.css">
-</head>
+    <link rel="stylesheet" href="../css/buttons.css" />
+    <link rel="stylesheet" href="../css/inputs.css" />
+    <link rel="stylesheet" href="../css/containers.css" />
+    <link rel="stylesheet" href="../css/text-styles.css" />
+    <link rel="stylesheet" href="../css/snackbar.css" />
+    <link rel="stylesheet" href="../css/styles.css" />
+  </head>
 
-<body style="background-image: url('../assets/images/background.png');
-background-size: cover;
-width: 100%;
-background-repeat: no-repeat;
-background-position: top;">
-    <div class="container" style="position: relative; ">
-        <!-- Login Form -->
-        <div id="login-container" class="form-container show">
-            <div class="cont"></div>
-            <h2 style="margin-top: 20px; margin-bottom: 50px; text-align: center;">ورود به سیستم</h2>
-            <form id="login-form">
-                <label for="login-email">ایمیل</label>
-                <input type="email" id="login-email" name="login-email" placeholder="Email: example@email.com" style="direction: ltr;" required>
-                <label for="login-password">رمز عبور</label>
-                <div class="password-container">
-                    <input type="password" id="login-password" name="login-password" placeholder="Password" style="direction: ltr;" required>
-                    <i id="toggle-password-login" class="isax isax-dcube toggle-password"></i>
-                </div>
-                <button class="primary-button" style="margin-top: 50px;" type="submit" id="login-button">ورود</button>
-            </form>
-            <p style="text-align: center;">
-                حساب کاربری ندارید؟
-                <a href="#" id="show-register">ثبت‌نام کنید</a>
-            </p>
-        </div>
-        <!-- Register Form -->
-        <div id="register-form" class="form-container">
-            <div class="cont"></div>
-            <h2 style="margin-top: 20px; margin-bottom: 10px; text-align: center;">ایجاد حساب کاربری</h2>
-            <form id="register">
-                <label for="register-first-name">نام</label>
-                <input type="text" id="register-first-name" placeholder="نام" style="direction: rtl; unicode-bidi: plaintext;">
-                <label for="register-last-name">نام خانوادگی</label>
-                <input type="text" id="register-last-name" placeholder="نام خانوادگی" style="direction: rtl; unicode-bidi: plaintext;">
-                <label for="register-email">ایمیل</label>
-                <input type="email" id="register-email" placeholder="Email: example@email.com" style="direction: ltr;" required>
-                <label for="register-phone">شماره تماس</label>
-                <input type="text" id="register-phone" placeholder="+98 912 000 0000" style="direction: ltr;">
-                <label for="register-password">رمز عبور</label>
-                <div class="password-container">
-                    <input type="password" id="register-password" placeholder="Password" style="direction: ltr;" required>
-                    <i id="toggle-password-register" class="isax isax-eye toggle-password"></i>
-                </div>
-                <button class="primary-button" style="margin-top: 20px;" type="submit" id="register-button">ثبت‌نام</button>
-            </form>
-            <p style="text-align: center;">
-                قبلا ثبت‌نام کرده‌اید؟
-                <a href="#" id="show-login">ورود به حساب</a>
-            </p>
-        </div>
+  <body
+    style="
+      background-image: url('../assets/images/background.png');
+      background-size: cover;
+      width: 100%;
+      background-repeat: no-repeat;
+      background-position: top;
+    "
+  >
+    <div class="container" style="position: relative">
+      <!-- Login Form -->
+      <div id="login-container" class="form-container show">
+        <div class="cont"></div>
+        <h2 style="margin-top: 20px; margin-bottom: 50px; text-align: center">ورود به سیستم</h2>
+        <form id="login-form">
+          <label for="login-email">ایمیل</label>
+          <input type="email" id="login-email" name="login-email" placeholder="Email: example@email.com" style="direction: ltr" required />
+          <label for="login-password">رمز عبور</label>
+          <div class="password-container">
+            <input type="password" id="login-password" name="login-password" placeholder="Password" style="direction: ltr" required />
+            <i id="toggle-password-login" class="isax isax-dcube toggle-password"></i>
+          </div>
+          <button class="primary-button" style="margin-top: 50px" type="submit" id="login-button">ورود</button>
+        </form>
+        <p style="text-align: center">
+          حساب کاربری ندارید؟
+          <a href="#" id="show-register">ثبت‌نام کنید</a>
+        </p>
+      </div>
+      <!-- Register Form -->
+      <div id="register-form" class="form-container">
+        <div class="cont"></div>
+        <h2 style="margin-top: 20px; margin-bottom: 10px; text-align: center">ایجاد حساب کاربری</h2>
+        <form id="register">
+          <label for="register-first-name">نام</label>
+          <input type="text" id="register-first-name" placeholder="نام" style="direction: rtl; unicode-bidi: plaintext" />
+          <label for="register-last-name">نام خانوادگی</label>
+          <input type="text" id="register-last-name" placeholder="نام خانوادگی" style="direction: rtl; unicode-bidi: plaintext" />
+          <label for="register-email">ایمیل</label>
+          <input type="email" id="register-email" placeholder="Email: example@email.com" style="direction: ltr" required />
+          <label for="register-phone">شماره تماس</label>
+          <input type="text" id="register-phone" placeholder="+98 912 000 0000" style="direction: ltr" />
+          <label for="register-password">رمز عبور</label>
+          <div class="password-container">
+            <input type="password" id="register-password" placeholder="Password" style="direction: ltr" required />
+            <i id="toggle-password-register" class="isax isax-eye toggle-password"></i>
+          </div>
+          <button class="primary-button" style="margin-top: 20px" type="submit" id="register-button">ثبت‌نام</button>
+        </form>
+        <p style="text-align: center">
+          قبلا ثبت‌نام کرده‌اید؟
+          <a href="#" id="show-login">ورود به حساب</a>
+        </p>
+      </div>
     </div>
     <div id="snackbar"></div>
     <script src="../js/login.js"></script>
-</body>
-
+  </body>
 </html>

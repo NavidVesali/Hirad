@@ -1,3 +1,8 @@
+
+
+
+
+
 .primary-button {
     cursor: pointer;
     display: flex;
@@ -16,6 +21,22 @@
     animation: rotate 3s linear infinite;
 }
 
+.p-button2 {
+    color: #d4d4d4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 12px;
+    border: 1px solid #0000;
+    border-radius: 20px;
+    background: linear-gradient(#511922, #511922) padding-box, linear-gradient(var(--angle), rgba(255, 106, 0, 0), #832339) border-box;
+    box-shadow: inset 0px 4px 15px 2px rgba(131, 35, 57, 0.7);
+}
+
+.p-button2:hover {
+    animation: rotate 3s linear infinite;
+}
+
 .s-button {
     cursor: pointer;
     display: flex;
@@ -30,9 +51,23 @@
     box-shadow: inset 0px 4px 15px 2px rgba(255, 255, 255, 0.08);
 }
 
+
 .s-button:hover {
     animation: rotate 3s linear infinite;
 }
+
+.s-button2 {
+    color: #d4d4d4;
+    /* padding: 12px; */
+    /* border: 1px solid #0000; */
+    background: linear-gradient(#272727, #272727) padding-box, linear-gradient(var(--angle), rgba(255, 106, 0, 0), #3c3c3c) border-box;
+    box-shadow: inset 0px 4px 15px 2px rgba(255, 255, 255, 0.08);
+}
+
+.s-button2:hover {
+    animation: rotate 3s linear infinite;
+}
+
 
 @property --angle {
     syntax: "<angle>";

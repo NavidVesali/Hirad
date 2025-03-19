@@ -38,29 +38,29 @@ class Footer extends HTMLElement {
         <section id="footer" class="s-button2 w-full flex justify-between items-center pt-[10px] mb-5">
             <div class="mr-12">
                 <span onclick="window.location.href='/'" style="cursor: pointer;">
-                    <img src="assets/images/footer/hirad-Logo 1.png" alt="logo" />
+                    <img src="/assets/images/footer/hirad-Logo 1.png" alt="logo" />
                 </span>
             </div>
 
             <div class="grid grid-cols-3 grid-rows-3 gap-8">
                 <div class="flex justify-start items-center gap-1">
-                    <img src="assets/images/footer/arrow-left.svg" alt="" />
+                    <img src="/assets/images/footer/arrow-left.svg" alt="" />
                     <a href="/">خانه</a>
                 </div>
                 <div class="flex justify-start items-center gap-1">
-                    <img src="assets/images/footer/arrow-left.svg" alt="" />
+                    <img src="/assets/images/footer/arrow-left.svg" alt="" />
                     <a href="/products">محصولات</a>
                 </div>
                 <div class="flex justify-start items-center gap-1">
-                    <img src="assets/images/footer/arrow-left.svg" alt="" />
+                    <img src="/assets/images/footer/arrow-left.svg" alt="" />
                     <a href="/services">خدمات شرکت</a>
                 </div>
                 <div class="flex justify-start items-center gap-1">
-                    <img src="assets/images/footer/arrow-left.svg" alt="" />
+                    <img src="/assets/images/footer/arrow-left.svg" alt="" />
                     <a href="/about">درباره ما</a>
                 </div>
                 <div class="flex justify-start items-center gap-1">
-                    <img src="assets/images/footer/arrow-left.svg" alt="" />
+                    <img src="/assets/images/footer/arrow-left.svg" alt="" />
                     <a href="/contact">تماس با ما</a>
                 </div>
             </div>
