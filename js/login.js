@@ -161,4 +161,4 @@ function showSnackbar(message) {
     }
 }
 
-window.uploadImage = uploadImage;
+window.showSnackbar = showSnackbar;

@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="../css/style.css" />
     <link rel="stylesheet" href="../css/inputs.css" />
     <link rel="stylesheet" href="../css/text-styles.css">
+    <link rel="stylesheet" href="../css/snackbar.css" />
     <link rel="stylesheet" href="../css/buttons.css">
 
     <title>تماس با ما</title>
@@ -51,12 +52,19 @@
                             <input type="text" id="name" name="name" placeholder="نام و نام خانوادگی" />
                         </div>
                         <div class="form-group w-[100%]">
-                            <label for="lastname">انتخاب بخش‌*</label>
-                            <input type="text" id="lastname" name="lastname" placeholder="انتخاب بخش‌" />
+                            <label for="department">انتخاب بخش‌*</label>
+                            <input list="departments" id="department" name="department" placeholder="انتخاب بخش‌" required />
+                            <datalist id="departments">
+                                <option value="بخش مشاوره"></option>
+                                <option value="بخش فروش"></option>
+                                <option value="بخش پشتیبانی"></option>
+                                <option value="مدیریت"></option>
+                            </datalist>
                         </div>
+
                         <div class="form-group w-[100%]">
-                            <label for="email">ایمیل</label>
-                            <input type="email" id="email" name="email" placeholder="Example@exampl.com" style="text-align: left" />
+                            <label for="email">ایمیل*</label>
+                            <input type="email" id="email" name="email" placeholder="Example@exampl.com" style="text-align: left" required />
                         </div>
                         <div class="form-group w-[100%]">
                             <label for="phone">شماره تماس</label>
@@ -65,9 +73,9 @@
                     </div>
                     <div class="form-group w-[100%]">
                         <label for="message">پیام*</label>
-                        <textarea id="message" name="message" placeholder="پیام خود را بنویسید ..." style="unicode-bidi: plaintext"></textarea>
+                        <textarea id="message" name="message" placeholder="پیام خود را بنویسید ..." style="unicode-bidi: plaintext" required></textarea>
                     </div>
-                    <button type="submit" class="primary-button w-[100%] h-[48px]">
+                    <button id="send-contact-message" type="submit" class="primary-button w-[100%] h-[48px]">
               ارسال پیام
             </button>
                 </form>
@@ -84,10 +92,11 @@
     <div class="w-full h-auto ">
         <hirad-footer></hirad-footer>
     </div>
-
+    <div id="snackbar"></div>
     <script src="../js/js-start.js"></script>
     <script src="../js/footer.js"></script>
     <script src="../js/Header.js"></script>
+    <script src="../js/contact.js"></script>
 </body>
 
 </html>
