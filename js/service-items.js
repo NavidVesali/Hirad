@@ -173,8 +173,8 @@ class ServiceItems extends HTMLElement {
                 border-radius: 16px;
             }
             .service-icon-loaded {
-                width: 80px;
-                height: 80px;
+                width: 100px;
+                height: 100px;
                 margin-bottom: 20px;
                 border-radius: 50%;
                 object-fit: cover;
@@ -274,11 +274,11 @@ class ServiceItems extends HTMLElement {
                 // Render actual content when data is loaded
                 const serviceIcon = document.createElement('img');
                 serviceIcon.className = 'service-icon-loaded';
-                serviceIcon.src = item.icon || './assets/images/default.png'; // Initial src with fallback
+                serviceIcon.src = item.icon || 'assets/images/placeholder.gif'; // Initial src with fallback
                 serviceIcon.alt = item.name || 'Service Icon';
                 // Add error handling for image loading failure
                 serviceIcon.onerror = () => {
-                    serviceIcon.src = './assets/images/default.png'; // Fallback to default image
+                    serviceIcon.src = 'assets/images/placeholder.gif'; // Fallback to default image
                 };
 
                 const serviceName = document.createElement('div');
