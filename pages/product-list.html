@@ -1,124 +1,123 @@
 <!DOCTYPE html>
 <html lang="fa" dir="rtl">
-  <head>
+
+<head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="../src/output.css" />
     <link rel="stylesheet" href="../css/style.css" />
     <link rel="stylesheet" href="../css/buttons.css">
     <link rel="stylesheet" href="../css/tab-input.css">
+    <link rel="stylesheet" href="../css/text-styles.css">
     <title>محصولات</title>
-  </head>
-  <body>
+</head>
+
+<body>
     <!-------------------- start Header Section -------------------->
 
     <hirad-header></hirad-header>
 
     <!-------------------- end Header Section ---------------------->
 
-    <div id="contact" class="w-[80%] h-auto flex flex-col my-16 gap-3.5">
-      <div class="flex justify-start items-center gap-2 p-3.5">
-        <img src="../assets/images/services/menu.svg" alt="" />
-        <p>صفحه اصلی / محصولات</p>
-      </div>
+    <div class="w-[80%] flex flex-col gap-3.5" style="margin: 64px 0 20px 0;">
+        <div class="flex justify-start items-center gap-2">
+            <img src="../assets/images/services/menu.svg" alt="" />
+            <p>صفحه اصلی / محصولات</p>
+        </div>
     </div>
 
-    <div class="w-[80%] h-auto flex justify-center items-center my-10 gap-[30px]">
-      <div class="tabs p-4 w-[15%] h-auto">
-        <div>
-          <input type="radio" id="tab1" name="tabs" checked />
-          <label class="tab" for="tab1">
-            <div class="dot"></div>
-            <div class="tab-content">شیرآلات صنعتی</div>
-          </label>
+    <div id="landing-product-cat" style="width: 90%; gap: 20px; min-height: 27vw; margin: 50px 0 30px 0; align-items: center; justify-items: start; display: flex; flex-direction: row;">
+        <div class="tabs p-4" style="width: 200px;">
+            <div>
+                <input type="radio" id="tab1" name="tabs" checked onclick="changeTab(0) " />
+                <label class="tab" for="tab1">
+                  <div class="dot"></div>
+                  <div class="tab-content">شیرآلات صنعتی</div>
+              </label>
+            </div>
+            <div>
+                <input type="radio" id="tab2" name="tabs" onclick="changeTab(1) " />
+                <label class="tab" for="tab2">
+                  <div class="dot"></div>
+                  <div class="tab-content">اتصلات</div>
+              </label>
+            </div>
+            <div>
+                <input type="radio" id="tab3" name="tabs" onclick="changeTab(2) " />
+                <label class="tab" for="tab3">
+                  <div class="dot"></div>
+                  <div class="tab-content">لوله تیوب</div>
+              </label>
+            </div>
+            <div>
+                <input type="radio" id="tab4" name="tabs" onclick="changeTab(3) " />
+                <label class="tab" for="tab4">
+                  <div class="dot"></div>
+                  <div class="tab-content">فلنج</div>
+              </label>
+            </div>
+            <div>
+                <input type="radio" id="tab5" name="tabs" onclick="changeTab(4) " />
+                <label class="tab" for="tab5">
+                  <div class="dot"></div>
+                  <div class="tab-content">ابزار دقیق</div>
+              </label>
+            </div>
         </div>
-        <div>
-          <input type="radio" id="tab2" name="tabs" />
-          <label class="tab" for="tab2">
-            <div class="dot"></div>
-            <div class="tab-content">اتصلات</div>
-          </label>
+        <div style="width: 25vw; height: 25vw;">
+            <img id="tab-image" src="./assets/images/Main-1.png" alt=" " />
         </div>
-        <div>
-          <input type="radio" id="tab3" name="tabs" />
-          <label class="tab" for="tab3">
-            <div class="dot"></div>
-            <div class="tab-content">لوله تیوب</div>
-          </label>
+        <div style="width: 50%; display: flex; flex-direction: column; gap: 10px;">
+            <h2 id="tab-title">شـیرآلـات صـنعتی</h2>
+            <p id="tab-description" style="text-align: justify;">
+                واردات و تامین انواع مختلف شیرالات صنعتی در متریال های کربـن استیل ، استنلس استیل ، فولاد های آلیاژی ( Alloy Steel ) ، چـدنی، بر اساس استاندارد متریال : ASME/API/NACE/DIN، شیر فلکه تـوپی ،شیر کشویـی ، شیر سـوزنی ، شیر یکطرفه (خـودکار) ، شیر نیدل شیر پـروانه
+                ای ، شیر پـلاگ، ، شیر اسـتوانه ای، شیر فـشار شکن ، شیر اطمـینان ، شیر دیـافـراگمی بر اسـاس انـواع اتـصـال دو سـر : فـلـنـجـی RF/RTJ ، جـوشی ، سـاکت، دنده
+            </p>
+            <button id="cat-button" class="primary-button" style="width: 250px; margin-top: 30px;">مشاهده بیشتر</button>
         </div>
-        <div>
-          <input type="radio" id="tab4" name="tabs" />
-          <label class="tab" for="tab4">
-            <div class="dot"></div>
-            <div class="tab-content">فلنج</div>
-          </label>
-        </div>
-        <div>
-          <input type="radio" id="tab5" name="tabs" />
-          <label class="tab" for="tab5">
-            <div class="dot"></div>
-            <div class="tab-content">ابزار دقیق</div>
-          </label>
-        </div>
-      </div>
-  
-      <div class="w-[35%] h-auto"> 
-      <img src="../assets/images/Main-1.png" alt="" class="">
-      </div>
-  
-      <div class="flex flex-col gap-7 w-[45%]">
-        <h2 class="text-[36px] font-[700]">شـیرآلـات صـنعتی</h2>
-        <p class="w-[100%] h-auto font-[400] text-[18px] text text-justify">
-          واردات و تامین انواع مختلف شیرالات صنعتی در متریال های کربـن استیل ،
-          استنلس استیل ، فولاد های آلیاژی ( Alloy Steel ) ، چـدنی، بر اساس
-          استاندارد متریال : ASME/API/NACE/DIN، شیر فلکه تـوپی ،شیر کشویـی ،
-          شیر سـوزنی ، شیر یکطرفه (خـودکار) ، شیر نیدل شیر پـروانه ای ، شیر
-          پـلاگ، ، شیر اسـتوانه ای، شیر فـشار شکن ، شیر اطمـینان ، شیر
-          دیـافـراگمی بر اسـاس انـواع اتـصـال دو سـر : فـلـنـجـی RF/RTJ ،
-          جـوشی ، سـاکت، دنده
-        </p>
-        <button class="primary-button w-[250px]">مشاهده بیشتر</button>
-      </div>
     </div>
-  </div>
 
-  <div class="w-[80%] h-auto grid grid-cols-3 gap-2.5 mb-16 " >
-    <div class="w-[100%] s-button2 h-auto rounded-[32px]">
-      <img src="../assets/images/product-list/image.svg" alt="" class="pb-[5px] w-full" >
-      <div class="p-[20px]">
-        <h3 class="tex-[20px] text-right py-[5px]">گیت ولو استنلس استیل NICO</h3>
-      <p class="text-[16px] text-right py-[5px]">اندازه:</p>
-      <p class="text-left py-[5px]">1/2" ~ 36"</p>
-      <hr style="color: rgba(255, 255, 255, 0.1);">
-      <p class="py-[5px]">رتبه بندی‌های اسمی:</p>
-      <div>
-        <ul class="list-disc list-inside p-[5px] " style="direction: ltr;">
-          <li>ASME: 150# ~ 1500#</li>
-          <li>DIN: PN10 ~ PN160</li>
-          <li>JIS: 10K ~ 63K</li>
-        </ul>
-      </div>
-      <div class="w-[100%] h-auto  flex justify-between items-center gap-3 ">
-        <button class="p-button2 cursor-pointer w-[50%] h-[48px]">مشاوره&nbsp;&nbsp; 
+    <div class="w-[80%] h-auto grid grid-cols-3 gap-2.5 mb-16 ">
+        <div class="w-[100%] s-button2 h-auto rounded-[32px]">
+            <img src="../assets/images/product-list/image.svg" alt="" class="pb-[5px] w-full">
+            <div class="p-[20px]">
+                <h3 class="tex-[20px] text-right py-[5px]">گیت ولو استنلس استیل NICO</h3>
+                <p class="text-[16px] text-right py-[5px]">اندازه:</p>
+                <p class="text-left py-[5px]">1/2" ~ 36"</p>
+                <hr style="color: rgba(255, 255, 255, 0.1);">
+                <p class="py-[5px]">رتبه بندی‌های اسمی:</p>
+                <div>
+                    <ul class="list-disc list-inside p-[5px] " style="direction: ltr;">
+                        <li>ASME: 150# ~ 1500#</li>
+                        <li>DIN: PN10 ~ PN160</li>
+                        <li>JIS: 10K ~ 63K</li>
+                    </ul>
+                </div>
+                <div class="w-[100%] h-auto  flex justify-between items-center gap-3 ">
+                    <button class="p-button2 cursor-pointer w-[50%] h-[48px]">مشاوره&nbsp;&nbsp; 
           <img class="ml-1" src="../assets/images/services/call-outgoing.svg" alt="" /></button>
-        <button class="s-button rounded-[20px] cursor-pointer w-[50%] h-[48px]">اطلاعات بیشتر
+                    <button class="s-button rounded-[20px] cursor-pointer w-[50%] h-[48px]">اطلاعات بیشتر
           <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M14.9998 19.92L8.47984 13.4C7.70984 12.63 7.70984 11.37 8.47984 10.6L14.9998 4.07996" stroke="#D4D4D4" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
             </svg>
             
             </button>
-      </div>
-      </div>
+                </div>
+            </div>
+        </div>
+
+
     </div>
- 
-  
-  </div>
 
-  <div class="w-full h-auto "><hirad-footer></hirad-footer></div>
+    <div class="w-full h-auto ">
+        <hirad-footer></hirad-footer>
+    </div>
 
 
-  <script src="../js/js-start.js"></script>
-  <script src="../js/footer.js"></script>
-  <script src="../js/Header.js"></script>
+    <script src="../js/js-start.js"></script>
+    <script src="../js/footer.js"></script>
+    <script src="../js/Header.js"></script>
+    <script src="../js/product-list.js"></script>
 </body>
+
 </html>

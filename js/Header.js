@@ -128,6 +128,9 @@ class Header extends HTMLElement {
             if (itemRoute === '/' && (currentPath === '/' || currentPath.endsWith('/index.html'))) {
                 activeItem = item;
             }
+            if (itemRoute === '/products' && (currentPath === '/products' || currentPath.includes('product'))) {
+                activeItem = item;
+            }
         });
 
         if (activeItem) {
