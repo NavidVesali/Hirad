@@ -1,8 +1,3 @@
-
-
-
-
-
 .primary-button {
     cursor: pointer;
     display: flex;
@@ -51,7 +46,6 @@
     box-shadow: inset 0px 4px 15px 2px rgba(255, 255, 255, 0.08);
 }
 
-
 .s-button:hover {
     animation: rotate 3s linear infinite;
 }
@@ -67,7 +61,6 @@
 .s-button2:hover {
     animation: rotate 3s linear infinite;
 }
-
 
 @property --angle {
     syntax: "<angle>";

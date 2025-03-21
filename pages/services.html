@@ -1,15 +1,18 @@
 <!DOCTYPE html>
 <html lang="fa" dir="rtl">
-  <head>
+
+<head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>سرویس ها</title>
     <link rel="stylesheet" href="../src/output.css" />
     <link rel="stylesheet" href="../css/style.css" />
+    <link rel="stylesheet" href="../css/service-page.css">
+    <link rel="stylesheet" href="../css/text-styles.css">
     <link rel="stylesheet" href="../css/buttons.css" />
-  </head>
+</head>
 
-  <body>
+<body>
     <!-------------------- Header Section ---------------------->
 
     <hirad-header></hirad-header>
@@ -17,153 +20,148 @@
 
     <!-------------------- start box section----------------- -->
 
-    <div class="w-[80%] h-auto flex flex-col my-16 gap-3.5">
-      <div class="flex justify-start items-center gap-2 p-3.5">
-        <img src="../assets/images/services/menu.svg" alt="" />
-        <p>صفحه اصلی / خدمات هیراد</p>
-      </div>
-      <div class="w-[100%] h-auto flex justify-between p-3.5">
-        <h1 class="text-[48px] font-bold">خدمات کلیدی شرکت تجهیز فرآیند هیراد</h1>
+    <div class="w-[80%] h-auto flex flex-col gap-3.5" style="margin: 64px 0 20px 0;">
         <div class="flex justify-start items-center gap-2">
-          <span>مشاهده خدمات هیراد</span>
-          <img src="../assets/images/services/arrow-down.svg" alt="" />
+            <img src="../assets/images/services/menu.svg" alt="" />
+            <p>صفحه اصلی / خدمات هیراد</p>
         </div>
-      </div>
-      <p class="text-[20px]">همراه شما در طراحی، اجرا و بهره‌برداری کامل پروژه‌ها</p>
+        <div class="w-[100%] h-auto flex justify-between">
+            <h1 class="text-[48px] font-bold">خدمات کلیدی شرکت تجهیز فرآیند هیراد</h1>
+            <div class="flex justify-start items-center gap-2">
+                <span>مشاهده خدمات هیراد</span>
+                <img src="../assets/images/services/arrow-down.svg" alt="" />
+            </div>
+        </div>
+        <p class="text-[20px]">همراه شما در طراحی، اجرا و بهره‌برداری کامل پروژه‌ها</p>
     </div>
 
     <div class="wrapper">
-      <div class="box s-button2 flex justify-evenly gap-4" onclick="expandDiv(this)">
-        <div class="servic-box w-[100%] h-[100%] justify-between items-center">
-          <div class="w-[40%] h-[100%] my-4">
-            <img class="w-full h-full object-cover rounded-[24px]" src="../assets/images/services/image 2.svg" alt="" />
-          </div>
-          <div class="flex flex-col justify-between w-[60%] h-[90%] my-12 px-5 border-l-2 gap-6 border-[#7a7a7a]">
-            <div class=" ">
-              <h2 class="text-[32px]">بازرگانی و تامین تجهیزات</h2>
-              <p class="sec-color text-justify">
-                برخی برندها با وجود آنکه در بازارصنایع نفت، گاز و پتروشیمی مورد مصرف هستند و در وندورلیست ها نیز عضویت دارند فاقد نماینده رسمی در
-                ایران هستند، تجهیز فرآیند هیراد به واسطه شرکای بین المللی تجاری خود و همچنین انبارداران (استوکیست ها) در سراسر ایران توانمندی تامین
-                سفارشی کالای صنعتی را در سریع ترین زمان ممکن با قیمتی مناسب و با امکان ارائه گواهینامه های معتبر بازرسی دارد.
-              </p>
-            </div>
-            <button class="p-button2 cursor-pointer w-[225px] h-[48px]">
+        <div class="box flex justify-evenly gap-4" onclick="expandDiv(this)">
+            <div class="servic-box w-[100%] h-[100%] justify-between items-center">
+                <div class="w-[40%] h-[100%] my-4">
+                    <img class="w-full h-full object-cover rounded-[24px]" src="../assets/images/services/image 2.svg" alt="" />
+                </div>
+                <div class="flex flex-col justify-between w-[60%] h-[90%] my-12 px-5 border-l-2 gap-6 border-[#7a7a7a]">
+                    <div class=" ">
+                        <h2 class="text-[32px]">بازرگانی و تامین تجهیزات</h2>
+                        <p class="sec-color text-justify">
+                            برخی برندها با وجود آنکه در بازارصنایع نفت، گاز و پتروشیمی مورد مصرف هستند و در وندورلیست ها نیز عضویت دارند فاقد نماینده رسمی در ایران هستند، تجهیز فرآیند هیراد به واسطه شرکای بین المللی تجاری خود و همچنین انبارداران (استوکیست ها) در سراسر ایران توانمندی
+                            تامین سفارشی کالای صنعتی را در سریع ترین زمان ممکن با قیمتی مناسب و با امکان ارائه گواهینامه های معتبر بازرسی دارد.
+                        </p>
+                    </div>
+                    <button class="p-button2 cursor-pointer w-[225px] h-[48px]">
               <img class="ml-1" src="../assets/images/services/call-outgoing.svg" alt="" />ارتباط با بخش مشاوره
             </button>
-          </div>
-        </div>
-        <div class="h-[90%] flex flex-col justify-between self-center items-center pb-1.5 min-w-[96px]">
-          <span class="sec-color text-[32px]">۰۱</span>
-          <span class="text-[20px]" style="writing-mode: vertical-rl; rotate: 180deg">بازرگانی و تامین تجهیزات</span>
-        </div>
-      </div>
-      <div class="box s-button2 flex justify-evenly gap-4" onclick="expandDiv(this)">
-        <div class="servic-box w-[100%] h-[100%] justify-between items-center">
-          <div class="w-[40%] h-[100%] my-4">
-            <img class="w-full h-full object-cover rounded-[24px]" src="../assets/images/services/image 2.svg" alt="" />
-          </div>
-          <div class="flex flex-col justify-between w-[60%] h-[90%] my-12 px-5 border-l-2 gap-6 border-[#7a7a7a]">
-            <div class=" ">
-              <h2 class="text-[32px]">بازرگانی و تامین تجهیزات</h2>
-              <p class="sec-color text-justify">
-                برخی برندها با وجود آنکه در بازارصنایع نفت، گاز و پتروشیمی مورد مصرف هستند و در وندورلیست ها نیز عضویت دارند فاقد نماینده رسمی در
-                ایران هستند، تجهیز فرآیند هیراد به واسطه شرکای بین المللی تجاری خود و همچنین انبارداران (استوکیست ها) در سراسر ایران توانمندی تامین
-                سفارشی کالای صنعتی را در سریع ترین زمان ممکن با قیمتی مناسب و با امکان ارائه گواهینامه های معتبر بازرسی دارد.
-              </p>
+                </div>
             </div>
-            <button class="p-button2 cursor-pointer w-[225px] h-[48px]">
+            <div class="h-[90%] flex flex-col justify-between self-center items-center pb-1.5 min-w-[96px]">
+                <span class="sec-color text-[32px]">۰۱</span>
+                <span class="text-[20px]" style="writing-mode: vertical-rl; rotate: 180deg">بازرگانی و تامین تجهیزات</span>
+            </div>
+        </div>
+        <div class="box flex justify-evenly gap-4" onclick="expandDiv(this)">
+            <div class="servic-box w-[100%] h-[100%] justify-between items-center">
+                <div class="w-[40%] h-[100%] my-4">
+                    <img class="w-full h-full object-cover rounded-[24px]" src="../assets/images/services/image 2.svg" alt="" />
+                </div>
+                <div class="flex flex-col justify-between w-[60%] h-[90%] my-12 px-5 border-l-2 gap-6 border-[#7a7a7a]">
+                    <div class=" ">
+                        <h2 class="text-[32px]">بازرگانی و تامین تجهیزات</h2>
+                        <p class="sec-color text-justify">
+                            برخی برندها با وجود آنکه در بازارصنایع نفت، گاز و پتروشیمی مورد مصرف هستند و در وندورلیست ها نیز عضویت دارند فاقد نماینده رسمی در ایران هستند، تجهیز فرآیند هیراد به واسطه شرکای بین المللی تجاری خود و همچنین انبارداران (استوکیست ها) در سراسر ایران توانمندی
+                            تامین سفارشی کالای صنعتی را در سریع ترین زمان ممکن با قیمتی مناسب و با امکان ارائه گواهینامه های معتبر بازرسی دارد.
+                        </p>
+                    </div>
+                    <button class="p-button2 cursor-pointer w-[225px] h-[48px]">
               <img class="ml-1" src="../assets/images/services/call-outgoing.svg" alt="" />ارتباط با بخش مشاوره
             </button>
-          </div>
-        </div>
-        <div class="h-[90%] flex flex-col justify-between self-center items-center pb-1.5 min-w-[96px]">
-          <span class="sec-color text-[32px]">۰۱</span>
-          <span class="text-[20px]" style="writing-mode: vertical-rl; rotate: 180deg">بازرگانی و تامین تجهیزات</span>
-        </div>
-      </div>
-      <div class="box s-button2 flex justify-evenly gap-4" onclick="expandDiv(this)">
-        <div class="servic-box w-[100%] h-[100%] justify-between items-center">
-          <div class="w-[40%] h-[100%] my-4">
-            <img class="w-full h-full object-cover rounded-[24px]" src="../assets/images/services/image 2.svg" alt="" />
-          </div>
-          <div class="flex flex-col justify-between w-[60%] h-[90%] my-12 px-5 border-l-2 gap-6 border-[#7a7a7a]">
-            <div class=" ">
-              <h2 class="text-[32px]">بازرگانی و تامین تجهیزات</h2>
-              <p class="sec-color text-justify">
-                برخی برندها با وجود آنکه در بازارصنایع نفت، گاز و پتروشیمی مورد مصرف هستند و در وندورلیست ها نیز عضویت دارند فاقد نماینده رسمی در
-                ایران هستند، تجهیز فرآیند هیراد به واسطه شرکای بین المللی تجاری خود و همچنین انبارداران (استوکیست ها) در سراسر ایران توانمندی تامین
-                سفارشی کالای صنعتی را در سریع ترین زمان ممکن با قیمتی مناسب و با امکان ارائه گواهینامه های معتبر بازرسی دارد.
-              </p>
+                </div>
             </div>
-            <button class="p-button2 cursor-pointer w-[225px] h-[48px]">
+            <div class="h-[90%] flex flex-col justify-between self-center items-center pb-1.5 min-w-[96px]">
+                <span class="sec-color text-[32px]">۰۱</span>
+                <span class="text-[20px]" style="writing-mode: vertical-rl; rotate: 180deg">بازرگانی و تامین تجهیزات</span>
+            </div>
+        </div>
+        <div class="box flex justify-evenly gap-4" onclick="expandDiv(this)">
+            <div class="servic-box w-[100%] h-[100%] justify-between items-center">
+                <div class="w-[40%] h-[100%] my-4">
+                    <img class="w-full h-full object-cover rounded-[24px]" src="../assets/images/services/image 2.svg" alt="" />
+                </div>
+                <div class="flex flex-col justify-between w-[60%] h-[90%] my-12 px-5 border-l-2 gap-6 border-[#7a7a7a]">
+                    <div class=" ">
+                        <h2 class="text-[32px]">بازرگانی و تامین تجهیزات</h2>
+                        <p class="sec-color text-justify">
+                            برخی برندها با وجود آنکه در بازارصنایع نفت، گاز و پتروشیمی مورد مصرف هستند و در وندورلیست ها نیز عضویت دارند فاقد نماینده رسمی در ایران هستند، تجهیز فرآیند هیراد به واسطه شرکای بین المللی تجاری خود و همچنین انبارداران (استوکیست ها) در سراسر ایران توانمندی
+                            تامین سفارشی کالای صنعتی را در سریع ترین زمان ممکن با قیمتی مناسب و با امکان ارائه گواهینامه های معتبر بازرسی دارد.
+                        </p>
+                    </div>
+                    <button class="p-button2 cursor-pointer w-[225px] h-[48px]">
               <img class="ml-1" src="../assets/images/services/call-outgoing.svg" alt="" />ارتباط با بخش مشاوره
             </button>
-          </div>
-        </div>
-        <div class="h-[90%] flex flex-col justify-between self-center items-center pb-1.5 min-w-[96px]">
-          <span class="sec-color text-[32px]">۰۱</span>
-          <span class="text-[20px]" style="writing-mode: vertical-rl; rotate: 180deg">بازرگانی و تامین تجهیزات</span>
-        </div>
-      </div>
-      <div class="box s-button2 flex justify-evenly gap-4" onclick="expandDiv(this)">
-        <div class="servic-box w-[100%] h-[100%] justify-between items-center">
-          <div class="w-[40%] h-[100%] my-4">
-            <img class="w-full h-full object-cover rounded-[24px]" src="../assets/images/services/image 2.svg" alt="" />
-          </div>
-          <div class="flex flex-col justify-between w-[60%] h-[90%] my-12 px-5 border-l-2 gap-6 border-[#7a7a7a]">
-            <div class=" ">
-              <h2 class="text-[32px]">بازرگانی و تامین تجهیزات</h2>
-              <p class="sec-color text-justify">
-                برخی برندها با وجود آنکه در بازارصنایع نفت، گاز و پتروشیمی مورد مصرف هستند و در وندورلیست ها نیز عضویت دارند فاقد نماینده رسمی در
-                ایران هستند، تجهیز فرآیند هیراد به واسطه شرکای بین المللی تجاری خود و همچنین انبارداران (استوکیست ها) در سراسر ایران توانمندی تامین
-                سفارشی کالای صنعتی را در سریع ترین زمان ممکن با قیمتی مناسب و با امکان ارائه گواهینامه های معتبر بازرسی دارد.
-              </p>
+                </div>
             </div>
-            <button class="p-button2 cursor-pointer w-[225px] h-[48px]">
+            <div class="h-[90%] flex flex-col justify-between self-center items-center pb-1.5 min-w-[96px]">
+                <span class="sec-color text-[32px]">۰۱</span>
+                <span class="text-[20px]" style="writing-mode: vertical-rl; rotate: 180deg">بازرگانی و تامین تجهیزات</span>
+            </div>
+        </div>
+        <div class="box flex justify-evenly gap-4" onclick="expandDiv(this)">
+            <div class="servic-box w-[100%] h-[100%] justify-between items-center">
+                <div class="w-[40%] h-[100%] my-4">
+                    <img class="w-full h-full object-cover rounded-[24px]" src="../assets/images/services/image 2.svg" alt="" />
+                </div>
+                <div class="flex flex-col justify-between w-[60%] h-[90%] my-12 px-5 border-l-2 gap-6 border-[#7a7a7a]">
+                    <div class=" ">
+                        <h2 class="text-[32px]">بازرگانی و تامین تجهیزات</h2>
+                        <p class="sec-color text-justify">
+                            برخی برندها با وجود آنکه در بازارصنایع نفت، گاز و پتروشیمی مورد مصرف هستند و در وندورلیست ها نیز عضویت دارند فاقد نماینده رسمی در ایران هستند، تجهیز فرآیند هیراد به واسطه شرکای بین المللی تجاری خود و همچنین انبارداران (استوکیست ها) در سراسر ایران توانمندی
+                            تامین سفارشی کالای صنعتی را در سریع ترین زمان ممکن با قیمتی مناسب و با امکان ارائه گواهینامه های معتبر بازرسی دارد.
+                        </p>
+                    </div>
+                    <button class="p-button2 cursor-pointer w-[225px] h-[48px]">
               <img class="ml-1" src="../assets/images/services/call-outgoing.svg" alt="" />ارتباط با بخش مشاوره
             </button>
-          </div>
+                </div>
+            </div>
+            <div class="h-[90%] flex flex-col justify-between self-center items-center pb-1.5 min-w-[96px]">
+                <span class="sec-color text-[32px]">۰۱</span>
+                <span class="text-[20px]" style="writing-mode: vertical-rl; rotate: 180deg">بازرگانی و تامین تجهیزات</span>
+            </div>
         </div>
-        <div class="h-[90%] flex flex-col justify-between self-center items-center pb-1.5 min-w-[96px]">
-          <span class="sec-color text-[32px]">۰۱</span>
-          <span class="text-[20px]" style="writing-mode: vertical-rl; rotate: 180deg">بازرگانی و تامین تجهیزات</span>
-        </div>
-      </div>
     </div>
     <!-------------------- end box section----------------- -->
     <!-------------------- start s-gallery section----------------- -->
 
     <div id="s-gallery" class="w-[80%] my-16">
-      <h2 class="text-[36px] font-[700]">تامین تجهیزات صنعتی پروژه های خطوط لوله نفت و گاز</h2>
-      <p class="text-[20px] font-[400] text-justify">
-        مجموعه تجهیز فرآیند هیراد با سابقه طولانی حضور در صنعت یکی از بزرگترین و کامل ترین تامین کنندگان کالاهای مورد نیاز در صنایع حفاری، نفت و گاز،
-        پتروشیمی و همچنین صنایع فولاد و معدن و پروژه های نیروگاهی است. ساختن بنای محکمی از اعتماد بین شرکت های طرف قرارداد ما نه تنها دسترسی چشمگیری
-        به منابع مهم و اصلی تجهیزات و کالاهای تخصصی ما فراهم کرده است بلکه افق دیدی باز در برابر ما گشوده بطوریکه هر لحظه در تقویم تجاری جمهوری اسلامی
-        ایران به محکم تر کردن روابط خود با منابع سابق و ایجاد روابط با منابع نو و قابل اعتماد دیگری پرداخته و به فهرست همکاران خود افزوده است. ایجاد
-        شبکه ای چنین قوی و همچنان گسترده شونده بین کارفرمایان و مشتریان و سازندگان و تامین کنندگان این توانایی منحصر به فرد را برای ما به ارمغان آورده
-        که پاسخگوی نیاز بخش تدارک پروژه های شما (Procurement) در سریع ترین زمان ممکن و با بهترین قیمت باشیم.
-      </p>
+        <h2 class="text-[36px] font-[700]">تامین تجهیزات صنعتی پروژه های خطوط لوله نفت و گاز</h2>
+        <p class="text-[20px] font-[400] text-justify">
+            مجموعه تجهیز فرآیند هیراد با سابقه طولانی حضور در صنعت یکی از بزرگترین و کامل ترین تامین کنندگان کالاهای مورد نیاز در صنایع حفاری، نفت و گاز، پتروشیمی و همچنین صنایع فولاد و معدن و پروژه های نیروگاهی است. ساختن بنای محکمی از اعتماد بین شرکت های طرف قرارداد
+            ما نه تنها دسترسی چشمگیری به منابع مهم و اصلی تجهیزات و کالاهای تخصصی ما فراهم کرده است بلکه افق دیدی باز در برابر ما گشوده بطوریکه هر لحظه در تقویم تجاری جمهوری اسلامی ایران به محکم تر کردن روابط خود با منابع سابق و ایجاد روابط با منابع نو
+            و قابل اعتماد دیگری پرداخته و به فهرست همکاران خود افزوده است. ایجاد شبکه ای چنین قوی و همچنان گسترده شونده بین کارفرمایان و مشتریان و سازندگان و تامین کنندگان این توانایی منحصر به فرد را برای ما به ارمغان آورده که پاسخگوی نیاز بخش تدارک پروژه
+            های شما (Procurement) در سریع ترین زمان ممکن و با بهترین قیمت باشیم.
+        </p>
     </div>
 
     <div>
-      <video id="s-gallery-video" src="" class="w-80% h-auto" poster="../assets/images/services/Video.svg"></video>
+        <video id="s-gallery-video" src="" style="width: 80vw;" poster="../assets/images/services/Video.svg"></video>
     </div>
     <!-------------------- end s-gallery section----------------- -->
 
     <div class="w-[80%] h-auto my-16">
-      <h2 class="font-[700] text-[36px]">تامین تجهیزات صنعتی پروژه های خطوط لوله نفت و گاز</h2>
-      <p class="font-[400] text-[20px] text-justify">
-        برای معرفی تجهیزات نفت، گاز و پتروشیمی ابتدا نیاز است اطلاعات مختصری راجع به تاریخچه این صنعت داشته باشیم. کلمه‌ پتروشیمی در اصل ترکیبی از دو
-        واژه “پترول” و “شیمی” است که معنای لغوی این عبارت تبدیل فرآورده‌های نفت خام یا گاز طبیعی به محصولات مصرفی می‌باشد. فرآورده‌‌های نفتی امروزه
-        علاوه بر استفاده‌های قبلی خود در زمینه‌هایی مانند سوخت وسائل نقلیه، روغن موتور و سایر موارد در تولید بسیاری دیگر از قطعات مورد نیاز ساخت
-        خودروها، نقش مهمی دارند. همچنین از فراورده‌های نفتی برای تامین سوخت موشک‌های هدایت شونده، سفینه‌های ماهواره‌بر و گاها در ساخت قطعات داخلی
-        آن‌ها به‌کار می‌رود. برای استفاده از فراورده‌ها نیاز است که تجهیزات نفت و گاز مخصوص این حوزه به‌کار‌گیری شود.
-      </p>
+        <h2 class="font-[700] text-[36px]">تامین تجهیزات صنعتی پروژه های خطوط لوله نفت و گاز</h2>
+        <p class="font-[400] text-[20px] text-justify">
+            برای معرفی تجهیزات نفت، گاز و پتروشیمی ابتدا نیاز است اطلاعات مختصری راجع به تاریخچه این صنعت داشته باشیم. کلمه‌ پتروشیمی در اصل ترکیبی از دو واژه “پترول” و “شیمی” است که معنای لغوی این عبارت تبدیل فرآورده‌های نفت خام یا گاز طبیعی به محصولات مصرفی می‌باشد.
+            فرآورده‌‌های نفتی امروزه علاوه بر استفاده‌های قبلی خود در زمینه‌هایی مانند سوخت وسائل نقلیه، روغن موتور و سایر موارد در تولید بسیاری دیگر از قطعات مورد نیاز ساخت خودروها، نقش مهمی دارند. همچنین از فراورده‌های نفتی برای تامین سوخت موشک‌های
+            هدایت شونده، سفینه‌های ماهواره‌بر و گاها در ساخت قطعات داخلی آن‌ها به‌کار می‌رود. برای استفاده از فراورده‌ها نیاز است که تجهیزات نفت و گاز مخصوص این حوزه به‌کار‌گیری شود.
+        </p>
     </div>
-    <div class="w-full h-auto"><hirad-footer></hirad-footer></div>
+    <div class="w-full h-auto">
+        <hirad-footer></hirad-footer>
+    </div>
 
-    <script src="../js/js-start.js"></script>
+    <script src="../js/service-page.js"></script>
     <script src="../js/Header.js"></script>
     <script src="../js/footer.js"></script>
-  </body>
+</body>
+
 </html>
