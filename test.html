@@ -1,37 +1,132 @@
 <!DOCTYPE html>
 <html lang="fa" dir="rtl">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="./src/output.css" />
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./src/output.css" />
     <link rel="stylesheet" href="./css/style.css" />
-  <title>Document</title>
-  <style>
-    .container {
-  display: flex;
-  align-items: center;
-}
+    <link rel="stylesheet" href="./css/containers.css" />
+    <link rel="stylesheet" href="./css/buttons.css" />
+    <link rel="stylesheet" href="./css/text-styles.css" />
+    <link rel="stylesheet" href="./css/extra-animations.css" />
+    <link rel="stylesheet" href="css/tab-input.css" />
+    <title>هیراد</title>
+  </head>
 
-.line {
-  width: 50px;
-  height: 2px;
-  background-color: rgb(219, 211, 211);
-  margin-right: 10px;
-}
-
-  </style>
-</head>
-<body class="flex items-center justify-center bg-[#141414]">
-  <div class="container">
-    <div class="line"></div>
-    <p>This is a paragraph.</p>
-  </div>
-  <img src="./assets/" alt="" class="gap-2">
-
-
+  <body>
+    <div class="relative w-[100vw] h-[100vh]">
+        <!-- Hamburger Button -->
+        <button id="menu-btn" class="fixed top-4 right-4 z-50 flex flex-col items-center justify-between w-10 h-8 cursor-pointer">
+          <span class="w-8 h-1 bg-white rounded transition-all"></span>
+          <span class="w-8 h-1 bg-white rounded transition-all"></span>
+          <span class="w-8 h-1 bg-white rounded transition-all"></span>
+        </button>
   
+        <!-- Sidebar -->
+        <div
+          id="sidebar"
+          class="w-[15%] h-[100vh] fixed right-0 top-0 bg-[#1E1E1E] transform translate-x-[100%] transition-transform duration-500 ease-in-out z-40 flex items-center"
+        >
+          <aside class="grid grid-cols-1 grid-rows-6 gap-5 w-[100%] justify-items-center">
+            <div class="container-1 w-full text-center flex justify-around items-center rounded-[24px]">
+              <img src="assets/images/Header/Logo1.svg" alt="Logo" />
+              <div style="display: flex; justify-content: start; align-items: center; gap: 1rem">
+                <img src="assets/images/Header/search-normal.svg" class="header-search" alt="search" />
+              </div>
+            </div>
+            <div class="container-1 w-full flex justify-center rounded-[24px]">
+              <a href="/" class="nav-link" data-route="/">خانه</a>
+            </div>
+            <div class="container-1 w-full flex justify-center rounded-[24px]">
+              <a href="/services" class=" nav-link "  data-route="/services">خدمات شرکت</a>
+            </div>
+            <div class="container-1 w-full flex justify-center rounded-[24px]">
+              <a href="/products" class=" nav-link" data-route="/products">محصولات</a>
+            </div>
+            <div class="container-1 w-full flex justify-center rounded-[24px]">
+              <a href="/about" class=" nav-link" data-route="/about">درباره ما</a>
+            </div>
+            <div class="container-1 w-full flex justify-center rounded-[24px]">
+              <a href="/contact" class=" nav-link" data-route="/contact">تماس با ما</a>
+            </div>
+          </aside>
+        </div>
+      </div>
   
-<script src="./js/js-start.js"></script>
+      <!-- JS to toggle menu -->
+      <script>
+        const menuBtn = document.getElementById("menu-btn");
+        const sidebar = document.getElementById("sidebar");
+  
+        let isOpen = false;
+  
+        menuBtn.addEventListener("click", () => {
+          if (!isOpen) {
+            sidebar.classList.remove("translate-x-[100%]");
+            sidebar.classList.add("translate-x-0");
+          } else {
+            sidebar.classList.add("translate-x-[100%]");
+            sidebar.classList.remove("translate-x-0");
+          }
+          isOpen = !isOpen;
+  
+          // Toggle animation for the hamburger icon
+          menuBtn.classList.toggle("open");
+        });
+      </script>
+  
+      <style>
+        /* Hamburger Animation */
+        #menu-btn.open span:nth-child(1) {
+          transform: translateY(7px) rotate(45deg);
+        }
+        #menu-btn.open span:nth-child(2) {
+          opacity: 0;
+        }
+        #menu-btn.open span:nth-child(3) {
+          transform: translateY(-7px) rotate(-45deg);
+        }
+        span {
+          transition: transform 0.3s, opacity 0.3s;
+        }
+  
+        /* Navigation Link Hover Animation - Center Outward */
+        .nav-link {
+          position: relative;
+          display: inline-block;
+          padding: 5px 0;
+          white-space: nowrap;
+          color: white;
+          text-align: center;
+        }
+  
+        .nav-link::after {
+          content: "";
+          position: absolute;
+          width: 0;
+          height: 2px;
+          bottom: 0;
+          left: 50%;
+          background-color: var(--primary-color);
+          transition: width 0.3s ease-in-out;
+          transform: translateX(-50%);
+        }
+  
+        .nav-link:hover::after {
+          width: 100%;
+        }
+        
+        /* Fix for RTL text alignment */
+        .container-1 {
+          direction: rtl;
+        }
+      </style>
 
-</body>
+    <script src="./js/js-start.js"></script>
+    <script src="./js/landing.js"></script>
+    <script src="./js/animated-line.js"></script>
+    <script src="./js/service-items.js"></script>
+    <script src="./js/Header.js"></script>
+    <script src="./js/footer.js"></script>
+  </body>
 </html>
