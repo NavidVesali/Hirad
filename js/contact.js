@@ -3,7 +3,7 @@ document.addEventListener("DOMContentLoaded", function() {
     const submitButton = document.getElementById("send-contact-message");
 
     form.addEventListener("submit", async function(event) {
-        event.preventDefault(); // Prevent default form submission
+        event.preventDefault();
 
         // Collect form data
         const formData = {
@@ -24,6 +24,8 @@ document.addEventListener("DOMContentLoaded", function() {
         submitButton.disabled = true;
         submitButton.innerText = "در حال ارسال...";
 
+        showSnackbar("در حال ارسال پیام...");
+
         try {
             const response = await fetch("http://localhost:3000/api/send-message", {
                 method: "POST",
@@ -35,7 +37,8 @@ document.addEventListener("DOMContentLoaded", function() {
 
             if (response.ok) {
                 showSnackbar("پیام شما با موفقیت ارسال شد.");
-                form.reset(); // Clear the form
+                form.reset();
+                window.history.replaceState({}, document.title, window.location.pathname);
             } else {
                 const errorData = await response.json();
                 showSnackbar(errorData.error || "خطایی در ارسال پیام رخ داد.");
