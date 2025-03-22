@@ -1,8 +1,8 @@
-.servic-box {
+.service-box {
     display: none;
 }
 
-.servic-box.show {
+.service-box.show {
     display: block;
 }
 
