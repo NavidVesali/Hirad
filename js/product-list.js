@@ -2,11 +2,6 @@ let tabData = [];
 let currentTabIndex = 0;
 let cachedData = new Map();
 
-// Import CSS file
-const linkElement = document.createElement('link');
-linkElement.rel = 'stylesheet';
-linkElement.href = '../css/product-card.css';
-document.head.appendChild(linkElement);
 
 async function fetchProductCatData() {
     try {
@@ -110,17 +105,20 @@ function updateProductList(eventData) {
 
             // Loop over the fetched product data
             data.forEach(product => {
+                const productLink = `/product/${product.id}`;
                 const card = document.createElement('div');
                 card.className = 'product-card';
                 card.style.opacity = '0'; // Start hidden for animation
-
+                card.addEventListener('click', (event) => {
+                    openProductPage(productLink, product.name);
+                });
                 const imgElement = document.createElement('img');
                 imgElement.className = 'product-image';
                 imgElement.alt = product.name;
                 imgElement.src = product.image_url || '../assets/images/product-list/image.svg';
 
                 imgElement.onerror = () => {
-                    imgElement.src = '../assets/images/placeholder.gif'; // Add a shimmer or placeholder image here
+                    imgElement.src = '../assets/images/placeholder.gif';
                 };
 
                 // Create the content for the product card dynamically from the data
@@ -134,7 +132,7 @@ function updateProductList(eventData) {
                             مشاوره
                             <img class="ml-1" src="../assets/images/services/call-outgoing.svg" alt="">
                         </button>
-                        <button class="primary-button" style="width: 50%">
+                        <button class="primary-button" style="width: 50%" onclick="openProductPage(productLink, product.name);">
                             اطلاعات بیشتر
                             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path d="M14.9998 19.92L8.47984 13.4C7.70984 12.63 7.70984 11.37 8.47984 10.6L14.9998 4.07996" stroke="#D4D4D4" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
@@ -155,6 +153,12 @@ function updateProductList(eventData) {
             });
         }, 300); // Match fade-out duration
     }
+}
+
+function openProductPage(link, name) {
+    const url = new URL(link, window.location.origin);
+    url.searchParams.set("title", name);
+    window.location.href = url.toString();
 }
 
 

@@ -67,19 +67,19 @@ class Footer extends HTMLElement {
 
             <div class="flex flex-col flex-nowrap w-[546px] h-[200px] gap-8 mb-2.5">
                 <div class="flex justify-start items-center gap-1.5">
-                    <img src="assets/images/footer/location.svg" alt="" />
+                    <img src="/assets/images/footer/location.svg" alt="" />
                     <p>${data.address}</p>
                 </div>
                 <div class="flex justify-start items-center gap-1.5">
-                    <img src="assets/images/footer/call-calling.svg" alt="" />
+                    <img src="/assets/images/footer/call-calling.svg" alt="" />
                     ${data.phone.map(phone => `<a href="tel:${phone}">${phone.replace('+98','0')}</a>`).join(" - ")}
                 </div>
                 <div class="flex justify-start items-center gap-1.5">
-                    <img src="assets/images/footer/whatsapp.svg" alt="" />
+                    <img src="/assets/images/footer/whatsapp.svg" alt="" />
                     ${data.whatsapp.map(whatsapp => `<a href="tel:${whatsapp}">${whatsapp.replace('+98','0')}</a>`).join(" / ")}
                 </div>
                 <div class="flex justify-start items-center gap-1.5">
-                    <img src="assets/images/footer/sms.svg" alt="" />
+                    <img src="/assets/images/footer/sms.svg" alt="" />
                     ${data.email.map(email => `<a href="mailto:${email}">${email}</a>`).join(" / ")}
                 </div>
             </div>
