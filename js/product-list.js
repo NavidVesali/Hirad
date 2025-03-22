@@ -256,5 +256,8 @@ function changeTab(index) {
             description.classList.add("fade-in");
             newCatButton.classList.add("fade-in");
         }, 300);
+    } else {
+        const tabs = document.getElementById("tab1").checked = true;
+        changeTab(0);
     }
 }
