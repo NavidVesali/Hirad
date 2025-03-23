@@ -17,7 +17,6 @@
 .product-content {
     padding: 20px;
     height: 285px;
-    overflow-y: hidden;
 }
 
 .product-title {
@@ -26,10 +25,12 @@
     padding: 5px 0;
 }
 
-.product-text {
+.technical-specs-container {
     font-size: 16px;
     text-align: justify;
     padding: 5px 0;
+    height: 200px;
+    overflow-y: scroll;
 }
 
 .button-container {

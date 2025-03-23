@@ -2,6 +2,29 @@ let tabData = [];
 let currentTabIndex = 0;
 let cachedData = new Map();
 
+// Function to parse markdown sections with headings
+function parseMarkdownSections(markdown) {
+    if (!markdown) return {};
+
+    const sections = {};
+    let currentSection = null;
+
+    const lines = markdown.split('\n');
+
+    lines.forEach(line => {
+        // Check if line is a heading (starts with ###)
+        if (line.startsWith('###')) {
+            currentSection = line.replace('###', '').trim();
+            sections[currentSection] = [];
+        }
+        // If we have a current section and line has content, add to that section
+        else if (currentSection && line.trim()) {
+            sections[currentSection].push(line.trim());
+        }
+    });
+
+    return sections;
+}
 
 async function fetchProductCatData() {
     try {
@@ -103,15 +126,15 @@ function updateProductList(eventData) {
         setTimeout(() => {
             container.innerHTML = ''; // Clear the container
 
-            // Loop over the fetched product data
             data.forEach(product => {
                 const productLink = `/product/${product.id}`;
                 const card = document.createElement('div');
                 card.className = 'product-card';
                 card.style.opacity = '0'; // Start hidden for animation
                 card.addEventListener('click', (event) => {
-                    openProductPage(productLink, product.name);
+                    openProductPage(productLink, product.name, product.id);
                 });
+
                 const imgElement = document.createElement('img');
                 imgElement.className = 'product-image';
                 imgElement.alt = product.name;
@@ -121,18 +144,18 @@ function updateProductList(eventData) {
                     imgElement.src = '../assets/images/placeholder.gif';
                 };
 
-                // Create the content for the product card dynamically from the data
+                // Create the basic card structure
                 card.innerHTML = `
                     <div class="product-content">
                         <h3 class="product-title">${product.name}</h3>
-                        <p class="product-text">${product.description || 'No description available'}</p>
+                        <div class="technical-specs-container"></div>
                     </div>
                     <div class="button-container">
                         <button class="s-button" style="width: 50%">
                             مشاوره
                             <img class="ml-1" src="../assets/images/services/call-outgoing.svg" alt="">
                         </button>
-                        <button class="primary-button" style="width: 50%" onclick="openProductPage(productLink, product.name);">
+                        <button class="primary-button" style="width: 50%" onclick="openProductPage('${productLink}', '${product.name}', ${product.id});">
                             اطلاعات بیشتر
                             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path d="M14.9998 19.92L8.47984 13.4C7.70984 12.63 7.70984 11.37 8.47984 10.6L14.9998 4.07996" stroke="#D4D4D4" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
@@ -140,7 +163,33 @@ function updateProductList(eventData) {
                         </button>
                     </div>
                 `;
+
                 card.prepend(imgElement); // Prepend image to the card
+
+                // Add technical specs if they exist
+                if (product.technical_specs) {
+                    const techSpecsContainer = card.querySelector('.technical-specs-container');
+                    const techSpecs = parseMarkdownSections(product.technical_specs);
+
+                    Object.entries(techSpecs).forEach(([title, content]) => {
+                        const specSection = document.createElement('div');
+                        specSection.innerHTML = `
+                            <div class="spec-title" style="display: flex; align-items: center; gap: 8px; text-wrap-mode:nowrap;">
+                                <span class="markdown">${title}</span>
+                                <div style="width: 100%; height: 1px; background-color: rgba(255,255,255,0.1);"></div>
+                            </div>
+                            <p class="spec-content">${content}</p>
+                        `;
+
+                        specSection.style.marginBottom = '12px';
+                        techSpecsContainer.appendChild(specSection);
+                    });
+                } else {
+                    // Add fallback if no technical specs
+                    const techSpecsContainer = card.querySelector('.technical-specs-container');
+                    techSpecsContainer.innerHTML = '<p>No specifications available</p>';
+                }
+
                 container.appendChild(card);
 
                 // Fade in animation for the new product card
@@ -155,27 +204,31 @@ function updateProductList(eventData) {
     }
 }
 
-function openProductPage(link, name) {
+function openProductPage(link, name, id) {
     const url = new URL(link, window.location.origin);
     url.searchParams.set("title", name);
+    url.searchParams.set("id", id);
     window.location.href = url.toString();
 }
 
 
 function setTextDirection(element) {
-
-    // Find child elements with classes 'product-title' and 'product-text'
+    // Find child elements with classes 'product-title' and all 'p' elements
     const productTitle = element.querySelector('.product-title');
-    const productText = element.querySelector('.product-text');
+    const productTextElements = element.querySelectorAll('p');
 
-    // Set the direction for each of them
+    // Set direction for the title
     if (productTitle) {
-        const isRTL = /[\u0600-\u06FF]/.test(productTitle);
+        const isRTL = /[\u0600-\u06FF]/.test(productTitle.textContent);
         productTitle.style.direction = isRTL ? "rtl" : "ltr";
     }
-    if (productText) {
-        const isRTL = /[\u0600-\u06FF]/.test(productText);
-        productText.style.direction = isRTL ? "rtl" : "ltr";
+
+    // Set direction for each paragraph individually
+    if (productTextElements.length > 0) {
+        productTextElements.forEach(p => {
+            const isRTL = /[\u0600-\u06FF]/.test(p.textContent);
+            p.style.direction = isRTL ? "rtl" : "ltr";
+        });
     }
 }
 
@@ -218,17 +271,13 @@ function changeTab(index) {
         const title = document.getElementById("tab-title");
         const image = document.getElementById("tab-image");
         const description = document.getElementById("tab-description");
-        const catButton = document.getElementById("cat-button");
 
         title.classList.remove("fade-in");
         image.classList.remove("fade-in");
         description.classList.remove("fade-in");
-        catButton.classList.remove("fade-in");
-
         title.classList.add("fade-out");
         image.classList.add("fade-out");
         description.classList.add("fade-out");
-        catButton.classList.add("fade-out");
 
         setTimeout(() => {
             title.innerText = tabData[index]['name'];
@@ -239,22 +288,13 @@ function changeTab(index) {
                 image.src = '../assets/images/placeholder.gif';
             };
             description.innerText = tabData[index]['description'];
-
-            const newCatButton = catButton.cloneNode(true);
-            catButton.replaceWith(newCatButton);
-            newCatButton.addEventListener("click", () => {
-                window.location.href = `/products/${tabData[index]['slug']}`;
-            });
-
             title.classList.remove("fade-out");
             image.classList.remove("fade-out");
             description.classList.remove("fade-out");
-            newCatButton.classList.remove("fade-out");
 
             title.classList.add("fade-in");
             image.classList.add("fade-in");
             description.classList.add("fade-in");
-            newCatButton.classList.add("fade-in");
         }, 300);
     } else {
         const tabs = document.getElementById("tab1").checked = true;
