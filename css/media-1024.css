@@ -1,18 +1,16 @@
 @media only screen and (max-width: 1024px) {
-    hirad-header{
-        display: none;
-    }
+  header {
+    justify-content: flex-end !important;
+  }
+  header > span:first-child {
+    display: block;
+  }
 
+  header > div:first-of-type {
+    display: none;
+  }
 
-
-
-
-
-
-
-
-
-
-
-    
+  header > div:last-of-type {
+    display: none !important;
+  }
 }
