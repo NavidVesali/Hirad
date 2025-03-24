@@ -1,6 +1,7 @@
 @media only screen and (max-width: 1024px) {
   header {
     justify-content: flex-end !important;
+    position: fixed !important;
   }
   header > span:first-child {
     display: block;
@@ -12,5 +13,12 @@
 
   header > div:last-of-type {
     display: none !important;
+  }
+
+  .nav-aside{
+    display: block;
+  }
+  #landing-hero > div > button.s-button{
+    width: 220px;
   }
 }
