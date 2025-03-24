@@ -13,60 +13,130 @@
     <link rel="stylesheet" href="css/sidebar-index.css" />
     <title>هیراد</title>
   </head>
-
   <body>
-    <div class="relative w-[100vw] h-[100vh]">
-      <!-- Hamburger Button -->
-      <button
-        id="menu-btn"
-        class="fixed top-4 right-4 z-50 flex flex-col items-center justify-between w-10 h-8 cursor-pointer transition-all duration-500"
-      >
-        <span class="w-8 h-1 bg-white rounded transition-all"></span>
-        <span class="w-8 h-1 bg-white rounded transition-all"></span>
-        <span class="w-8 h-1 bg-white rounded transition-all"></span>
-      </button>
-
-      <!-- Sidebar -->
-      <div
-        id="sidebar"
-        class="container-1 h-[100vh] fixed right-0 top-0 bg-[#1E1E1E] transform translate-x-[100%] transition-transform duration-500 ease-in-out z-40 flex items-center"
-        style="width: 250px"
-      >
-        <aside class="grid grid-cols-1 grid-rows-6 gap-5 w-[100%] justify-items-center">
-          <div class="w-full flex justify-center rounded-[24px]">
-            <a href="/" class="nav-link" data-route="/">خانه</a>
-          </div>
-          <div class="w-full flex justify-center rounded-[24px]">
-            <a href="/services" class="nav-link" data-route="/services">خدمات شرکت</a>
-          </div>
-          <div class="w-full flex justify-center rounded-[24px]">
-            <a href="/products/default" class="nav-link" data-route="/products/default">محصولات</a>
-          </div>
-          <div class="w-full flex justify-center rounded-[24px]">
-            <a href="/about" class="nav-link" data-route="/about">درباره ما</a>
-          </div>
-          <div class="w-full flex justify-center rounded-[24px] ">
-            <a href="/contact" class="nav-link" data-route="/contact">تماس با ما</a>
-          </div>
-        </aside>
+    <div class="tabs-wrapper">
+      <div class="tabs-container" id="tabs-container">
+        <div>
+          <input type="radio" id="tab1" name="tabs" checked />
+          <label class="tab" for="tab1">
+            <div class="tab-content">شیرآلات صنعتی</div>
+            <div class="line"></div>
+          </label>
+        </div>
+        <div>
+          <input type="radio" id="tab2" name="tabs" />
+          <label class="tab" for="tab2">
+            <div class="tab-content">اتصالات</div>
+            <div class="line"></div>
+          </label>
+        </div>
+        <div>
+          <input type="radio" id="tab3" name="tabs" />
+          <label class="tab" for="tab3">
+            <div class="tab-content">لوله تیوب</div>
+            <div class="line"></div>
+          </label>
+        </div>
+        <div>
+          <input type="radio" id="tab4" name="tabs" />
+          <label class="tab" for="tab4">
+            <div class="tab-content">فلنج</div>
+            <div class="line"></div>
+          </label>
+        </div>
+        <div>
+          <input type="radio" id="tab5" name="tabs" />
+          <label class="tab" for="tab5">
+            <div class="tab-content">ابزار دقیق</div>
+            <div class="line"></div>
+          </label>
+        </div>
       </div>
     </div>
+<style>
+  /* Wrapper تب‌ها */
+.tabs-wrapper {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+}
 
-    <div class="flex justify-around gap-5">
-        <button class="primary-button w-[243px]"  onclick="scrollToSection( 'about')">درباره شرکت </button>
-        <button class="s-button w-[243px]"  onclick="scrollToSection( 'landing-product-cat')">مشاهده محصولات</button>
-    </div>
+/* تب‌ها با اسکرول افقی */
+.tabs-container {
+  display: flex;
+  gap: 8px;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  width: 100%;
+  scrollbar-width: none; /* حذف اسکرول فایرفاکس */
+  -ms-overflow-style: none; /* حذف اسکرول برای IE/Edge */
+  padding-bottom: 8px;
+}
 
-    <div class="flex h-auto  justify-around items-center gap-5 mt-[100px]">
-        <button class="w-[500px] mx-5 bg-amber-800">1</button>
-        <button class="w-[500px] mx-5 bg-amber-800">1</button>
-      
- 
-     </div>
+/* حذف اسکرول برای کروم و سافاری */
+.tabs-container::-webkit-scrollbar {
+  display: none;
+}
 
-    <!-- JS to toggle menu -->
+/* استایل تب‌ها */
+.tab {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 16px;
+  cursor: pointer;
+  border-radius: 8px;
+  transition: background-color 0.3s ease, border-color 0.3s ease;
+  white-space: nowrap;
+  text-align: center;
+  position: relative;
+}
 
-    <script></script>
+/* خط زیر تب‌ها */
+.line {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 0;
+  height: 2px;
+  background-color: #c2163e;
+  transition: width 0.3s ease-in-out, left 0.3s ease-in-out;
+}
+
+/* افکت هاور روی تب */
+.tab:hover .line {
+  width: 100%;
+  left: 0;
+}
+
+/* افکت برای تب انتخاب‌شده */
+/* input[type="radio"]:checked + .tab .line {
+  width: 100%;
+  left: 0;
+  background-color: #c2163e;
+} */
+
+/* مخفی کردن input */
+input[type="radio"] {
+  display: none;
+}
+
+</style>    
+<script>
+  // افزودن قابلیت اسکرول افقی با چرخ موس (در همه دستگاه‌ها)
+const container = document.getElementById("tabs-container");
+
+// کنترل اسکرول افقی در همه صفحات
+container.addEventListener("wheel", (e) => {
+  e.preventDefault(); // جلوگیری از اسکرول عمودی
+  container.scrollBy({
+    left: e.deltaY * 2, // سرعت اسکرول 2 برابر
+    behavior: "smooth",
+  });
+});
+
+</script>
 
     <script src="./js/sidbar-index-js.js"></script>
     <script src="./js/js-start.js"></script>
