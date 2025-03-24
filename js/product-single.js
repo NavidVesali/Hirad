@@ -1,4 +1,5 @@
 window.addEventListener("DOMContentLoaded", () => {
+    fetchProductData();
     const params = new URLSearchParams(window.location.search);
     const title = params.get("title");
     if (title) {
@@ -209,6 +210,3 @@ async function fetchProductData() {
         console.error('Error fetching product data:', error);
     }
 }
-
-// Call the function when the page loads
-document.addEventListener('DOMContentLoaded', fetchProductData);
