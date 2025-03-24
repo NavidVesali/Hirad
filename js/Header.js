@@ -57,7 +57,7 @@ class Header extends HTMLElement {
           
           <a href="/services" class="header-item" data-route="/services">خدمات شرکت</a>
 
-          <a href="/products" class="header-item" data-route="/products">محصولات</a>
+          <a href="/products/default" class="header-item" data-route="/products/default">محصولات</a>
           <a href="/about" class="header-item" data-route="/about">درباره ما</a>
 
           <a href="/contact" class="header-item" data-route="/contact">تماس با ما</a>

@@ -49,7 +49,7 @@ class Footer extends HTMLElement {
                 </div>
                 <div class="flex justify-start items-center gap-1">
                     <img src="/assets/images/footer/arrow-left.svg" alt="" />
-                    <a href="/products">محصولات</a>
+                    <a href="/products/default">محصولات</a>
                 </div>
                 <div class="flex justify-start items-center gap-1">
                     <img src="/assets/images/footer/arrow-left.svg" alt="" />

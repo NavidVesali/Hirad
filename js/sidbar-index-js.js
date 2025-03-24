@@ -1,23 +1,35 @@
-
 const menuBtn = document.getElementById("menu-btn");
 const sidebar = document.getElementById("sidebar");
 
 let isOpen = false;
 
-menuBtn.addEventListener("click", () => {
-  if (!isOpen) {
+menuBtn.addEventListener("click", (event) => {
+    event.stopPropagation();
+    if (isOpen) {
+        closeSidebar();
+    } else {
+        openSidebar();
+    }
+});
+
+document.addEventListener("click", (event) => {
+    if (isOpen && !sidebar.contains(event.target) && !menuBtn.contains(event.target)) {
+        closeSidebar();
+    }
+});
+
+function openSidebar() {
     sidebar.classList.remove("translate-x-[100%]");
     sidebar.classList.add("translate-x-0");
-    // Move button to left side
     menuBtn.classList.add("move-to-left");
-  } else {
+    menuBtn.classList.add("open");
+    isOpen = true;
+}
+
+function closeSidebar() {
     sidebar.classList.add("translate-x-[100%]");
     sidebar.classList.remove("translate-x-0");
-    // Move button back to right side
     menuBtn.classList.remove("move-to-left");
-  }
-  isOpen = !isOpen;
-
-  // Toggle animation for the hamburger icon
-  menuBtn.classList.toggle("open");
-});
+    menuBtn.classList.remove("open");
+    isOpen = false;
+}

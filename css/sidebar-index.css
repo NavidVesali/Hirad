@@ -1,49 +1,52 @@
         #menu-btn.open span:nth-child(1) {
-          transform: translateY(14px) rotate(45deg);
+            transform: translateY(14px) rotate(45deg);
         }
+        
         #menu-btn.open span:nth-child(2) {
-          opacity: 0;
+            opacity: 0;
         }
+        
         #menu-btn.open span:nth-child(3) {
-          transform: translateY(-14px) rotate(-45deg);
+            transform: translateY(-14px) rotate(-45deg);
         }
+        
         span {
-          transition: transform 0.3s, opacity 0.3s;
+            transition: transform 0.3s, opacity 0.3s;
         }
-  
+        
         #menu-btn {
-          transition: transform 0.5s ease;
+            transition: transform 0.5s ease;
         }
         
         #menu-btn.move-to-left {
-          transform: translateX(calc(-50vw + 60px));
+            transform: translateX(calc(-180px));
         }
-  
+        
         .nav-link {
-          position: relative;
-          display: inline-block;
-          padding: 5px 0;
-          white-space: nowrap;
-          color: white;
-          text-align: center;
+            position: relative;
+            display: inline-block;
+            padding: 5px 0;
+            white-space: nowrap;
+            color: white;
+            text-align: center;
         }
-  
+        
         .nav-link::after {
-          content: "";
-          position: absolute;
-          width: 0;
-          height: 2px;
-          bottom: 0;
-          left: 50%;
-          background-color: var(--primary-color);
-          transition: width 0.3s ease-in-out;
-          transform: translateX(-50%);
+            content: "";
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: 0;
+            left: 50%;
+            background-color: var(--primary-color);
+            transition: width 0.3s ease-in-out;
+            transform: translateX(-50%);
         }
-  
+        
         .nav-link:hover::after {
-          width: 100%;
+            width: 100%;
         }
         
         .container-1 {
-          direction: rtl;
+            direction: rtl;
         }

@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="fa" dir="rtl">
-  <head>
+
+<head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./src/output.css" />
@@ -12,9 +13,9 @@
     <link rel="stylesheet" href="css/tab-input.css" />
     <link rel="stylesheet" href="css/sidebar-index.css">
     <title>هیراد</title>
-  </head>
+</head>
 
-  <body>
+<body>
     <div class="relative w-[100vw] h-[100vh]">
         <!-- Hamburger Button -->
         <button id="menu-btn" class="fixed top-4 right-4 z-50 flex flex-col items-center justify-between w-10 h-8 cursor-pointer transition-all duration-500">
@@ -22,45 +23,42 @@
           <span class="w-8 h-1 bg-white rounded transition-all"></span>
           <span class="w-8 h-1 bg-white rounded transition-all"></span>
         </button>
-  
-        <!-- Sidebar -->
-        <div
-          id="sidebar"
-          class="container-1 w-[50%] h-[100vh] fixed right-0 top-0 bg-[#1E1E1E] transform translate-x-[100%] transition-transform duration-500 ease-in-out z-40 flex items-center"
-        >
-          <aside class="grid grid-cols-1 grid-rows-6 gap-5 w-[100%] justify-items-center">
-            <div class=" w-full flex justify-center rounded-[24px]">
-              <a href="/" class="nav-link" data-route="/">خانه</a>
-            </div>
-            <div class=" w-full flex justify-center rounded-[24px]">
-              <a href="/services" class=" nav-link "  data-route="/services">خدمات شرکت</a>
-            </div>
-            <div class=" w-full flex justify-center rounded-[24px]">
-              <a href="/products" class=" nav-link" data-route="/products">محصولات</a>
-            </div>
-            <div class=" w-full flex justify-center rounded-[24px]">
-              <a href="/about" class=" nav-link" data-route="/about">درباره ما</a>
-            </div>
-            <div class=" w-full flex justify-center rounded-[24px]">
-              <a href="/contact" class=" nav-link" data-route="/contact">تماس با ما</a>
-            </div>
-          </aside>
-        </div>
-      </div>
-  
-      <!-- JS to toggle menu -->
-       
-      <script>
-      
-      </script>
-  
-      
 
+        <!-- Sidebar -->
+        <div id="sidebar" class="container-1 h-[100vh] fixed right-0 top-0 bg-[#1E1E1E] transform translate-x-[100%] transition-transform duration-500 ease-in-out z-40 flex items-center" style="width:250px;">
+            <aside class="grid grid-cols-1 grid-rows-6 gap-5 w-[100%] justify-items-center">
+                <div class=" w-full flex justify-center rounded-[24px]">
+                    <a href="/" class="nav-link" data-route="/">خانه</a>
+                </div>
+                <div class=" w-full flex justify-center rounded-[24px]">
+                    <a href="/services" class=" nav-link " data-route="/services">خدمات شرکت</a>
+                </div>
+                <div class=" w-full flex justify-center rounded-[24px]">
+                    <a href="/products/default" class=" nav-link" data-route="/products/default">محصولات</a>
+                </div>
+                <div class=" w-full flex justify-center rounded-[24px]">
+                    <a href="/about" class=" nav-link" data-route="/about">درباره ما</a>
+                </div>
+                <div class=" w-full flex justify-center rounded-[24px]">
+                    <a href="/contact" class=" nav-link" data-route="/contact">تماس با ما</a>
+                </div>
+            </aside>
+        </div>
+    </div>
+
+    <!-- JS to toggle menu -->
+
+    <script>
+    </script>
+
+
+    <script src="./js/sidbar-index-js.js"></script>
     <script src="./js/js-start.js"></script>
     <script src="./js/landing.js"></script>
     <script src="./js/animated-line.js"></script>
     <script src="./js/service-items.js"></script>
     <script src="./js/Header.js"></script>
     <script src="./js/footer.js"></script>
-  </body>
+</body>
+
 </html>
