@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./src/output.css" />
     <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="./css/landing.css">
     <link rel="stylesheet" href="./css/containers.css" />
     <link rel="stylesheet" href="./css/buttons.css">
     <link rel="stylesheet" href="./css/text-styles.css">
@@ -80,7 +81,7 @@
     <service-items></service-items>
 
     <!-- start about section --------------------------------------------------->
-    <section id="about" class="w-[100%] h-auto flex flex-col items-center clear-both">
+    <section id="about" class="lazy-load w-[100%] flex flex-col items-center clear-both">
         <div id="about-continer" class="stack-1">
             <h2 id="about-title" class="group-box-name">درباره شرکت تجهیز فرآیند هیراد</h2>
             <div class="content-div flex flex-col items-center gap-10">
@@ -122,7 +123,7 @@
     </section>
 
     <!-- start cat section -------------------------------------------------->
-    <div id="landing-product-cat" style="width: 90%; gap: 20px; min-height: 27vw; margin: 50px 0 30px 0; align-items: center; justify-items: start; display: flex; flex-direction: row;">
+    <div id="landing-product-cat" class="lazy-load" style="width: 90%; gap: 20px; min-height: 27vw; margin: 50px 0 30px 0; align-items: center; justify-items: start; display: flex; flex-direction: row;">
         <div class="tabs p-4" style="width: 200px;">
             <div>
                 <input type="radio" id="tab1" name="tabs" checked onclick="changeTab(0) " />
@@ -174,7 +175,7 @@
     </div>
 
     <!-- start standard section -------------------------------------------------->
-    <section id="standards" class="w-[100%] h-auto flex flex-col items-center clear-both my-10">
+    <section id="standards" class="lazy-load w-[100%] h-auto flex flex-col items-center clear-both my-10">
         <div id="about-continer" class="stack-1">
             <h2 class="group-box-name px-3">استانداردها</h2>
             <div class="content-div flex flex-col items-center gap-10">
@@ -183,7 +184,7 @@
                     حوزه پایپینگ متریال، باعث می گردد کالای درخواستی طبق نیاز مشتری عرضه گردد تا از بعد فنی آرامش ایشان فراهم گردد.
                 </p>
             </div>
-            <div id="standard-logo" style="
+            <div id="standard-logo" class="logos" style="
                 width: 100%; 
                 display: flex; 
                 flex-direction: row; 
@@ -200,12 +201,13 @@
                 <img src="./assets/images/astm.svg " alt=" " title="img " class="w-[20%] " />
                 <img src="./assets/images/api.svg " alt=" " title="img " class="w-[20%] " />
             </div>
+
             <div class="border-container"></div>
         </div>
     </section>
 
     <!-- start why choos us section -------------------------------------------------->
-    <section id="about-2" class="w-[100%] h-auto flex flex-col items-center clear-both my-10">
+    <section id="about-2" class="lazy-load w-[100%] h-auto flex flex-col items-center clear-both my-10">
         <div id="about-continer " class="stack-1">
             <h2 id="why-title" class="group-box-name px-3">چرا هیراد؟</h2>
             <div class="flex flex-col items-center gap-10 my-10">
@@ -256,7 +258,7 @@
     </section>
 
     <!-- start partners section -------------------------------------------------->
-    <section id="partners" class="w-[100%] h-auto flex flex-col items-center clear-both my-10">
+    <section id="partners" class="lazy-load w-[100%] h-auto flex flex-col items-center clear-both my-10">
         <div id="partners-continer" class="stack-1">
             <h2 id="partners-title" class="group-box-name text-[36px] px-3">برخی از مشتریان هـیراد</h2>
             <div class="content-div flex flex-col items-center gap-10">
@@ -272,7 +274,7 @@
                 padding: 10px 20px; 
                 overflow-x: auto;
                 white-space: nowrap;
-                scrollbar-width: thin; 
+                scrollbar-width:none; 
                 scrollbar-color: #ccc transparent;
                 ">
                     <img src="./assets/images/nace.svg " alt=" " title="img " class="w-[20%] " />
@@ -287,16 +289,49 @@
         </div>
     </section>
     <!-- end partners section -------------------------------------------------->
-    <div class="w-full h-auto">
+    <div class="lazy-load w-full h-auto">
         <hirad-footer></hirad-footer>
     </div>
+    <Script>
+        // Function to load content when it comes into view
+        function loadContent(entries, observer) {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    // Add your logic for when a section comes into view.
+                    // For example, you could add an 'active' class to start animations, load images, etc.
+                    const section = entry.target;
+                    section.classList.add('loaded'); // Example: Add 'loaded' class
+
+                    // If there are any images or other elements to load, do so here:
+                    const images = section.querySelectorAll('img[data-src]');
+                    images.forEach(img => {
+                        img.src = img.getAttribute('data-src'); // Load the image
+                        img.removeAttribute('data-src'); // Remove the lazy load attribute
+                    });
+
+                    // Unobserve the section after it has been loaded
+                    observer.unobserve(section);
+                }
+            });
+        }
+
+        // Set up the IntersectionObserver
+        const observer = new IntersectionObserver(loadContent, {
+            root: null, // Use the viewport as the root
+            threshold: 0.5 // Trigger when 50% of the section is visible
+        });
+
+        // Target all sections with the class 'lazy-load'
+        const sections = document.querySelectorAll('.lazy-load');
+        sections.forEach(section => observer.observe(section));
+    </Script>
     <script src="./js/js-start.js"></script>
     <script src="./js/landing.js"></script>
     <script src="./js/animated-line.js"></script>
     <script src="./js/service-items.js"></script>
     <script src="./js/Header.js"></script>
     <script src="./js/footer.js"></script>
-    <script src="./js/sidbar-index-js.js"></script>
+    <!-- <script src="./js/sidbar-index-js.js" defer></script> -->
 </body>
 
 </html>
