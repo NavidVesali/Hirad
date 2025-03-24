@@ -9,11 +9,72 @@
     <link rel="stylesheet" href="../css/buttons.css" />
     <link rel="stylesheet" href="../css/text-styles.css">
 
+    <style>
+        /* Shimmer animation styles */
+        
+        @keyframes shimmer {
+            0% {
+                background-position: -200% 0;
+            }
+            100% {
+                background-position: 200% 0;
+            }
+        }
+        
+        .skeleton {
+            background: linear-gradient(90deg, rgba(255, 255, 255, 0.05) 25%, rgba(255, 255, 255, 0.1) 50%, rgba(255, 255, 255, 0.05) 75%);
+            background-size: 200% 100%;
+            animation: shimmer 1.5s infinite;
+            border-radius: 4px;
+        }
+        
+        .skeleton-text {
+            height: 16px;
+            margin-bottom: 8px;
+            width: 100%;
+        }
+        
+        .skeleton-title {
+            height: 32px;
+            margin-bottom: 16px;
+            width: 70%;
+        }
+        
+        .skeleton-img {
+            border-radius: 32px;
+            width: 35vw;
+            height: 25vw;
+        }
+        
+        .skeleton-button {
+            height: 48px;
+            border-radius: 20px;
+        }
+        
+        .skeleton-hide {
+            display: none;
+        }
+        
+        .content-loaded {
+            animation: fadeIn 0.5s ease-in;
+        }
+        
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+    </style>
+
     <title>محصولات</title>
 </head>
 
 <body>
-    <hirad-header></hirad-header>
+    <hirad-header style="position: sticky; top: 0; z-index: 999"></hirad-header>
+
 
     <div class="w-[80%] h-auto flex flex-col gap-3.5" style="margin: 64px 0 20px 0;">
         <div class="flex justify-start items-center gap-2 p-3.5">
@@ -22,24 +83,43 @@
             <p>/</p>
             <a href="/products/default">محصولات</a>
             <p>/</p>
-            <p id="product-name-breadcrumb">نام محصول</p>
+            <p id="product-name-breadcrumb-content"></p>
         </div>
     </div>
 
     <div class="w-[80%] h-auto flex justify-between" style="align-items: start;">
         <div class="w-[50%] h-auto">
-            <img id="product-image" src="../assets/images/product-list/image.svg" alt="" style="border-radius: 32px;
-            width: 35vw; height: 25vw; object-fit: cover;" />
+            <div id="product-image-skeleton" class="skeleton skeleton-img"></div>
+            <img id="product-image" class="skeleton-hide" src="../assets/images/product-list/image.svg" alt="" style="border-radius: 32px; width: 35vw; height: 25vw; object-fit: cover;" />
         </div>
         <div id="specs" class="w-[50%] h-[100%] flex flex-col gap-3">
-            <h2 class="text-[32px]" id="product-name">نام محصول</h2>
-            <div class="spec-title flex items-center gap-2">
-                <span class="markdown">dommy title</span>
-                <div class="w-full h-[1px] bg-[rgba(255,255,255,0.1)]"></div>
+            <div id="product-name-skeleton" class="skeleton skeleton-title"></div>
+            <h2 class="text-[32px] skeleton-hide" id="product-name">نام محصول</h2>
+
+            <!-- Skeleton for specs -->
+            <div id="specs-skeleton">
+                <div class="flex items-center gap-2 mb-3">
+                    <span class="skeleton" style="width: 80px; height: 16px;"></span>
+                    <div class="w-full h-[1px] bg-[rgba(255,255,255,0.1)]"></div>
+                </div>
+                <div class="skeleton skeleton-text"></div>
+                <div class="skeleton skeleton-text" style="width: 90%;"></div>
+                <div class="skeleton skeleton-text" style="width: 85%;"></div>
+
+                <div class="flex items-center gap-2 mb-3 mt-4">
+                    <span class="skeleton" style="width: 90px; height: 16px;"></span>
+                    <div class="w-full h-[1px] bg-[rgba(255,255,255,0.1)]"></div>
+                </div>
+                <div class="skeleton skeleton-text"></div>
+                <div class="skeleton skeleton-text" style="width: 80%;"></div>
             </div>
+
             <div class="button-container w-[100%] h-auto flex justify-between items-center gap-3">
-                <button class="s-button rounded-[20px] cursor-pointer w-[50%] h-[48px]">مشاوره</button>
-                <a id="catalog-link" href="#" class="p-button2 cursor-pointer w-[50%] h-[48px]">کاتالوگ محصول</a>
+                <div id="consult-button-skeleton" class="skeleton skeleton-button w-[50%]"></div>
+                <button class="s-button rounded-[20px] cursor-pointer w-[50%] h-[48px] skeleton-hide">مشاوره</button>
+
+                <div id="catalog-button-skeleton" class="skeleton skeleton-button w-[50%]"></div>
+                <a id="catalog-link" href="#" class="p-button2 cursor-pointer w-[50%] h-[48px] skeleton-hide">کاتالوگ محصول</a>
             </div>
         </div>
     </div>
@@ -49,18 +129,40 @@
             <h3 class="text-nowrap">خصوصیات محصول</h3>
             <div class="w-full h-[1px] bg-[rgba(255,255,255,0.1)]"></div>
         </div>
-        <ul class="list-disc list-inside p-[5px]" id="desc"></ul>
+
+        <!-- Skeleton for description list -->
+        <div id="desc-skeleton">
+            <div class="skeleton skeleton-text mt-2"></div>
+            <div class="skeleton skeleton-text" style="width: 90%;"></div>
+            <div class="skeleton skeleton-text" style="width: 85%;"></div>
+            <div class="skeleton skeleton-text" style="width: 80%;"></div>
+        </div>
+
+        <ul class="list-disc list-inside p-[5px] skeleton-hide" id="desc"></ul>
     </div>
+
     <div class="w-[80%] h-auto my-12">
         <div class="flex items-center gap-1">
             <h3 class="text-nowrap">توضیحات تکمیلی</h3>
             <div class="w-full h-[1px] bg-[rgba(255,255,255,0.1)]"></div>
         </div>
-        <div id="extra-desc"></div>
+
+        <!-- Skeleton for extra description -->
+        <div id="extra-desc-skeleton">
+            <div class="skeleton skeleton-title mt-4" style="height: 24px; width: 40%;"></div>
+            <div class="skeleton skeleton-text mt-2"></div>
+            <div class="skeleton skeleton-text" style="width: 95%;"></div>
+            <div class="skeleton skeleton-text" style="width: 90%;"></div>
+            <div class="skeleton skeleton-text" style="width: 85%;"></div>
+        </div>
+
+        <div id="extra-desc" class="skeleton-hide"></div>
     </div>
+
     <div style="width: 100%;">
         <hirad-footer></hirad-footer>
     </div>
+
     <script src="../js/Header.js"></script>
     <script src="../js/footer.js"></script>
     <script src="../js/product-single.js"></script>

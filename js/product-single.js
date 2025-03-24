@@ -1,11 +1,12 @@
 window.addEventListener("DOMContentLoaded", () => {
-    fetchProductData();
     const params = new URLSearchParams(window.location.search);
     const title = params.get("title");
     if (title) {
         document.title = title;
+        document.getElementById('product-name-breadcrumb-content').textContent = title;
+
     }
-    parseMarkdownSections();
+    fetchProductData();
 });
 
 // Get the product ID from the URL query parameter
@@ -104,6 +105,27 @@ function createSpecSection(title, content) {
     return specContainer;
 }
 
+// Function to show content and hide skeletons
+function showContent() {
+    // Hide all skeleton elements
+    document.querySelectorAll('.skeleton').forEach(el => {
+        el.classList.add('skeleton-hide');
+    });
+
+    // Show all content elements
+    document.querySelectorAll('.skeleton-hide').forEach(el => {
+        if (!el.classList.contains('skeleton')) {
+            el.classList.remove('skeleton-hide');
+            el.classList.add('content-loaded');
+        }
+    });
+
+    // Hide skeleton containers
+    document.getElementById('specs-skeleton').style.display = 'none';
+    document.getElementById('desc-skeleton').style.display = 'none';
+    document.getElementById('extra-desc-skeleton').style.display = 'none';
+}
+
 // Function to fetch product data and populate the HTML
 async function fetchProductData() {
     try {
@@ -115,13 +137,16 @@ async function fetchProductData() {
         const response = await fetch(`http://localhost:3000/api/product/${productId}`);
 
         if (!response.ok) {
+            window.location.href = "/not-found";
             throw new Error(`HTTP error! Status: ${response.status}`);
         }
 
+        setTimeout(() => {
+            showContent();
+        }, 50);
         const product = await response.json();
 
         // Update product details in the HTML
-        document.getElementById('product-name-breadcrumb').textContent = product.name;
         document.getElementById('product-name').textContent = product.name;
         const image = document.getElementById('product-image');
         image.src = product.image_url;
@@ -136,12 +161,6 @@ async function fetchProductData() {
 
         // Find the product details container
         const productDetailsContainer = document.getElementById('specs');
-
-        // Remove the template spec-title section
-        const templateSpec = productDetailsContainer.querySelector('.spec-title');
-        if (templateSpec) {
-            templateSpec.remove();
-        }
 
         // Get the button div that should remain at the bottom
         const buttonDiv = productDetailsContainer.querySelector('div[class^="button-container"]');
@@ -208,5 +227,6 @@ async function fetchProductData() {
 
     } catch (error) {
         console.error('Error fetching product data:', error);
+        // Show error state or redirect
     }
 }
