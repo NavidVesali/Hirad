@@ -770,9 +770,6 @@
   .mr-12 {
     margin-right: calc(var(--spacing) * 12);
   }
-  .mb-2 {
-    margin-bottom: calc(var(--spacing) * 2);
-  }
   .mb-2\.5 {
     margin-bottom: calc(var(--spacing) * 2.5);
   }
@@ -884,6 +881,12 @@
   .h-8 {
     height: calc(var(--spacing) * 8);
   }
+  .h-\[48px\] {
+    height: 48px;
+  }
+  .h-\[58px\] {
+    height: 58px;
+  }
   .h-\[100\%\] {
     height: 100%;
   }
@@ -892,12 +895,6 @@
   }
   .h-\[1px\] {
     height: 1px;
-  }
-  .h-\[48px\] {
-    height: 48px;
-  }
-  .h-\[58px\] {
-    height: 58px;
   }
   .h-\[64px\] {
     height: 64px;
@@ -925,9 +922,6 @@
   }
   .min-h-screen {
     min-height: 100vh;
-  }
-  .w-1 {
-    width: calc(var(--spacing) * 1);
   }
   .w-1\/2 {
     width: calc(1/2 * 100%);
@@ -973,9 +967,6 @@
   }
   .w-\[375px\] {
     width: 375px;
-  }
-  .w-\[530px\] {
-    width: 530px;
   }
   .w-\[546px\] {
     width: 546px;
@@ -1857,9 +1848,6 @@
   .object-top {
     object-position: top;
   }
-  .p-3 {
-    padding: calc(var(--spacing) * 3);
-  }
   .p-3\.5 {
     padding: calc(var(--spacing) * 3.5);
   }
@@ -1881,6 +1869,9 @@
   .px-\[100px\] {
     padding-inline: 100px;
   }
+  .py-6 {
+    padding-block: calc(var(--spacing) * 6);
+  }
   .py-12 {
     padding-block: calc(var(--spacing) * 12);
   }
@@ -1889,9 +1880,6 @@
   }
   .pt-\[30px\] {
     padding-top: 30px;
-  }
-  .pb-1 {
-    padding-bottom: calc(var(--spacing) * 1);
   }
   .pb-1\.5 {
     padding-bottom: calc(var(--spacing) * 1.5);
@@ -1945,9 +1933,6 @@
   .text-base {
     font-size: var(--text-base);
     line-height: var(--tw-leading, var(--text-base--line-height));
-  }
-  .text-\[2\.25rem\] {
-    font-size: 2.25rem;
   }
   .text-\[16px\] {
     font-size: 16px;

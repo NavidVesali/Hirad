@@ -51,9 +51,65 @@
     scrollbar-color: #ccc transparent;
   }
 
+  #landing-product-cat {
+    flex-direction: column !important;
+  }
+  #tabs-wrapper {
+    display: none;
+  }
+  .tabs-wrapper-m {
+    display: block;
+  }
+  .tabs-wrapper-m {
+    width: 100%;
+    overflow-x: scroll;
+    scrollbar-width: thin;
+    scrollbar-color: #ccc transparent;
+    position: relative;
+  }
 
-  #landing-product-cat{
-    /* flex-direction: column !important; */
+  .tabs-container {
+    display: flex;
+    /* gap: 8px; */
+    width: 100%;
+    /* padding-bottom: 8px; */
+  }
+
+  .tabs-container::-webkit-scrollbar {
+    display: none;
+  }
+
+  .tab {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 16px;
+    cursor: pointer;
+    border-radius: 8px;
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+    white-space: nowrap;
+    text-align: center;
+    position: relative;
+  }
+
+  .line {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 0;
+    height: 2px;
+    background-color: #c2163e;
+    transition: width 0.3s ease-in-out, left 0.3s ease-in-out;
+  }
+
+  .tab:hover .line {
+    width: 100%;
+    left: 0;
+  }
+
+  input[type="radio"]:checked + .tab .tab-content{
+    color: #c2163e;
 
   }
 }
