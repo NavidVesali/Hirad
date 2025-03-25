@@ -80,7 +80,7 @@ class Header extends HTMLElement {
       </div>
     </header>
     <aside class="nav-aside">
-    <div class="relative w-[100vw] h-[100vh]">
+    <div style="display: fixed; top:0; right:0; z-index: 50;">
         <button id="menu-btn" class="fixed top-10 right-4 z-50 flex flex-col items-center justify-between w-10 h-8 cursor-pointer transition-all duration-500">
         <span class="w-8 h-1 bg-white rounded transition-all"></span>
         <span class="w-8 h-1 bg-white rounded transition-all"></span>
