@@ -44,4 +44,7 @@
         top: 25vh !important;
         right: 60vw !important;
     }
+    #about-counter {
+        width: 100% !important;
+    }
 }

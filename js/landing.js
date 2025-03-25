@@ -151,11 +151,13 @@ document.addEventListener("DOMContentLoaded", () => {
     const counters = document.querySelectorAll("#about-counter .counter-value");
     if (counters.length) {
         const observer = new IntersectionObserver(
-            (entries) => entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    startCounting(entry.target);
-                }
-            }), { threshold: 0.5 }
+            (entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        startCounting(entry.target);
+                    }
+                }), { threshold: 0.5 }
+            }
         );
 
         counters.forEach(counter => observer.observe(counter));
