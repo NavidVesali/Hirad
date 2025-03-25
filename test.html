@@ -53,90 +53,77 @@
         </div>
       </div>
     </div>
-<style>
-  /* Wrapper تب‌ها */
-.tabs-wrapper {
-  width: 100%;
-  overflow: hidden;
-  position: relative;
-}
+    <style>
+      .tabs-wrapper {
+        display: none;
+        width: 100%;
+        overflow-x: scroll;
+        scrollbar-width: thin;
+        scrollbar-color: #ccc transparent;
+        position: relative;
+      }
 
-/* تب‌ها با اسکرول افقی */
-.tabs-container {
-  display: flex;
-  gap: 8px;
-  overflow-x: auto;
-  scroll-behavior: smooth;
-  width: 100%;
-  scrollbar-width: none; /* حذف اسکرول فایرفاکس */
-  -ms-overflow-style: none; /* حذف اسکرول برای IE/Edge */
-  padding-bottom: 8px;
-}
+      .tabs-container {
+        display: flex;
+        gap: 8px;
+        overflow-x: auto;
+        scroll-behavior: smooth;
+        width: 100%;
+        scrollbar-width: none;
+        -ms-overflow-style: none;
+        padding-bottom: 8px;
+      }
 
-/* حذف اسکرول برای کروم و سافاری */
-.tabs-container::-webkit-scrollbar {
-  display: none;
-}
+      .tabs-container::-webkit-scrollbar {
+        display: none;
+      }
 
-/* استایل تب‌ها */
-.tab {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  padding: 10px 16px;
-  cursor: pointer;
-  border-radius: 8px;
-  transition: background-color 0.3s ease, border-color 0.3s ease;
-  white-space: nowrap;
-  text-align: center;
-  position: relative;
-}
+      .tab {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 10px 16px;
+        cursor: pointer;
+        border-radius: 8px;
+        transition: background-color 0.3s ease, border-color 0.3s ease;
+        white-space: nowrap;
+        text-align: center;
+        position: relative;
+      }
 
-/* خط زیر تب‌ها */
-.line {
-  position: absolute;
-  bottom: 0;
-  left: 50%;
-  width: 0;
-  height: 2px;
-  background-color: #c2163e;
-  transition: width 0.3s ease-in-out, left 0.3s ease-in-out;
-}
+      .line {
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        width: 0;
+        height: 2px;
+        background-color: #c2163e;
+        transition: width 0.3s ease-in-out, left 0.3s ease-in-out;
+      }
 
-/* افکت هاور روی تب */
-.tab:hover .line {
-  width: 100%;
-  left: 0;
-}
+      .tab:hover .line {
+        width: 100%;
+        left: 0;
+      }
 
-/* افکت برای تب انتخاب‌شده */
-/* input[type="radio"]:checked + .tab .line {
-  width: 100%;
-  left: 0;
-  background-color: #c2163e;
-} */
+      input[type="radio"] {
+        display: none;
+      }
+    </style>
+    <script>
+      // افزودن قابلیت اسکرول افقی با چرخ موس (در همه دستگاه‌ها)
+      const container = document.getElementById("tabs-container");
 
-/* مخفی کردن input */
-input[type="radio"] {
-  display: none;
-}
-
-</style>    
-<script>
-  // افزودن قابلیت اسکرول افقی با چرخ موس (در همه دستگاه‌ها)
-const container = document.getElementById("tabs-container");
-
-// کنترل اسکرول افقی در همه صفحات
-container.addEventListener("wheel", (e) => {
-  e.preventDefault(); // جلوگیری از اسکرول عمودی
-  container.scrollBy({
-    left: e.deltaY * 2, // سرعت اسکرول 2 برابر
-    behavior: "smooth",
-  });
-});
-
-</script>
+      // کنترل اسکرول افقی در همه صفحات
+      container.addEventListener("wheel", (e) => {
+        e.preventDefault(); // جلوگیری از اسکرول عمودی
+        container.scrollBy({
+          left: e.deltaY * 2, // سرعت اسکرول 2 برابر
+          behavior: "smooth",
+        });
+      });
+    </script>
 
     <script src="./js/sidbar-index-js.js"></script>
     <script src="./js/js-start.js"></script>
