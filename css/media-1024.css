@@ -54,12 +54,7 @@
   #landing-product-cat {
     flex-direction: column !important;
   }
-  #tabs-wrapper {
-    display: none;
-  }
-  .tabs-wrapper-m {
-    display: block;
-  }
+ 
   .tabs-wrapper-m {
     width: 100%;
     overflow-x: scroll;
@@ -108,8 +103,4 @@
     left: 0;
   }
 
-  input[type="radio"]:checked + .tab .tab-content{
-    color: #c2163e;
-
-  }
 }

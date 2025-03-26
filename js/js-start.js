@@ -12,3 +12,6 @@ document.querySelectorAll("#nav-bar span").forEach((span, index) => {
         span.click();
     });
 });
+
+// ==================================================
+
