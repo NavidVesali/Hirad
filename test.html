@@ -13,48 +13,64 @@
     <link rel="stylesheet" href="css/sidebar-index.css" />
     <title>هیراد</title>
   </head>
-  <body>
-    <div class="tabs-wrapper">
-      <div class="tabs-container" id="tabs-container">
+    <div
+      class="wrapper-2"
+      style="width: 90%;display: flex;flex-direction: column;align-items: center;justify-content: center;">
+      <div  id="tabs-container" style="width: 50%;">
         <div>
-          <input type="radio" id="tab1" name="tabs" checked />
+          <input type="radio" id="tab1" name="tabs" checked onclick="changeTab(0)" />
           <label class="tab" for="tab1">
-            <div class="tab-content">شیرآلات صنعتی</div>
+            <div class="tab-content" style="padding: 5px">شیرآلات صنعتی</div>
             <div class="line"></div>
           </label>
         </div>
         <div>
-          <input type="radio" id="tab2" name="tabs" />
+          <input type="radio" id="tab2" name="tabs" onclick="changeTab(1)" />
           <label class="tab" for="tab2">
-            <div class="tab-content">اتصالات</div>
+            <div class="tab-content" style="padding: 5px">اتصالات</div>
             <div class="line"></div>
           </label>
         </div>
         <div>
-          <input type="radio" id="tab3" name="tabs" />
+          <input type="radio" id="tab3" name="tabs" onclick="changeTab(2)" />
           <label class="tab" for="tab3">
-            <div class="tab-content">لوله تیوب</div>
+            <div class="tab-content" style="padding: 5px">لوله تیوب</div>
             <div class="line"></div>
           </label>
         </div>
         <div>
-          <input type="radio" id="tab4" name="tabs" />
+          <input type="radio" id="tab4" name="tabs" onclick="changeTab(3)" />
           <label class="tab" for="tab4">
-            <div class="tab-content">فلنج</div>
+            <div class="tab-content" style="padding: 5px">فلنج</div>
             <div class="line"></div>
           </label>
         </div>
         <div>
-          <input type="radio" id="tab5" name="tabs" />
+          <input type="radio" id="tab5" name="tabs" onclick="changeTab(4)" />
           <label class="tab" for="tab5">
-            <div class="tab-content">ابزار دقیق</div>
+            <div class="tab-content" style="padding: 5px">ابزار دقیق</div>
             <div class="line"></div>
           </label>
         </div>
+       </div>
+      <div style="width: 25vw; height: 25vw">
+        <img id="tab-image" src="./assets/images/Main-1.png" alt=" " style="width: 25vw; height: 25vw; object-fit: contain; border-radius: 20px" />
       </div>
+      <div style="width: 50%; display: flex; flex-direction: column; gap: 10px">
+        <h2 id="tab-title">شـیرآلـات صـنعتی</h2>
+        <p id="tab-description" style="text-align: justify">
+          واردات و تامین انواع مختلف شیرالات صنعتی در متریال های کربـن استیل ، استنلس استیل ، فولاد های آلیاژی ( Alloy Steel ) ، چـدنی، بر اساس
+          استاندارد متریال : ASME/API/NACE/DIN، شیر فلکه تـوپی ،شیر کشویـی ، شیر سـوزنی ، شیر یکطرفه (خـودکار) ، شیر نیدل شیر پـروانه ای ، شیر پـلاگ،
+          ، شیر اسـتوانه ای، شیر فـشار شکن ، شیر اطمـینان ، شیر دیـافـراگمی بر اسـاس انـواع اتـصـال دو سـر : فـلـنـجـی RF/RTJ ، جـوشی ، سـاکت، دنده
+        </p>
+        <button id="cat-button" class="primary-button" style="width: 250px; margin-top: 30px">مشاهده بیشتر</button>
+      </div>
+      
     </div>
+  
+    </body>
     <style>
-      .tabs-wrapper {
+      .wrapper-2 #tabs-container {
         width: 100%;
         overflow-x: scroll;
         scrollbar-width: thin;
@@ -62,22 +78,23 @@
         position: relative;
       }
 
-      .tabs-container {
+      .wrapper-2 #tabs-container {
         display: flex;
+        justify-content: center;
         gap: 8px;
-        overflow-x: auto;
+        overflow-x: scroll;
         scroll-behavior: smooth;
         width: 100%;
-        scrollbar-width: none;
-        -ms-overflow-style: none;
+        /* scrollbar-width: none;
+        -ms-overflow-style: none; */
         padding-bottom: 8px;
       }
 
-      .tabs-container::-webkit-scrollbar {
+      .wrapper-2 #tabs-container::-webkit-scrollbar {
         display: none;
       }
 
-      .tab {
+      .wrapper-2 .tab {
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -91,7 +108,7 @@
         position: relative;
       }
 
-      .line {
+      .wrapper-2 .line {
         position: absolute;
         bottom: 0;
         left: 50%;
@@ -101,12 +118,12 @@
         transition: width 0.3s ease-in-out, left 0.3s ease-in-out;
       }
 
-      .tab:hover .line {
+      .wrapper-2 .tab:hover .line {
         width: 100%;
         left: 0;
       }
 
-      input[type="radio"] {
+      .wrapper-2 input[type="radio"] {
         display: none;
       }
     </style>
@@ -133,45 +150,3 @@
     <script src="./js/footer.js"></script>
   </body>
 </html>
-
-
-
-<div class="tabs-wrapper-m" style="width: 50%">
-  <div class="tabs-container" id="tabs-container">
-    <div>
-      <input type="radio" id="tab1" name="tabs" checked onclick="changeTab(0)" />
-      <label class="tab" for="tab1">
-        <div class="tab-content" style="padding: 5px;">شیرآلات صنعتی</div>
-        <div class="line"></div>
-      </label>
-    </div>
-    <div>
-      <input type="radio" id="tab2" name="tabs" onclick="changeTab(1)" />
-      <label class="tab" for="tab2">
-        <div class="tab-content" style="padding: 5px;">اتصالات</div>
-        <div class="line"></div>
-      </label>
-    </div>
-    <div>
-      <input type="radio" id="tab3" name="tabs" onclick="changeTab(2)" />
-      <label class="tab" for="tab3">
-        <div class="tab-content" style="padding: 5px;">لوله تیوب</div>
-        <div class="line"></div>
-      </label>
-    </div>
-    <div>
-      <input type="radio" id="tab4" name="tabs" onclick="changeTab(3)" />
-      <label class="tab" for="tab4">
-        <div class="tab-content" style="padding: 5px;">فلنج</div>
-        <div class="line"></div>
-      </label>
-    </div>
-    <div>
-      <input type="radio" id="tab5" name="tabs" onclick="changeTab(4)" />
-      <label class="tab" for="tab5">
-        <div class="tab-content" style="padding: 5px;">ابزار دقیق</div>
-        <div class="line"></div>
-      </label>
-    </div>
-  </div>
-</div>
