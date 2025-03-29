@@ -233,8 +233,13 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 function changeTab(index) {
-    if (!tabData[index]) {
-        window.location.href = "/not-found"; // Redirect if invalid index
+    if (!tabData || !tabData[index]) {
+        document.getElementById("tab1").checked = true;
+        try {
+            changeTab(0);
+        } catch (e) {
+            console.error("Error in changeTab function:", e);
+        }
         return;
     }
 

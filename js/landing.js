@@ -98,7 +98,15 @@ function updateContent(data) {
 }
 
 function changeTab(index) {
-    if (!tabData[index]) return;
+    if (!tabData || !tabData[index]) {
+        document.getElementById("tab1").checked = true;
+        try {
+            changeTab(0);
+        } catch (e) {
+            console.error("Error in changeTab function:", e);
+        }
+        return;
+    }
 
     const elements = {
         title: document.getElementById("tab-title"),

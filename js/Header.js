@@ -87,7 +87,7 @@ class Header extends HTMLElement {
         <span class="w-8 h-1 bg-white rounded transition-all"></span>
       </button>
 
-        <div id="sidebar" class="container-1  h-[100vh] fixed right-0 top-0 bg-[#1E1E1E] transform translate-x-[100%] transition-transform duration-500 ease-in-out z-40 flex items-center" style="width: 250px">
+        <div id="sidebar" class="container-1  h-[100vh] fixed right-0 top-0 transform translate-x-[100%] transition-transform duration-500 ease-in-out z-40 flex items-center" style="width: 250px; background-color: rgba(14,14,14, 0.8);">
             <div class="grid grid-cols-1 grid-rows-6 gap-5 w-[100%] justify-items-center">
                 <div class="w-full flex justify-center rounded-[24px]">
                     <a href="/" class="nav-link" data-route="/">خانه</a>
@@ -157,6 +157,9 @@ class Header extends HTMLElement {
                 activeItem = item;
             }
             if (itemRoute === "/products" && (currentPath === "/products" || currentPath.includes("product"))) {
+                activeItem = item;
+            }
+            if (itemRoute === "/product" && (currentPath === "/product" || currentPath.includes("product"))) {
                 activeItem = item;
             }
         });
