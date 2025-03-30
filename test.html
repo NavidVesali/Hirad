@@ -1,101 +1,115 @@
 <!DOCTYPE html>
-<html lang="en" dir="rtl">
+<html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Responsive Scroll Div</title>
-  <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loop Slider</title>
+    <style>
     body {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      min-height: 100vh;
-      background-color: #f4f4f4;
-    }
+  
+  background: #141414;
+  display: -webkit-box;
 
-    .container {
-      width: 90%;
-      max-width: 1200px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      gap: 10px;
-      overflow: hidden;
-      margin: 40px 0;
-    }
+  height: 100vh;
+  -webkit-box-pack: center;
+          justify-content: center;
+}
 
-    .s-button2 {
-      width: 172px;
-      height: 64px;
-      background-color: #c2163e;
-      color: white;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      border-radius: 32px;
-      font-size: 18px;
-      white-space: nowrap;
-      position: relative;
-    }
+@-webkit-keyframes scroll {
+  0% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+  100% {
+    -webkit-transform: translateX(calc(-250px * 5));
+            transform: translateX(calc(-250px * 5));
+  }
+}
 
-    .about-2-icon {
-      width: 24px;
-      height: 24px;
-      position: absolute;
-      top: 50%;
-      right: 8px;
-      transform: translateY(-50%);
-    }
-
-    /* Media query for scroll */
-    @media (max-width: 1024px) {
-      .container {
-        overflow-x: auto;
-        justify-content: flex-start;
-        gap: 10px;
-      }
-
-      .s-button2 {
-        flex-shrink: 0;
-      }
-
-      .container::-webkit-scrollbar {
-        height: 8px;
-      }
-
-      .container::-webkit-scrollbar-thumb {
-        background-color: #c2163e;
-        border-radius: 10px;
-      }
-    }
-  </style>
+@keyframes scroll {
+  0% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+  100% {
+    -webkit-transform: translateX(calc(-250px * 5));
+            transform: translateX(calc(-250px * 5));
+  }
+}
+.loop--slider {
+  height: 120px;
+  margin: auto;
+  overflow: hidden;
+  position: relative;
+  width: 960px;
+}
+.loop--slider::before, .loop--slider::after {
+  content: "";
+  height: 120px;
+  position: absolute;
+  width: 200px;
+  z-index: 2;
+}
+.loop--slider::after {
+  right: 0;
+  top: 0;
+  -webkit-transform: rotateZ(180deg);
+          transform: rotateZ(180deg);
+}
+.loop--slider::before {
+  left: 0;
+  top: 0;
+}
+.loop--slider .loop--slide--track {
+  -webkit-animation: scroll 20s linear infinite;
+          animation: scroll 20s linear infinite;
+  display: -webkit-box;
+  display: flex;
+  width: calc(250px * 10);
+}
+.loop--slider .loop--slide {
+  height: 100px;
+  width: 250px;
+}
+    </style>
 </head>
 <body>
-  <div class="container">
-    <span class="w-[172px] h-[64px] s-button2 about-2-txt rounded-[32px] relative">
-      تــدارکـات<img class="about-2-icon" src="./assets/images/about-2/layer.svg" alt=" " />
-    </span>
-    <span class="w-[172px] h-[64px] s-button2 about-2-txt rounded-[32px] relative">
-      انبار<img class="about-2-icon" src="./assets/images/about-2/house-2.svg" alt=" " />
-    </span>
-    <span class="w-[172px] h-[64px] s-button2 about-2-txt rounded-[32px] relative">
-      بسته‌بندی<img class="about-2-icon" src="./assets/images/about-2/box.svg" alt=" " />
-    </span>
-    <span class="w-[172px] h-[64px] s-button2 about-2-txt rounded-[32px] relative">
-      واحد پروژه‌ها<img class="about-2-icon" src="./assets/images/about-2/share.svg" alt=" " />
-    </span>
-    <span class="w-[172px] h-[64px] s-button2 about-2-txt rounded-[32px] relative">
-      بازرسی<img class="about-2-icon" src="./assets/images/about-2/3d-cube-scan.svg" alt=" " />
-    </span>
-    <span class="w-[172px] h-[64px] s-button2 about-2-txt rounded-[32px] relative">
-      ارائه اسناد حمل<img class="about-2-icon" src="./assets/images/about-2/truck-tick.svg" alt=" " />
-    </span>
-  </div>
+    <div class="loop--slider">
+        <div class="loop--slide--track">
+            <div class="loop--slide">
+              <img src="./assets/images/nace.svg " alt=" " title="img " class="w-[20%]" />
+            </div>
+            <div class="loop--slide">
+              <img src="./assets/images/mss.svg " alt=" " title="img " class="w-[20%]" />
+            </div>
+            <div class="loop--slide">
+              <img src="./assets/images/astm.svg " alt=" " title="img " class="w-[20%]" />
+            </div>
+            <div class="loop--slide">
+              <img src="./assets/images/api.svg " alt=" " title="img " class="w-[20%]" />
+            </div>
+            <div class="loop--slide">
+              <img src="./assets/images/ansi.svg " alt=" " title="img " class="w-[20%]" />
+            </div>
+
+            
+            <div class="loop--slide">
+              <img src="./assets/images/nace.svg" alt=" " title="img " class="w-[20%]" />
+            </div>
+            <div class="loop--slide">
+              <img src="./assets/images/mss.svg " alt=" " title="img " class="w-[20%]" />
+            </div>
+            <div class="loop--slide">
+              <img src="./assets/images/astm.svg " alt=" " title="img " class="w-[20%]" />
+            </div>
+            <div class="loop--slide">
+              <img src="./assets/images/api.svg " alt=" " title="img " class="w-[20%]" />
+            </div>
+            <div class="loop--slide">
+              <img src="./assets/images/ansi.svg " alt=" " title="img " class="w-[20%]" />
+            </div>
+            
+        </div>
+    </div>
 </body>
 </html>
