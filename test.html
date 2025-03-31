@@ -1,126 +1,182 @@
 <!DOCTYPE html>
-<html lang="fa" dir="">
+<html lang="fa" dir="rtl">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Responsive Loop Slider</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>سرویس ها</title>
+    <link rel="stylesheet" href="./src/output.css" />
+    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="./css/service-page.css">
+    <link rel="stylesheet" href="./css/text-styles.css">
+    <link rel="stylesheet" href="./css/buttons.css" />
+    <link rel="stylesheet" href="./css/media-1024.css">
+
+
     <style>
-        
-
-        /* body {
-            background: #141414;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            margin: 0;
-        } */
-
-        @-webkit-keyframes scroll {
-            0% {
-                -webkit-transform: translateX(0);
-                        transform: translateX(0);
-            }
-            100% {
-                -webkit-transform: translateX(-50%);
-                        transform: translateX(-50%);
-            }
+      @media (max-width: 1024px){
+        .wrapper{
+          flex-direction: column !important;
+          overflow:visible;
+          
         }
 
-        @keyframes scroll {
-            0% {
-                -webkit-transform: translateX(0);
-                        transform: translateX(0);
-            }
-            100% {
-                -webkit-transform: translateX(-50%);
-                        transform: translateX(-50%);
-            }
-        }
-
-        .loop--slider {
-            margin: auto;
-            overflow: hidden;
-            position: relative;
-            width: 100%; /* Full width */
-        }
-
-        .loop--slider::before,
-        .loop--slider::after {
-            content: "";
-            height: 120px;
-            position: absolute;
-            width: 10%;
-            z-index: 2;
-        }
-
-        /* .loop--slider::after {
-            right: 0;
-            top: 0;
-            -webkit-transform: rotateZ(180deg);
-                    transform: rotateZ(180deg);
-        } */
-
-        .loop--slider::before {
-            left: 0;
-            top: 0;
-        }
-
-        .loop--slider .loop--slide--track {
-            -webkit-animation: scroll 20s linear infinite;
-                    animation: scroll 20s linear infinite;
-            display: flex;
-            width: 200%; /* 10 slides, 2 loops for smooth transition */
-        }
-
-        .loop--slider .loop--slide {
-            height: 100%;
-            width: 10%; /* Each slide takes 10% of parent width */
-        }
-
-        .loop--slide img {
-            width: 100%;
-            height: 100%;
-            /* object-fit: contain; */
-        }
+      }
     </style>
 </head>
-<body>
-    <div class="loop--slider">
-        <div class="loop--slide--track">
-            <div class="loop--slide">
-                <img src="./assets/images/nace.svg" alt="NACE" title="NACE" />
-            </div>
-            <div class="loop--slide">
-                <img src="./assets/images/mss.svg" alt="MSS" title="MSS" />
-            </div>
-            <div class="loop--slide">
-                <img src="./assets/images/astm.svg" alt="ASTM" title="ASTM" />
-            </div>
-            <div class="loop--slide">
-                <img src="./assets/images/api.svg" alt="API" title="API" />
-            </div>
-            <div class="loop--slide">
-                <img src="./assets/images/ansi.svg" alt="ANSI" title="ANSI" />
-            </div>
 
-            <!-- Duplicate slides for seamless looping -->
-            <div class="loop--slide">
-                <img src="./assets/images/nace.svg" alt="NACE" title="NACE" />
+<body>
+    <!-------------------- Header Section ---------------------->
+
+    <hirad-header style="position: sticky; top: 0; z-index: 999"></hirad-header>
+    <!-------------------- Header Section ---------------------->
+
+    <!-------------------- start box section----------------- -->
+
+    <div class="w-[80%] h-auto flex flex-col gap-3.5" style="margin: 64px 0 20px 0;">
+        <div class="flex justify-start items-center gap-2">
+            <img src="../assets/images/services/menu.svg" alt="" />
+            <a href="/">صفحه اصلی</a>
+            <p>/</p>
+            <p>خدمات هیراد</p>
+        </div>
+        <div class="w-[100%] h-auto flex justify-between">
+            <h1 class="text-[48px] font-bold">خدمات کلیدی شرکت تجهیز فرآیند هیراد</h1>
+            <div class="flex justify-start items-center gap-2">
+                <span onclick="window.scrollTo({ top: 780, behavior: 'smooth' });" style="cursor: pointer;">مشاهده خدمات هیراد</span>
+                <img src="../assets/images/services/arrow-down.svg" alt="" />
             </div>
-            <div class="loop--slide">
-                <img src="./assets/images/mss.svg" alt="MSS" title="MSS" />
+        </div>
+        <p class="text-[20px]">همراه شما در طراحی، اجرا و بهره‌برداری کامل پروژه‌ها</p>
+    </div>
+
+    <div class="wrapper">
+        <div class="box flex justify-evenly gap-4" onclick="expandDiv(this)">
+            <div class="service-box w-[100%] h-[100%] justify-between items-center">
+                <div class="w-[40%] h-[100%] my-4">
+                    <img class="w-full h-full object-cover rounded-[24px]" src="../assets/images/services/image 2.svg" alt="" />
+                </div>
+                <div class="flex flex-col justify-between w-[60%] h-[90%] my-12 px-5" style="border-left: 2px solid rgba(255,255,255,0.04);">
+                    <div class=" ">
+                        <h2 class="text-[32px]">بازرگانی و تامین تجهیزات</h2>
+                        <p class="sec-color text-justify">
+                            برخی برندها با وجود آنکه در بازارصنایع نفت، گاز و پتروشیمی مورد مصرف هستند و در وندورلیست ها نیز عضویت دارند فاقد نماینده رسمی در ایران هستند، تجهیز فرآیند هیراد به واسطه شرکای بین المللی تجاری خود و همچنین انبارداران (استوکیست ها) در سراسر ایران توانمندی
+                            تامین سفارشی کالای صنعتی را در سریع ترین زمان ممکن با قیمتی مناسب و با امکان ارائه گواهینامه های معتبر بازرسی دارد.
+                        </p>
+                    </div>
+                    <button class="p-button2 cursor-pointer w-[225px] h-[48px]">
+              <img class="ml-1" src="../assets/images/services/call-outgoing.svg" alt="" />ارتباط با بخش مشاوره
+            </button>
+                </div>
             </div>
-            <div class="loop--slide">
-                <img src="./assets/images/astm.svg" alt="ASTM" title="ASTM" />
+            <div class="h-[90%] flex flex-col justify-between self-center items-center pb-1.5 min-w-[96px]">
+                <span class="sec-color text-[32px]">۰۱</span>
+                <span class="text-[20px]" style="writing-mode: vertical-rl; rotate: 180deg">بازرگانی و تامین تجهیزات</span>
             </div>
-            <div class="loop--slide">
-                <img src="./assets/images/api.svg" alt="API" title="API" />
+        </div>
+        <div class="box flex justify-evenly gap-4" onclick="expandDiv(this)">
+            <div class="service-box w-[100%] h-[100%] justify-between items-center">
+                <div class="w-[40%] h-[100%] my-4">
+                    <img class="w-full h-full object-cover rounded-[24px]" src="../assets/images/services/image 2.svg" alt="" />
+                </div>
+                <div class="flex flex-col justify-between w-[60%] h-[90%] my-12 px-5" style="border-left: 2px solid rgba(255,255,255,0.04);">
+                    <div class=" ">
+                        <h2 class="text-[32px]">بازرگانی و تامین تجهیزات</h2>
+                        <p class="sec-color text-justify">
+                            برخی برندها با وجود آنکه در بازارصنایع نفت، گاز و پتروشیمی مورد مصرف هستند و در وندورلیست ها نیز عضویت دارند فاقد نماینده رسمی در ایران هستند، تجهیز فرآیند هیراد به واسطه شرکای بین المللی تجاری خود و همچنین انبارداران (استوکیست ها) در سراسر ایران توانمندی
+                            تامین سفارشی کالای صنعتی را در سریع ترین زمان ممکن با قیمتی مناسب و با امکان ارائه گواهینامه های معتبر بازرسی دارد.
+                        </p>
+                    </div>
+                    <button class="p-button2 cursor-pointer w-[225px] h-[48px]">
+              <img class="ml-1" src="../assets/images/services/call-outgoing.svg" alt="" />ارتباط با بخش مشاوره
+            </button>
+                </div>
             </div>
-            <div class="loop--slide">
-                <img src="./assets/images/ansi.svg" alt="ANSI" title="ANSI" />
+            <div class="h-[90%] flex flex-col justify-between self-center items-center pb-1.5 min-w-[96px]">
+                <span class="sec-color text-[32px]">۰۲</span>
+                <span class="text-[20px]" style="writing-mode: vertical-rl; rotate: 180deg">بازرگانی و تامین تجهیزات</span>
+            </div>
+        </div>
+        <div class="box flex justify-evenly gap-4" onclick="expandDiv(this)">
+            <div class="service-box w-[100%] h-[100%] justify-between items-center">
+                <div class="w-[40%] h-[100%] my-4">
+                    <img class="w-full h-full object-cover rounded-[24px]" src="../assets/images/services/image 2.svg" alt="" />
+                </div>
+                <div class="flex flex-col justify-between w-[60%] h-[90%] my-12 px-5" style="border-left: 2px solid rgba(255,255,255,0.04);">
+                    <div class=" ">
+                        <h2 class="text-[32px]">بازرگانی و تامین تجهیزات</h2>
+                        <p class="sec-color text-justify">
+                            برخی برندها با وجود آنکه در بازارصنایع نفت، گاز و پتروشیمی مورد مصرف هستند و در وندورلیست ها نیز عضویت دارند فاقد نماینده رسمی در ایران هستند، تجهیز فرآیند هیراد به واسطه شرکای بین المللی تجاری خود و همچنین انبارداران (استوکیست ها) در سراسر ایران توانمندی
+                            تامین سفارشی کالای صنعتی را در سریع ترین زمان ممکن با قیمتی مناسب و با امکان ارائه گواهینامه های معتبر بازرسی دارد.
+                        </p>
+                    </div>
+                    <button class="p-button2 cursor-pointer w-[225px] h-[48px]">
+              <img class="ml-1" src="../assets/images/services/call-outgoing.svg" alt="" />ارتباط با بخش مشاوره
+            </button>
+                </div>
+            </div>
+            <div class="h-[90%] flex flex-col justify-between self-center items-center pb-1.5 min-w-[96px]">
+                <span class="sec-color text-[32px]">۰۳</span>
+                <span class="text-[20px]" style="writing-mode: vertical-rl; rotate: 180deg">بازرگانی و تامین تجهیزات</span>
+            </div>
+        </div>
+        <div class="box flex justify-evenly gap-4" onclick="expandDiv(this)">
+            <div class="service-box w-[100%] h-[100%] justify-between items-center">
+                <div class="w-[40%] h-[100%] my-4">
+                    <img class="w-full h-full object-cover rounded-[24px]" src="../assets/images/services/image 2.svg" alt="" />
+                </div>
+                <div class="flex flex-col justify-between w-[60%] h-[90%] my-12 px-5" style="border-left: 2px solid rgba(255,255,255,0.04);">
+                    <div class=" ">
+                        <h2 class="text-[32px]">بازرگانی و تامین تجهیزات</h2>
+                        <p class="sec-color text-justify">
+                            برخی برندها با وجود آنکه در بازارصنایع نفت، گاز و پتروشیمی مورد مصرف هستند و در وندورلیست ها نیز عضویت دارند فاقد نماینده رسمی در ایران هستند، تجهیز فرآیند هیراد به واسطه شرکای بین المللی تجاری خود و همچنین انبارداران (استوکیست ها) در سراسر ایران توانمندی
+                            تامین سفارشی کالای صنعتی را در سریع ترین زمان ممکن با قیمتی مناسب و با امکان ارائه گواهینامه های معتبر بازرسی دارد.
+                        </p>
+                    </div>
+                    <button class="p-button2 cursor-pointer w-[225px] h-[48px]">
+              <img class="ml-1" src="../assets/images/services/call-outgoing.svg" alt="" />ارتباط با بخش مشاوره
+            </button>
+                </div>
+            </div>
+            <div class="h-[90%] flex flex-col justify-between self-center items-center pb-1.5 min-w-[96px]">
+                <span class="sec-color text-[32px]">۰۴</span>
+                <span class="text-[20px]" style="writing-mode: vertical-rl; rotate: 180deg">بازرگانی و تامین تجهیزات</span>
             </div>
         </div>
     </div>
+    <!-------------------- end box section----------------- -->
+    <!-------------------- start s-gallery section----------------- -->
+
+    <div id="s-gallery" class="w-[80%] my-16">
+        <h2 class="text-[36px] font-[700]">تامین تجهیزات صنعتی پروژه های خطوط لوله نفت و گاز</h2>
+        <p class="text-[20px] font-[400] text-justify">
+            مجموعه تجهیز فرآیند هیراد با سابقه طولانی حضور در صنعت یکی از بزرگترین و کامل ترین تامین کنندگان کالاهای مورد نیاز در صنایع حفاری، نفت و گاز، پتروشیمی و همچنین صنایع فولاد و معدن و پروژه های نیروگاهی است. ساختن بنای محکمی از اعتماد بین شرکت های طرف قرارداد
+            ما نه تنها دسترسی چشمگیری به منابع مهم و اصلی تجهیزات و کالاهای تخصصی ما فراهم کرده است بلکه افق دیدی باز در برابر ما گشوده بطوریکه هر لحظه در تقویم تجاری جمهوری اسلامی ایران به محکم تر کردن روابط خود با منابع سابق و ایجاد روابط با منابع نو
+            و قابل اعتماد دیگری پرداخته و به فهرست همکاران خود افزوده است. ایجاد شبکه ای چنین قوی و همچنان گسترده شونده بین کارفرمایان و مشتریان و سازندگان و تامین کنندگان این توانایی منحصر به فرد را برای ما به ارمغان آورده که پاسخگوی نیاز بخش تدارک پروژه
+            های شما (Procurement) در سریع ترین زمان ممکن و با بهترین قیمت باشیم.
+        </p>
+    </div>
+
+    <div>
+        <video id="s-gallery-video" src="" style="width: 80vw;" poster="../assets/images/services/Video.svg"></video>
+    </div>
+    <!-------------------- end s-gallery section----------------- -->
+
+    <div class="w-[80%] h-auto my-16">
+        <h2 class="font-[700] text-[36px]">تامین تجهیزات صنعتی پروژه های خطوط لوله نفت و گاز</h2>
+        <p class="font-[400] text-[20px] text-justify">
+            برای معرفی تجهیزات نفت، گاز و پتروشیمی ابتدا نیاز است اطلاعات مختصری راجع به تاریخچه این صنعت داشته باشیم. کلمه‌ پتروشیمی در اصل ترکیبی از دو واژه “پترول” و “شیمی” است که معنای لغوی این عبارت تبدیل فرآورده‌های نفت خام یا گاز طبیعی به محصولات مصرفی می‌باشد.
+            فرآورده‌‌های نفتی امروزه علاوه بر استفاده‌های قبلی خود در زمینه‌هایی مانند سوخت وسائل نقلیه، روغن موتور و سایر موارد در تولید بسیاری دیگر از قطعات مورد نیاز ساخت خودروها، نقش مهمی دارند. همچنین از فراورده‌های نفتی برای تامین سوخت موشک‌های
+            هدایت شونده، سفینه‌های ماهواره‌بر و گاها در ساخت قطعات داخلی آن‌ها به‌کار می‌رود. برای استفاده از فراورده‌ها نیاز است که تجهیزات نفت و گاز مخصوص این حوزه به‌کار‌گیری شود.
+        </p>
+    </div>
+    <div class="w-full h-auto">
+        <hirad-footer></hirad-footer>
+    </div>
+
+    <script src="../js/service-page.js"></script>
+    <script src="../js/Header.js"></script>
+    <script src="../js/footer.js"></script>
 </body>
+
 </html>
