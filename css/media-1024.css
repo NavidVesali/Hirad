@@ -122,6 +122,8 @@
 
 .wrapper{
 }
+#product-container{
+  grid-template-columns: repeat(2, 1fr);}
 
 }
 
@@ -129,5 +131,8 @@
   #tab-image {
     height: 80vw !important;
     width: 80vw !important;
+  }
+  #product-container{
+    grid-template-columns: 1fr !important;
   }
 }

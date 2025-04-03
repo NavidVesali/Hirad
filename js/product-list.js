@@ -31,7 +31,7 @@ async function fetchProductCatData() {
         navigateToSlugTab();
     } catch (error) {
         console.error("Error fetching product categories:", error);
-        window.location.href = "/not-found"; // Redirect on fetch error
+        // window.location.href = "/not-found"; // Redirect on fetch error
     }
 }
 
