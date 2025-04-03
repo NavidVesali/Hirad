@@ -3,8 +3,9 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="./css/style.css">
-    <link rel="stylesheet" href="./src/output.css">
+    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="./src/output.css" />
+    <link rel="stylesheet" href="./css/text-styles.css">
     <title>Accordion Menu</title>
     <style>
       * {
@@ -28,18 +29,13 @@
         width: 500px;
         overflow: hidden;
         border-radius: 12px;
-
-        
       }
 
       .accordion-item {
-        border-bottom: 1px solid #333;
         overflow: hidden;
         transition: all 0.3s ease-in-out;
         margin-bottom: 10px;
         border-radius: 12px;
-
-        
       }
 
       .accordion-item:last-child {
@@ -58,6 +54,11 @@
 
       .accordion-header:hover {
         background: linear-gradient(135deg, #555, #444);
+      }
+      .accordion-content p ,h3{
+        margin: 10px 20px;
+        text-align: justify;
+        white-space: wrap;
       }
 
       .accordion-header p {
@@ -78,21 +79,25 @@
 
       .accordion-content {
         background-color: #2a2a2a;
-        display: flex
-;
-    flex-direction: column;
-    align-items: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
         color: #ccc;
-        padding: 0 20px;
+        /* padding: 0 20px; */
         max-height: 0;
         overflow-y: auto;
         transition: max-height 0.3s ease, padding 0.3s ease;
-        
+      }
+      .accordion-content img{
+        width: 100%;
+        border-radius: 0 0 32px 32px !important;
+        object-fit: cover;
+        height: 180px;
       }
 
       .accordion-item.active .accordion-content {
         max-height: 300px;
-        padding: 15px 20px;
+        /* padding: 15px 20px; */
       }
 
       .accordion-item.active {
@@ -109,12 +114,16 @@
           <span class="icon">▼</span>
         </div>
         <div class="accordion-content">
-            <h1>بازرگانی و تامین تجهیزات</h1>
-            <p>
-              برخی برندها با وجود آنکه در بازارصنایع نفت، گاز و پتروشیمی مورد مصرف هستند و در وندورلیست ها نیز عضویت دارند فاقد نماینده رسمی در ایران
-              هستند، تجهیز فرآیند هیراد به واسطه شرکای بین المللی تجاری خود و همچنین انبارداران (استوکیست ها) در سراسر ایران توانمندی تامین سفارشی کالای
-              صنعتی را در سریع ترین زمان ممکن با قیمتی مناسب و با امکان ارائه گواهینامه های معتبر بازرسی دارد.
-            </p>          <img src="./assets/images/services/image 2.svg" alt="" />
+          <h3>بازرگانی و تامین تجهیزات</h3>
+          <p>
+            برخی برندها با وجود آنکه در بازارصنایع نفت، گاز و پتروشیمی مورد مصرف
+            هستند و در وندورلیست ها نیز عضویت دارند فاقد نماینده رسمی در ایران
+            هستند، تجهیز فرآیند هیراد به واسطه شرکای بین المللی تجاری خود و
+            همچنین انبارداران (استوکیست ها) در سراسر ایران توانمندی تامین سفارشی
+            کالای صنعتی را در سریع ترین زمان ممکن با قیمتی مناسب و با امکان
+            ارائه گواهینامه های معتبر بازرسی دارد.
+          </p>
+          <img src="./assets/images/services/image 2.svg" alt="" />
           <button>بیشتر</button>
         </div>
       </div>
@@ -126,12 +135,17 @@
           <span class="icon">▼</span>
         </div>
         <div class="accordion-content">
-            <h1>بازرگانی و تامین تجهیزات</h1>
-            <p>
-              برخی برندها با وجود آنکه در بازارصنایع نفت، گاز و پتروشیمی مورد مصرف هستند و در وندورلیست ها نیز عضویت دارند فاقد نماینده رسمی در ایران
-              هستند، تجهیز فرآیند هیراد به واسطه شرکای بین المللی تجاری خود و همچنین انبارداران (استوکیست ها) در سراسر ایران توانمندی تامین سفارشی کالای
-              صنعتی را در سریع ترین زمان ممکن با قیمتی مناسب و با امکان ارائه گواهینامه های معتبر بازرسی دارد.
-            </p>          <img src="./assets/images/services/image 2.svg" alt="" />
+          <img src="./assets/images/services/image 2.svg" alt="" />
+
+          <h3>بازرگانی و تامین تجهیزات</h3>
+          <p>
+            برخی برندها با وجود آنکه در بازارصنایع نفت، گاز و پتروشیمی مورد مصرف
+            هستند و در وندورلیست ها نیز عضویت دارند فاقد نماینده رسمی در ایران
+            هستند، تجهیز فرآیند هیراد به واسطه شرکای بین المللی تجاری خود و
+            همچنین انبارداران (استوکیست ها) در سراسر ایران توانمندی تامین سفارشی
+            کالای صنعتی را در سریع ترین زمان ممکن با قیمتی مناسب و با امکان
+            ارائه گواهینامه های معتبر بازرسی دارد.
+          </p>
           <button>بیشتر</button>
         </div>
       </div>
@@ -143,12 +157,15 @@
           <span class="icon">▼</span>
         </div>
         <div class="accordion-content">
-            <h1>بازرگانی و تامین تجهیزات</h1>
-            <p>
-              برخی برندها با وجود آنکه در بازارصنایع نفت، گاز و پتروشیمی مورد مصرف هستند و در وندورلیست ها نیز عضویت دارند فاقد نماینده رسمی در ایران
-              هستند، تجهیز فرآیند هیراد به واسطه شرکای بین المللی تجاری خود و همچنین انبارداران (استوکیست ها) در سراسر ایران توانمندی تامین سفارشی کالای
-              صنعتی را در سریع ترین زمان ممکن با قیمتی مناسب و با امکان ارائه گواهینامه های معتبر بازرسی دارد.
-            </p>
+          <h3>بازرگانی و تامین تجهیزات</h3>
+          <p>
+            برخی برندها با وجود آنکه در بازارصنایع نفت، گاز و پتروشیمی مورد مصرف
+            هستند و در وندورلیست ها نیز عضویت دارند فاقد نماینده رسمی در ایران
+            هستند، تجهیز فرآیند هیراد به واسطه شرکای بین المللی تجاری خود و
+            همچنین انبارداران (استوکیست ها) در سراسر ایران توانمندی تامین سفارشی
+            کالای صنعتی را در سریع ترین زمان ممکن با قیمتی مناسب و با امکان
+            ارائه گواهینامه های معتبر بازرسی دارد.
+          </p>
           <img src="./assets/images/services/image 2.svg" alt="" />
           <button>بیشتر</button>
         </div>
@@ -161,11 +178,14 @@
           <span class="icon">▼</span>
         </div>
         <div class="accordion-content">
-          <h1>بازرگانی و تامین تجهیزات</h1>
+          <h3>بازرگانی و تامین تجهیزات</h3>
           <p>
-            برخی برندها با وجود آنکه در بازارصنایع نفت، گاز و پتروشیمی مورد مصرف هستند و در وندورلیست ها نیز عضویت دارند فاقد نماینده رسمی در ایران
-            هستند، تجهیز فرآیند هیراد به واسطه شرکای بین المللی تجاری خود و همچنین انبارداران (استوکیست ها) در سراسر ایران توانمندی تامین سفارشی کالای
-            صنعتی را در سریع ترین زمان ممکن با قیمتی مناسب و با امکان ارائه گواهینامه های معتبر بازرسی دارد.
+            برخی برندها با وجود آنکه در بازارصنایع نفت، گاز و پتروشیمی مورد مصرف
+            هستند و در وندورلیست ها نیز عضویت دارند فاقد نماینده رسمی در ایران
+            هستند، تجهیز فرآیند هیراد به واسطه شرکای بین المللی تجاری خود و
+            همچنین انبارداران (استوکیست ها) در سراسر ایران توانمندی تامین سفارشی
+            کالای صنعتی را در سریع ترین زمان ممکن با قیمتی مناسب و با امکان
+            ارائه گواهینامه های معتبر بازرسی دارد.
           </p>
           <img src="./assets/images/services/image 2.svg" alt="" />
           <button>بیشتر</button>
@@ -178,20 +198,20 @@
         const parent = element.parentElement;
 
         // Close all items
-        document.querySelectorAll(".accordion-item").forEach((item) => {
+        document.querySelectorAll('.accordion-item').forEach((item) => {
           if (item !== parent) {
-            item.classList.remove("active");
+            item.classList.remove('active');
           }
         });
 
         // Toggle current item
-        parent.classList.toggle("active");
+        parent.classList.toggle('active');
       }
 
-      document.addEventListener("click", (e) => {
-        if (!e.target.closest(".accordion-item")) {
-          document.querySelectorAll(".accordion-item").forEach((item) => {
-            item.classList.remove("active");
+      document.addEventListener('click', (e) => {
+        if (!e.target.closest('.accordion-item')) {
+          document.querySelectorAll('.accordion-item').forEach((item) => {
+            item.classList.remove('active');
           });
         }
       });
